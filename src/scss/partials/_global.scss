@@ -1,0 +1,28 @@
+// Reset
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+.app {
+  min-height: 100vh;
+  background-color: $appBgColor;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: $pageWidth;
+}
