@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import MobileNav from "./components/layout/MobileNav";
 import Navbar from "./components/layout/Navbar";
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
   return (
     <div className="app">
       <Navbar navIsOpen={navIsOpen} setNavIsOpen={setNavIsOpen} />
+      <MobileNav navIsOpen={navIsOpen} />
     </div>
   );
 }
