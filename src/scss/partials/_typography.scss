@@ -4,6 +4,23 @@
 html {
   font-family: "Montserrat", sans-serif;
   font-size: 62.5%;
-  line-height: 1.618;
+  line-height: 1.2;
   letter-spacing: 0.5px;
+}
+
+h4 {
+  font-size: clamp(1.8rem, 2.5vw, 2.4rem);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: clamp(2.4rem, 3.5vw, 5.6rem);
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+p {
+  line-height: 1.618;
+  max-width: 75ch;
 }

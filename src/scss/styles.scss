@@ -1,7 +1,9 @@
 @import "partials/variables";
 @import "partials/typography";
+@import "partials/buttons";
 @import "partials/global";
 
 @import "components/layout/navbar";
+@import "components/layout/header";
 @import "components/layout/mobile-nav";
 @import "components/layout/footer";

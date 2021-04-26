@@ -1,8 +1,6 @@
 .nav {
   position: relative;
   height: 10rem;
-  padding-left: $desktopPadding;
-  padding-right: $desktopPadding;
   background-color: $navBgColor;
   z-index: 10;
 
@@ -91,15 +89,5 @@
     color: $textLight2;
     font-weight: 400;
     text-transform: uppercase;
-  }
-
-  @media (max-width: 1024px) {
-    padding-left: $tabletPadding;
-    padding-right: $tabletPadding;
-  }
-
-  @media (max-width: 420px) {
-    padding-left: $mobilePadding;
-    padding-right: $mobilePadding;
   }
 }
