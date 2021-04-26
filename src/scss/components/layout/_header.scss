@@ -1,0 +1,105 @@
+.header {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+
+  .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 800px) {
+      flex-direction: column;
+    }
+  }
+
+  &__typography {
+    flex: 1 1 50%;
+    margin-right: 4rem;
+
+    h1,
+    h4 {
+      color: $textLight;
+    }
+
+    h4 span {
+      color: $accentColor;
+    }
+
+    p {
+      color: $textLight2;
+    }
+
+    button {
+      &:nth-of-type(1) {
+        @include button-styles(
+          4rem 3rem 0 0,
+          1.6rem 3.2rem,
+          $textLight,
+          $accentColor,
+          none,
+          4.3rem
+        );
+      }
+
+      &:nth-of-type(2) {
+        @include button-styles(
+          2rem 0 0 0,
+          1.6rem 3.2rem,
+          $textLight,
+          transparent,
+          1px solid $accentColor,
+          4.3rem
+        );
+      }
+
+      @media (max-width: 500px) {
+        display: block;
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 800px) {
+      margin: 0;
+    }
+  }
+  &__paragraph {
+    border-left: 1px solid $textLight2;
+    padding-left: 2rem;
+  }
+
+  &__image {
+    flex: 1 2 40%;
+    position: relative;
+    width: 100%;
+    max-width: 53.6rem;
+
+    img {
+      width: 100%;
+    }
+
+    div {
+      position: absolute;
+      width: 10rem;
+      height: 10rem;
+      border: 1px solid $accentColor;
+
+      &:nth-of-type(1) {
+        top: 2rem;
+        right: 2rem;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+      }
+
+      &:nth-of-type(2) {
+        bottom: 2rem;
+        left: 2rem;
+        border-top-color: transparent;
+        border-right-color: transparent;
+      }
+    }
+
+    @media (max-width: 800px) {
+      margin-top: 8rem;
+    }
+  }
+}

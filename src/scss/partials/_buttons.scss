@@ -1,0 +1,21 @@
+@mixin button-styles($margin, $padding, $text, $background, $border, $radius) {
+  margin: $margin;
+  padding: $padding;
+  color: $text;
+  background-color: $background;
+  border: $border;
+  border-radius: $radius;
+}
+
+button {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  outline: none;
+
+  &.block {
+    display: block;
+  }
+}

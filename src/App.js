@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import MobileNav from "./components/layout/MobileNav";
 import Navbar from "./components/layout/Navbar";
+import MobileNav from "./components/layout/MobileNav";
+import Header from "./components/layout/Header";
 
 function App() {
   const [navIsOpen, setNavIsOpen] = useState(false);
@@ -8,6 +9,7 @@ function App() {
     <div className="app">
       <Navbar navIsOpen={navIsOpen} setNavIsOpen={setNavIsOpen} />
       <MobileNav navIsOpen={navIsOpen} />
+      <Header />
     </div>
   );
 }
