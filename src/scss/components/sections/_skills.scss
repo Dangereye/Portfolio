@@ -1,0 +1,41 @@
+#skills {
+  .skills-list {
+    margin-top: $verticalPadding;
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: repeat(auto-fit, minmax(19.5rem, 1fr));
+
+    &__group {
+      margin: 0 auto;
+      min-width: 19.5rem;
+
+      h3 {
+        text-align: left;
+        color: $textLight2;
+      }
+
+      > li:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+
+      @media (max-width: 494px) {
+        margin: 0;
+      }
+    }
+
+    &__item {
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+
+      span {
+        margin-left: 1rem;
+        color: $textLight;
+      }
+    }
+  }
+}
