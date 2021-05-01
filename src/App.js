@@ -5,7 +5,8 @@ import MobileNav from "./components/layout/MobileNav";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import Projects from "./components/sections/Projects";
+import Project from "./pages/Project";
+import Projects from "./pages/Projects";
 import Error404 from "./pages/Error404";
 
 function App() {
@@ -14,12 +15,13 @@ function App() {
     <div className="app">
       <Router>
         <Navbar navIsOpen={navIsOpen} setNavIsOpen={setNavIsOpen} />
-        <MobileNav navIsOpen={navIsOpen} />
+        <MobileNav navIsOpen={navIsOpen} setNavIsOpen={setNavIsOpen} />
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/about" component={About} />
           <Route path="/contact" component={Contact} />
-          <Route path="/project/:id" component={Projects} />
+          <Route path="/project/:id" component={Project} />
+          <Route path="/projects" component={Projects} />
           <Route path="*" component={Error404} />
         </Switch>
       </Router>

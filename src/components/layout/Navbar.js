@@ -13,10 +13,12 @@ const Navbar = ({ navIsOpen, setNavIsOpen }) => {
           <div className="bar"></div>
           <div className="bar"></div>
         </div>
-        <div className={navIsOpen ? "nav__logo open" : "nav__logo"}>Pux.</div>
+        <Link to="/" className={navIsOpen ? "nav__logo open" : "nav__logo"}>
+          Pux.
+        </Link>
         <ul className="nav__links">
           <li className="nav__link">
-            <Link to="/">Portfolio</Link>
+            <Link to="/projects">Portfolio</Link>
           </li>
           <li className="nav__link">
             <Link to="/about">About</Link>

@@ -21,6 +21,12 @@
     display: flex;
     align-items: center;
     padding: 0.4rem 0;
+    cursor: pointer;
+
+    a {
+      color: $textDark2;
+      text-decoration: none;
+    }
   }
 
   &__icon {
@@ -30,7 +36,8 @@
   &__text {
     margin-left: 1rem;
     color: $textDark2;
-    font-weight: 400;
+    font-weight: 500;
+    text-decoration: none;
   }
 
   &.open {
