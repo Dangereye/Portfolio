@@ -1,0 +1,48 @@
+#projects {
+  .options {
+    margin: 3rem 0 $verticalPadding 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    > button:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+
+  .react-apps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    gap: 4rem;
+  }
+
+  .react-app {
+    width: 100%;
+    text-align: center;
+
+    &__image {
+      position: relative;
+      width: 100%;
+      border-radius: 4.3rem;
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3), 0 20px 20px rgba(0, 0, 0, 0.2),
+        0 30px 30px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      cursor: pointer;
+
+      img {
+        width: 100%;
+        transform: scale(1.02);
+        transition: 0.4s;
+      }
+
+      &:hover > img {
+        transform: scale(1.1);
+      }
+    }
+
+    &__title {
+      margin-top: 3rem;
+      color: $textLight;
+    }
+  }
+}

@@ -1,20 +1,19 @@
-// Page
-$pageWidth: 1364px;
+// Container
+$maxContainerWidth: 1364px;
 
-// Device Padding
-$desktopPadding: 4.8rem;
-$tabletPadding: 2.4rem;
-$mobilePadding: 1.6rem;
+// Padding
+$horizontalPadding: clamp(1.6rem, 4vw, 4.8rem);
+$verticalPadding: clamp(4rem, 7.5vw, 10rem);
 
 // Backgrounds
 $mobileNavBgColor: #eee;
-$appBgColor: #23263a;
-$navBgColor: #1f2235;
+$primaryColor: #1f2235;
+$secondaryColor: #23263a;
+$accentColor: #d82d39;
 
 // Text
-$accentColor: #d82d39;
 $textLight: #fefefe;
 $textLight2: #ccc;
 
-$textDark: #000;
-$textDark2: #212121;
+$textDark: rgb(21, 21, 21);
+$textDark2: rgb(61, 61, 61);

@@ -1,7 +1,6 @@
 .nav {
   position: relative;
   height: 10rem;
-  background-color: $navBgColor;
   z-index: 10;
 
   .container {
@@ -43,6 +42,8 @@
 
     &.open {
       .bar {
+        background-color: $textDark;
+
         &:nth-child(1) {
           top: 50%;
           transform: rotate(45deg);
@@ -68,6 +69,11 @@
     color: $textLight;
     font-weight: 800;
     text-transform: uppercase;
+    transition: 0.4s;
+
+    &.open {
+      color: $textDark;
+    }
   }
 
   &__links {
