@@ -39,7 +39,8 @@ const Projects = () => {
                 />
               </div>
 
-              <div className="react-app__title">TMDB Movies - 2021</div>
+              <div className="react-app__title">TMDB Movies</div>
+              <div className="react-app__date">2021</div>
             </div>
 
             <div className="react-app">
@@ -50,7 +51,8 @@ const Projects = () => {
                 />
               </div>
 
-              <div className="react-app__title">The Weather - 2021</div>
+              <div className="react-app__title">The Weather</div>
+              <div className="react-app__date">2021</div>
             </div>
 
             <div className="react-app">
@@ -61,7 +63,8 @@ const Projects = () => {
                 />
               </div>
 
-              <div className="react-app__title">Starwars - 2021</div>
+              <div className="react-app__title">Starwars</div>
+              <div className="react-app__date">2021</div>
             </div>
           </div>
         )}

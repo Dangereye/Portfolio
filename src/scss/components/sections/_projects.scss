@@ -12,8 +12,9 @@
 
   .react-apps {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
-    gap: 4rem;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    column-gap: clamp(2.4rem, 3vw, 4.8rem);
+    row-gap: 4.8rem;
   }
 
   .react-app {
@@ -24,7 +25,7 @@
       position: relative;
       width: 100%;
       border-radius: 4.3rem;
-      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3), 0 20px 20px rgba(0, 0, 0, 0.2),
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.2),
         0 30px 30px rgba(0, 0, 0, 0.1);
       overflow: hidden;
       cursor: pointer;
@@ -43,6 +44,12 @@
     &__title {
       margin-top: 3rem;
       color: $textLight;
+      font-weight: 500;
+    }
+
+    &__date {
+      margin-top: 1rem;
+      color: $textLight2;
     }
   }
 }
