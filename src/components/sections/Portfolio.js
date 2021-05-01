@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import myProjects from "../../data/myProjects";
 
-const Projects = () => {
+const Portfolio = () => {
   const [option, setOption] = useState("react");
   return (
     <section id="projects">
@@ -31,41 +33,17 @@ const Projects = () => {
 
         {option === "react" && (
           <div className="react-apps">
-            <div className="react-app">
-              <div className="react-app__image">
-                <img
-                  src="/img/min/projects/movies-project-min.jpg"
-                  alt="TMDB Movies"
-                />
+            {myProjects.map((app) => (
+              <div className="react-app" key={`project-${app.id}`}>
+                <div className="react-app__image">
+                  <Link to={`/project/${app.id}`}>
+                    <img src={app.image} alt={app.title} />
+                  </Link>
+                </div>
+                <div className="react-app__title">{app.title}</div>
+                <div className="react-app__date">{app.date}</div>
               </div>
-
-              <div className="react-app__title">TMDB Movies</div>
-              <div className="react-app__date">2021</div>
-            </div>
-
-            <div className="react-app">
-              <div className="react-app__image">
-                <img
-                  src="/img/min/projects/weather-project-min.jpg"
-                  alt="TMDB Movies"
-                />
-              </div>
-
-              <div className="react-app__title">The Weather</div>
-              <div className="react-app__date">2021</div>
-            </div>
-
-            <div className="react-app">
-              <div className="react-app__image">
-                <img
-                  src="/img/min/projects/starwars-project-min.jpg"
-                  alt="TMDB Movies"
-                />
-              </div>
-
-              <div className="react-app__title">Starwars</div>
-              <div className="react-app__date">2021</div>
-            </div>
+            ))}
           </div>
         )}
       </div>
@@ -73,4 +51,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default Portfolio;

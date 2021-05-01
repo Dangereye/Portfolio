@@ -18,10 +18,10 @@ function App() {
         <MobileNav navIsOpen={navIsOpen} setNavIsOpen={setNavIsOpen} />
         <Switch>
           <Route path="/" exact component={Home} />
-          <Route path="/about" component={About} />
-          <Route path="/contact" component={Contact} />
-          <Route path="/project/:id" component={Project} />
-          <Route path="/projects" component={Projects} />
+          <Route path="/about" exact component={About} />
+          <Route path="/contact" exact component={Contact} />
+          <Route path="/project/:id" exact component={Project} />
+          <Route path="/projects" exact component={Projects} />
           <Route path="*" component={Error404} />
         </Switch>
       </Router>
