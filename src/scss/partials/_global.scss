@@ -31,6 +31,10 @@ body {
 .header,
 section {
   padding: $verticalPadding $horizontalPadding;
+
+  &:nth-of-type(2) {
+    background-color: $secondaryColor;
+  }
 }
 
 .container {

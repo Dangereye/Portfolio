@@ -12,7 +12,7 @@ const Navbar = ({ navIsOpen, setNavIsOpen }) => {
           <div className="bar"></div>
           <div className="bar"></div>
         </div>
-        <div className="nav__logo">Pux.</div>
+        <div className={navIsOpen ? "nav__logo open" : "nav__logo"}>Pux.</div>
         <ul className="nav__links">
           <li className="nav__link">Portfolio</li>
           <li className="nav__link">About</li>
