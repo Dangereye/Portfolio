@@ -1,19 +1,28 @@
 import React, { useState } from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navbar from "./components/layout/Navbar";
 import MobileNav from "./components/layout/MobileNav";
-import Header from "./components/layout/Header";
-import Skills from "./components/sections/Skills";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 import Projects from "./components/sections/Projects";
+import Error404 from "./pages/Error404";
 
 function App() {
   const [navIsOpen, setNavIsOpen] = useState(false);
   return (
     <div className="app">
-      <Navbar navIsOpen={navIsOpen} setNavIsOpen={setNavIsOpen} />
-      <MobileNav navIsOpen={navIsOpen} />
-      <Header />
-      <Skills />
-      <Projects />
+      <Router>
+        <Navbar navIsOpen={navIsOpen} setNavIsOpen={setNavIsOpen} />
+        <MobileNav navIsOpen={navIsOpen} />
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/about" component={About} />
+          <Route path="/contact" component={Contact} />
+          <Route path="/project/:id" component={Projects} />
+          <Route path="*" component={Error404} />
+        </Switch>
+      </Router>
     </div>
   );
 }

@@ -90,10 +90,13 @@
     }
   }
 
-  &__link {
+  &__link,
+  &__link a {
     padding: 0.4rem 0;
     color: $textLight2;
     font-weight: 400;
     text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
   }
 }
