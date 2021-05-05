@@ -42,3 +42,11 @@ section {
   width: 100%;
   max-width: $maxContainerWidth;
 }
+
+.list {
+  li {
+    padding: 0.5rem 0;
+    color: $textDark;
+    font-weight: 400;
+  }
+}

@@ -3,14 +3,20 @@ import { Link } from "react-router-dom";
 import myProjects from "../../data/myProjects";
 
 const Portfolio = () => {
-  const [option, setOption] = useState("react");
+  const [option, setOption] = useState("all");
   return (
-    <section id="projects">
+    <section id="portfolio">
       <div className="container">
         <h3>Portfolio</h3>
         <h2>My Projects</h2>
 
         <div className="options">
+          <button
+            className={option === "all" ? "option active" : "option"}
+            onClick={() => setOption("all")}
+          >
+            All
+          </button>
           <button
             className={option === "react" ? "option active" : "option"}
             onClick={() => setOption("react")}
@@ -30,22 +36,27 @@ const Portfolio = () => {
             XD
           </button>
         </div>
-
-        {option === "react" && (
-          <div className="react-apps">
-            {myProjects.map((app) => (
-              <div className="react-app" key={`project-${app.id}`}>
+        <div className="react-apps">
+          {myProjects
+            .filter((item) => (option !== "all" ? item.type === option : item))
+            .map((item) => (
+              <div className="react-app" key={`project-${item.id}`}>
                 <div className="react-app__image">
-                  <Link to={`/project/${app.id}`}>
-                    <img src={app.image} alt={app.title} />
+                  <Link
+                    to={
+                      item.page
+                        ? `/project/${item.id}/${item.page}`
+                        : `/project/${item.id}`
+                    }
+                  >
+                    <img src={item.portfolio_image} alt={item.title} />
                   </Link>
                 </div>
-                <div className="react-app__title">{app.title}</div>
-                <div className="react-app__date">{app.date}</div>
+                <div className="react-app__title">{item.title}</div>
+                <div className="react-app__date">{item.date}</div>
               </div>
             ))}
-          </div>
-        )}
+        </div>
       </div>
     </section>
   );

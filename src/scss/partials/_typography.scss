@@ -26,6 +26,11 @@ h3 {
   font-size: clamp(1.8rem, 2.5vw, 2.4rem);
   font-weight: 300;
   margin-bottom: 2rem;
+
+  &.subtitle {
+    text-align: left;
+    color: $textDark;
+  }
 }
 
 h2 {
@@ -36,6 +41,8 @@ h2 {
 }
 
 p {
+  margin: 2rem 0;
+  color: $textDark2;
   line-height: 1.618;
-  max-width: 75ch;
+  max-width: 80ch;
 }

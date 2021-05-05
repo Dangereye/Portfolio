@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Project from "./pages/Project";
+import WorkwearClothingDirect from "./pages/WorkwearClothingDirect";
 import Projects from "./pages/Projects";
 import Error404 from "./pages/Error404";
 
@@ -21,6 +22,11 @@ function App() {
           <Route path="/about" exact component={About} />
           <Route path="/contact" exact component={Contact} />
           <Route path="/project/:id" exact component={Project} />
+          <Route
+            path="/project/:id/workwearclothingdirect"
+            exact
+            component={WorkwearClothingDirect}
+          />
           <Route path="/projects" exact component={Projects} />
           <Route path="*" component={Error404} />
         </Switch>
