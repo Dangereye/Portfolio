@@ -5,7 +5,7 @@ const Navbar = ({ navIsOpen, setNavIsOpen }) => {
   const [styles, setStyles] = useState();
 
   const toggleStyles = () => {
-    if (window.pageYOffset > 100) {
+    if (window.pageYOffset > 470) {
       setStyles("dark");
     } else {
       setStyles("light");
