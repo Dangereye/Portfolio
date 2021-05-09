@@ -9,6 +9,7 @@ import Project from "./pages/Project";
 import WorkwearClothingDirect from "./pages/WorkwearClothingDirect";
 import Projects from "./pages/Projects";
 import Error404 from "./pages/Error404";
+import Footer from "./components/layout/Footer";
 
 function App() {
   const [navIsOpen, setNavIsOpen] = useState(false);
@@ -32,6 +33,7 @@ function App() {
             <Route path="*" component={Error404} />
           </Switch>
         </main>
+        <Footer />
       </Router>
     </div>
   );
