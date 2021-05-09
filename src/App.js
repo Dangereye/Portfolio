@@ -17,19 +17,21 @@ function App() {
       <Router>
         <Navbar navIsOpen={navIsOpen} setNavIsOpen={setNavIsOpen} />
         <MobileNav navIsOpen={navIsOpen} setNavIsOpen={setNavIsOpen} />
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/about" exact component={About} />
-          <Route path="/contact" exact component={Contact} />
-          <Route path="/project/:id" exact component={Project} />
-          <Route
-            path="/project/:id/workwearclothingdirect"
-            exact
-            component={WorkwearClothingDirect}
-          />
-          <Route path="/projects" exact component={Projects} />
-          <Route path="*" component={Error404} />
-        </Switch>
+        <main>
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/about" exact component={About} />
+            <Route path="/contact" exact component={Contact} />
+            <Route path="/project/:id" exact component={Project} />
+            <Route
+              path="/project/:id/workwearclothingdirect"
+              exact
+              component={WorkwearClothingDirect}
+            />
+            <Route path="/projects" exact component={Projects} />
+            <Route path="*" component={Error404} />
+          </Switch>
+        </main>
       </Router>
     </div>
   );

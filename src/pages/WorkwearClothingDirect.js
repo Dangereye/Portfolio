@@ -14,23 +14,36 @@ const WorkwearClothingDirect = ({ match }) => {
 
   return (
     <>
-      <section className="project">
+      <section className=" project workwear">
+        <div className="container ">
+          <div className="split-grid">
+            <div className="image">
+              <img
+                src="/img/min/projects/ps/workwear/capture.jpg"
+                alt="www.workwearclothingdirect.com"
+              />
+            </div>
+            <div className="content">
+              <h1 className="project__title">
+                {project.title} - {project.date}
+              </h1>
+              <p>{project.description}</p>
+              <h3 className="subtitle">Deliverables</h3>
+              <ul className="list">
+                <li>9 Hero slides.</li>
+                <li>Banner + 3 SVG Icons.</li>
+                <li>12 Category images.</li>
+                <li>Installation.</li>
+              </ul>
+              <a href={project.links.live} target="_blank" rel="noreferrer">
+                Visit Site
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="workwear">
         <div className="container">
-          <h1 className="project__title">
-            {project.title} - {project.date}
-          </h1>
-          <p>{project.description}</p>
-          <h3 className="subtitle">Services</h3>
-          <ul className="list">
-            <li>9 Hero slides.</li>
-            <li>Banner + 3 SVG Icons, inc HTML, CSS template.</li>
-            <li>12 Category images, inc HTML, CSS template. </li>
-            <li>Installation, using Elementor for Wordpress.</li>
-          </ul>
-
-          <a href={project.links.live} target="_blank" rel="noreferrer">
-            Visit Site
-          </a>
           <h3 className="subtitle">Hero Slides</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
@@ -50,6 +63,10 @@ const WorkwearClothingDirect = ({ match }) => {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+      <section className="workwear ">
+        <div className="container">
           <h3 className="subtitle">Banner</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
@@ -94,7 +111,10 @@ const WorkwearClothingDirect = ({ match }) => {
               </div>
             </div>
           </div>
-
+        </div>
+      </section>
+      <section className="workwear">
+        <div className="container">
           <h3 className="subtitle">Categories</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
@@ -109,8 +129,31 @@ const WorkwearClothingDirect = ({ match }) => {
                 className="category"
                 style={{ backgroundImage: `url(${category.image})` }}
               >
-                <h2>{category.text}</h2>
+                <h2>{category.title}</h2>
                 <button>Shop now</button>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="project">
+        <div className="container">
+          <h3 className="subtitle">Top brands</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+            reiciendis qui inventore sunt quos doloremque nostrum, in, eius,
+            corporis accusamus quidem? Odit qui nihil et provident delectus
+            tenetur voluptatum cumque!
+          </p>
+          <div className="top-brands">
+            {project.top_brands.map((brand, index) => (
+              <div key={`top-brand-${index}`} className="brand">
+                <img
+                  src={brand.image}
+                  alt={brand.title}
+                  onClick={() => openSlider(index)}
+                />
+                <div className="slide__title">{brand.title}</div>
               </div>
             ))}
           </div>

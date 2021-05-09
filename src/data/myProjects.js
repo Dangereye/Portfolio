@@ -110,54 +110,96 @@ const myProjects = [
     ],
     categories: [
       {
-        text: "hi-vis",
+        title: "hi-vis",
         image: "/img/min/projects/ps/workwear/categories/hi-vis-min.jpg",
       },
       {
-        text: "coats & jackets",
+        title: "coats & jackets",
         image:
           "/img/min/projects/ps/workwear/categories/coats-and-jackets-min.jpg",
       },
       {
-        text: "footwear",
+        title: "footwear",
         image: "/img/min/projects/ps/workwear/categories/footwear-min.jpg",
       },
       {
-        text: "workwear",
+        title: "workwear",
         image: "/img/min/projects/ps/workwear/categories/workwear-min.jpg",
       },
       {
-        text: "hoodies",
+        title: "hoodies",
         image: "/img/min/projects/ps/workwear/categories/hoodies-min.jpg",
       },
       {
-        text: "sweatshirts",
+        title: "sweatshirts",
         image: "/img/min/projects/ps/workwear/categories/sweatshirts-min.jpg",
       },
       {
-        text: "hospitality",
+        title: "hospitality",
         image: "/img/min/projects/ps/workwear/categories/hospitality-min.jpg",
       },
       {
-        text: "healthcare",
+        title: "healthcare",
         image: "/img/min/projects/ps/workwear/categories/healthcare-min.jpg",
       },
       {
-        text: "chefwear",
+        title: "chefwear",
         image: "/img/min/projects/ps/workwear/categories/chefwear-min.jpg",
       },
       {
-        text: "corporate",
+        title: "corporate",
         image: "/img/min/projects/ps/workwear/categories/corporate-min.jpg",
       },
       {
-        text: "knitwear",
+        title: "knitwear",
         image: "/img/min/projects/ps/workwear/categories/knitwear-min.jpg",
       },
       {
-        text: "suits & jackets",
+        title: "suits & jackets",
         image:
           "/img/min/projects/ps/workwear/categories/suits-and-jackets-min.jpg",
+      },
+    ],
+    top_brands: [
+      {
+        title: "B&C",
+        image: "/img/min/projects/ps/workwear/brands/bandc-min.jpg",
+      },
+      {
+        title: "Dickies",
+        image: "/img/min/projects/ps/workwear/brands/dickies-min.jpg",
+      },
+      {
+        title: "Kustom Kit",
+        image: "/img/min/projects/ps/workwear/brands/kustom-kit-min.jpg",
+      },
+      {
+        title: "Portwest",
+        image: "/img/min/projects/ps/workwear/brands/portwest-min.jpg",
+      },
+      {
+        title: "Premier",
+        image: "/img/min/projects/ps/workwear/brands/premier-min.jpg",
+      },
+      {
+        title: "Result",
+        image: "/img/min/projects/ps/workwear/brands/result-min.jpg",
+      },
+      {
+        title: "RTX",
+        image: "/img/min/projects/ps/workwear/brands/rtx-min.jpg",
+      },
+      {
+        title: "Russell",
+        image: "/img/min/projects/ps/workwear/brands/russell-min.jpg",
+      },
+      {
+        title: "Sols",
+        image: "/img/min/projects/ps/workwear/brands/sols-min.jpg",
+      },
+      {
+        title: "Yoko",
+        image: "/img/min/projects/ps/workwear/brands/yoko-min.jpg",
       },
     ],
     links: { live: "/", code: "https://github.com/Dangereye/starwars" },

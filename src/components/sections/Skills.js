@@ -4,8 +4,8 @@ const Skills = () => {
   return (
     <section id="skills">
       <div className="container">
-        <h3>Skills</h3>
-        <h2>Most Common</h2>
+        <h3 className="section-title">Skills</h3>
+        <h2 className="section-title">Experience</h2>
         <div className="skills-list">
           <ul className="skills-list__group">
             <h3>Environment</h3>

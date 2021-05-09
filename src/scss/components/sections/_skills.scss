@@ -11,7 +11,7 @@
 
       h3 {
         text-align: left;
-        color: $textLight2;
+        color: $text-black;
       }
 
       > li:not(:last-child) {
@@ -34,7 +34,7 @@
 
       span {
         margin-left: 1rem;
-        color: $textLight;
+        color: $light-color;
       }
     }
   }

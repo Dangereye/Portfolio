@@ -1,5 +1,5 @@
 .header {
-  background-color: $secondaryColor;
+  background-color: $dark-color;
   .container {
     height: 100%;
     display: flex;
@@ -16,38 +16,24 @@
 
     h1,
     h4 {
-      color: $textLight;
+      color: $light-color;
     }
 
     h4 span {
-      color: $accentColor;
+      color: $accent-color;
     }
 
     p {
-      color: $textLight2;
+      color: $light-grey;
     }
 
     button {
       &:nth-of-type(1) {
-        @include button-styles(
-          4rem 3rem 0 0,
-          1.6rem 3.2rem,
-          $textLight,
-          $accentColor,
-          none,
-          4.3rem
-        );
+        margin: 4rem 3rem 0 0;
       }
 
       &:nth-of-type(2) {
-        @include button-styles(
-          2rem 0 0 0,
-          1.6rem 3.2rem,
-          $textLight,
-          transparent,
-          1px solid $accentColor,
-          4.3rem
-        );
+        margin-top: 2rem;
       }
 
       @media (max-width: 500px) {
@@ -61,7 +47,7 @@
     }
   }
   &__paragraph {
-    border-left: 1px solid $textLight2;
+    border-left: 1px solid $dark-grey;
     padding-left: 2rem;
   }
 
@@ -79,7 +65,7 @@
       position: absolute;
       width: 10rem;
       height: 10rem;
-      border: 1px solid $accentColor;
+      border: 1px solid $accent-color;
 
       &:nth-of-type(1) {
         top: 2rem;

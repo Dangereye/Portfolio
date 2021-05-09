@@ -7,30 +7,30 @@ const Portfolio = () => {
   return (
     <section id="portfolio">
       <div className="container">
-        <h3>Portfolio</h3>
-        <h2>My Projects</h2>
+        <h3 className="section-title">Portfolio</h3>
+        <h2 className="section-title">My Projects</h2>
 
         <div className="options">
           <button
-            className={option === "all" ? "option active" : "option"}
+            className={option === "all" ? "btn option active" : "btn option"}
             onClick={() => setOption("all")}
           >
             All
           </button>
           <button
-            className={option === "react" ? "option active" : "option"}
+            className={option === "react" ? "btn option active" : "btn option"}
             onClick={() => setOption("react")}
           >
             React
           </button>
           <button
-            className={option === "ps" ? "option active" : "option"}
+            className={option === "ps" ? "btn option active" : "btn option"}
             onClick={() => setOption("ps")}
           >
             PS
           </button>
           <button
-            className={option === "xd" ? "option active" : "option"}
+            className={option === "xd" ? "btn option active" : "btn option"}
             onClick={() => setOption("xd")}
           >
             XD

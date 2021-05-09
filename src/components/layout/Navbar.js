@@ -1,9 +1,24 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const Navbar = ({ navIsOpen, setNavIsOpen }) => {
+  const [styles, setStyles] = useState();
+
+  const toggleStyles = () => {
+    if (window.pageYOffset > 100) {
+      setStyles("dark");
+    } else {
+      setStyles("light");
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", toggleStyles);
+
+    return () => window.removeEventListener("scroll", toggleStyles);
+  });
   return (
-    <nav className="nav">
+    <nav className={`nav ${styles}`}>
       <div className="container">
         <div
           className={navIsOpen ? "nav__mobile-menu open" : "nav__mobile-menu"}
@@ -13,9 +28,10 @@ const Navbar = ({ navIsOpen, setNavIsOpen }) => {
           <div className="bar"></div>
           <div className="bar"></div>
         </div>
-        <Link to="/" className={navIsOpen ? "nav__logo open" : "nav__logo"}>
+        <Link to="/" className="nav__logo">
           Pux.
         </Link>
+
         <ul className="nav__links">
           <li className="nav__link">
             <Link to="/projects">Portfolio</Link>

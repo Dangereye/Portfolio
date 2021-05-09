@@ -1,5 +1,4 @@
 .project {
-  min-height: calc(100vh - 100px);
   background-color: #eee;
 
   &__title {
@@ -9,7 +8,7 @@
   }
   &__description {
     margin-bottom: 2rem;
-    color: $textDark2;
+    color: $text-black;
   }
 
   &__api,
@@ -27,7 +26,7 @@
       padding: 1rem;
       font-size: 1.4rem;
       font-weight: 500;
-      background-color: #dedede;
+      background-color: $mid-grey;
     }
   }
 
@@ -37,24 +36,8 @@
 
   a {
     &:nth-of-type(1) {
-      @include button-styles(
-        4rem 3rem 0 0,
-        1.6rem 3.2rem,
-        $textLight,
-        $accentColor,
-        none,
-        4.3rem
-      );
     }
     &:nth-of-type(2) {
-      @include button-styles(
-        2rem 0 0 0,
-        1.6rem 3.2rem,
-        $textDark,
-        transparent,
-        1px solid $accentColor,
-        4.3rem
-      );
     }
     @media (max-width: 400px) {
       display: block;

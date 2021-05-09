@@ -21,28 +21,35 @@ h1 {
 }
 
 h3 {
-  text-align: center;
-  color: $accentColor;
-  font-size: clamp(1.8rem, 2.5vw, 2.4rem);
-  font-weight: 300;
-  margin-bottom: 2rem;
+  font-weight: 400;
+
+  &.section-title {
+    margin-bottom: 2rem;
+    text-align: center;
+    color: $accent-color;
+    text-transform: uppercase;
+    font-size: clamp(1.8rem, 2.5vw, 2.4rem);
+  }
 
   &.subtitle {
     text-align: left;
-    color: $textDark;
+    color: $text-black;
   }
 }
 
 h2 {
-  text-align: center;
-  font-size: clamp(2.4rem, 3.5vw, 4rem);
-  color: $textLight;
   font-weight: 700;
+
+  &.section-title {
+    text-align: center;
+    font-size: clamp(2.4rem, 3.5vw, 4rem);
+    color: $text-black;
+  }
 }
 
 p {
   margin: 2rem 0;
-  color: $textDark2;
+  color: $dark-grey;
   line-height: 1.618;
   max-width: 80ch;
 }

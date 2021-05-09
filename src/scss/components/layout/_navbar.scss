@@ -1,7 +1,18 @@
 .nav {
-  position: relative;
+  position: fixed;
+  width: 100%;
   height: 10rem;
+  transition: 0.4s;
+
   z-index: 10;
+  &.light {
+    color: $text-black;
+    background-color: $light-color;
+  }
+  &.dark {
+    color: $light-color;
+    background-color: $dark-color;
+  }
 
   .container {
     width: 100%;
@@ -20,7 +31,7 @@
       position: absolute;
       width: 100%;
       height: 3px;
-      background-color: $textLight;
+      background-color: $accent-color;
       transition: 0.4s;
 
       &:nth-child(1) {
@@ -42,8 +53,6 @@
 
     &.open {
       .bar {
-        background-color: $textDark;
-
         &:nth-child(1) {
           top: 50%;
           transform: rotate(45deg);
@@ -66,15 +75,10 @@
   }
 
   &__logo {
-    color: $textLight;
+    color: inherit;
     font-weight: 800;
     text-transform: uppercase;
     text-decoration: none;
-    transition: 0.4s;
-
-    &.open {
-      color: $textDark;
-    }
   }
 
   &__links {
@@ -95,10 +99,9 @@
   &__link,
   &__link a {
     padding: 0.4rem 0;
-    color: $textLight2;
+    color: inherit;
     font-weight: 400;
     line-height: 1;
-    text-transform: uppercase;
     text-decoration: none;
     cursor: pointer;
   }
