@@ -98,8 +98,10 @@ section.workwear {
   align-items: center;
   background-position: center;
   background-size: cover;
+  color: $light-color;
 
   h2 {
+    color: inherit;
     font-size: 2.8rem;
     text-transform: uppercase;
   }
@@ -108,7 +110,7 @@ section.workwear {
     width: max-content;
     margin-top: 2rem;
     padding: 1rem;
-    color: $light-color;
+    color: inherit;
     text-transform: uppercase;
     background-color: transparent;
     border: 2px solid #f4631b;

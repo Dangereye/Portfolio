@@ -1,4 +1,5 @@
 #portfolio {
+  padding: $horizontalPadding 0;
   .options {
     margin: 3rem 0 $verticalPadding 0;
     display: flex;
@@ -10,23 +11,32 @@
     }
   }
 
-  .react-apps {
+  .projects {
+    margin: 0 auto;
+    max-width: 200rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-    column-gap: clamp(2.4rem, 3vw, 4.8rem);
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 4rem;
     row-gap: 4.8rem;
   }
 
-  .react-app {
+  .project {
+    position: relative;
     width: 100%;
     text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+
+    &:hover > .project__image img {
+      transform: scale(1.1);
+    }
+
+    &:hover > .project__info {
+      opacity: 1;
+      top: 100%;
+    }
 
     &__image {
-      position: relative;
       width: 100%;
-      border-radius: 4.3rem;
-      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.2),
-        0 30px 30px rgba(0, 0, 0, 0.1);
       overflow: hidden;
       cursor: pointer;
 
@@ -35,20 +45,37 @@
         transform: scale(1.02);
         transition: 0.4s;
       }
+    }
 
-      &:hover > img {
-        transform: scale(1.1);
-      }
+    &__info {
+      padding: 2rem 0;
+      width: 90%;
+      position: absolute;
+      top: 90%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $light-color;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      opacity: 0;
+      transition: 0.4s;
+      z-index: 2;
+    }
+
+    &__subtitle {
+      margin-bottom: 1rem;
+      color: $accent-color;
+      font-size: 1.6rem;
+      text-transform: uppercase;
     }
 
     &__title {
-      margin-top: 3rem;
-      color: $light-color;
+      margin-bottom: 1rem;
+      color: $text-black;
       font-weight: 500;
     }
 
     &__date {
-      margin-top: 1rem;
+      margin: 0;
       color: $dark-grey;
     }
   }

@@ -21,10 +21,10 @@ h1 {
 }
 
 h3 {
+  margin-bottom: 2rem;
   font-weight: 400;
 
   &.section-title {
-    margin-bottom: 2rem;
     text-align: center;
     color: $accent-color;
     text-transform: uppercase;

@@ -4,7 +4,7 @@ import myProjects from "../data/myProjects";
 const Project = ({ match, history }) => {
   const project = myProjects.find((x) => x.id === match.params.id);
   return (
-    <section className="project">
+    <section className="project padded">
       <div className="container">
         {project ? (
           <>
@@ -30,10 +30,20 @@ const Project = ({ match, history }) => {
                     <li key={`tech-${index}`}>{tech}</li>
                   ))}
                 </ul>
-                <a href={project.links.live} target="_blank" rel="noreferrer">
+                <a
+                  class="btn primary large"
+                  href={project.links.live}
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   Launch App
                 </a>
-                <a href={project.links.code} target="_blank" rel="noreferrer">
+                <a
+                  className="btn secondary large"
+                  href={project.links.code}
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   View Code
                 </a>
               </>

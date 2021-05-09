@@ -16,7 +16,7 @@ const Header = () => {
     delay: 0.4,
   });
   return (
-    <header className="header">
+    <header className="header px">
       <div className="container">
         <div className="header__typography">
           <h4 className="test">
@@ -25,16 +25,18 @@ const Header = () => {
           <h1 className="test2">Front-end Developer</h1>
           <div className="header__paragraph">
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Excepturi reprehenderit voluptatum sapiente rerum fugiat obcaecati
-              facere error natus mollitia recusandae.
+              Browse a selection of my recent projects, or download my CV.
+              <br /> Would you like to know more? Let's talk!
             </p>
           </div>
-          <button className="btn primary large">My Projects</button>
+          <button className="btn primary large">Recent Projects</button>
           <button className="btn secondary large">Download CV</button>
         </div>
         <div className="header__image">
-          <img src="/img/min/header/profile-image-min.png" alt="Craig Puxty" />
+          <img
+            src="/img/portfolio/min/header/profile-image-min.png"
+            alt="Craig Puxty"
+          />
           <div></div>
           <div></div>
         </div>

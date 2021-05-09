@@ -19,7 +19,7 @@ const WorkwearClothingDirect = ({ match }) => {
           <div className="split-grid">
             <div className="image">
               <img
-                src="/img/min/projects/ps/workwear/capture.jpg"
+                src="/img/projects/workwear/min/capture-full-min.jpg"
                 alt="www.workwearclothingdirect.com"
               />
             </div>
@@ -35,7 +35,12 @@ const WorkwearClothingDirect = ({ match }) => {
                 <li>12 Category images.</li>
                 <li>Installation.</li>
               </ul>
-              <a href={project.links.live} target="_blank" rel="noreferrer">
+              <a
+                className="btn primary large"
+                href={project.links.live}
+                target="_blank"
+                rel="noreferrer"
+              >
                 Visit Site
               </a>
             </div>
@@ -65,7 +70,7 @@ const WorkwearClothingDirect = ({ match }) => {
           </div>
         </div>
       </section>
-      <section className="workwear ">
+      <section className="workwear">
         <div className="container">
           <h3 className="subtitle">Banner</h3>
           <p>
@@ -77,7 +82,7 @@ const WorkwearClothingDirect = ({ match }) => {
           <div className="banner">
             <div className="banner__block">
               <img
-                src="/img/min/projects/ps/workwear/banner/delivery.svg"
+                src="/img/projects/workwear/min/banner/delivery.svg"
                 alt="Delivery"
               />
               <div className="banner____content">
@@ -92,7 +97,7 @@ const WorkwearClothingDirect = ({ match }) => {
             </div>
             <div className="banner__block">
               <img
-                src="/img/min/projects/ps/workwear/banner/30-days-returns.svg"
+                src="/img/projects/workwear/min/banner/30-days-returns.svg"
                 alt="Returns"
               />
               <div className="banner____content">
@@ -102,7 +107,7 @@ const WorkwearClothingDirect = ({ match }) => {
             </div>
             <div className="banner__block">
               <img
-                src="/img/min/projects/ps/workwear/banner/discounts.svg"
+                src="/img/projects/workwear/min/banner/discounts.svg"
                 alt="Discounts"
               />
               <div className="banner____content">

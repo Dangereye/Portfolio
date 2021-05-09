@@ -6,7 +6,7 @@ const myProjects = [
     title: "TMDB Movies",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi veritatis voluptatem, voluptatibus dolore officia atque recusandae, autem ipsum, iste sunt perferendis velit modi blanditiis aliquid saepe totam nihil. Nostrum, possimus.",
-    portfolio_image: "/img/min/portfolio/movies-project-min.jpg",
+    portfolio_image: "/img/projects/tmdb-movies/min/capture-square-min.jpg",
     api: ["themoviedb.org"],
     technologies: [
       "html",
@@ -27,7 +27,7 @@ const myProjects = [
     title: "The Weather",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi veritatis voluptatem, voluptatibus dolore officia atque recusandae, autem ipsum, iste sunt perferendis velit modi blanditiis aliquid saepe totam nihil. Nostrum, possimus.",
-    portfolio_image: "/img/min/portfolio/weather-project-min.jpg",
+    portfolio_image: "/img/projects/the-weather/min/capture-square-min.jpg",
     api: ["weatherapi.com", "unsplash.com"],
     technologies: [
       "html",
@@ -47,7 +47,7 @@ const myProjects = [
     title: "Starwars",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi veritatis voluptatem, voluptatibus dolore officia atque recusandae, autem ipsum, iste sunt perferendis velit modi blanditiis aliquid saepe totam nihil. Nostrum, possimus.",
-    portfolio_image: "/img/min/portfolio/starwars-project-min.jpg",
+    portfolio_image: "/img/projects/starwars/min/capture-square-min.jpg",
     api: ["swapi.dev"],
     technologies: ["html", "css", "sass", "javascript", "react"],
     links: { live: "/", code: "https://github.com/Dangereye/starwars" },
@@ -60,158 +60,148 @@ const myProjects = [
     title: "Workwear",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi veritatis voluptatem, voluptatibus dolore officia atque recusandae, autem ipsum, iste sunt perferendis velit modi blanditiis aliquid saepe totam nihil. Nostrum, possimus.",
-    portfolio_image: "/img/min/portfolio/starwars-project-min.jpg",
+    portfolio_image: "/img/projects/workwear/min/capture-square-min.jpg",
     slides: [
       {
         title: "AXQ Face Cover",
-        image: "/img/min/projects/ps/workwear/slides/axq-min.jpg",
+        image: "/img/projects/workwear/min/slides/axq-min.jpg",
         color: "#fe6a00",
       },
       {
         title: "B&C Corporate Shirts",
-        image: "/img/min/projects/ps/workwear/slides/bandc-min.jpg",
+        image: "/img/projects/workwear/min/slides/bandc-min.jpg",
         color: "#c79a63",
       },
       {
         title: "Beechfield Trawler Beanie",
-        image: "/img/min/projects/ps/workwear/slides/beechfield-beanie-min.jpg",
+        image: "/img/projects/workwear/min/slides/beechfield-beanie-min.jpg",
         color: "#dcad21",
       },
       {
         title: "Beechfield Original Morf",
-        image: "/img/min/projects/ps/workwear/slides/beechfield-morf-min.jpg",
+        image: "/img/projects/workwear/min/slides/beechfield-morf-min.jpg",
         color: "#0693c9",
       },
       {
         title: "Fruit Of The Loom T-Shirt",
-        image: "/img/min/projects/ps/workwear/slides/fruit-of-the-loom-min.jpg",
+        image: "/img/projects/workwear/min/slides/fruit-of-the-loom-min.jpg",
         color: "#b2356f",
       },
       {
         title: "Portwest Hi-Vis",
-        image: "/img/min/projects/ps/workwear/slides/portwest-min.jpg",
+        image: "/img/projects/workwear/min/slides/portwest-min.jpg",
         color: "#fffe54",
       },
       {
         title: "Premier Poplin Shirts",
-        image: "/img/min/projects/ps/workwear/slides/premier-min.jpg",
+        image: "/img/projects/workwear/min/slides/premier-min.jpg",
         color: "#d58665",
       },
       {
         title: "Workguard Saftey Boots",
-        image: "/img/min/projects/ps/workwear/slides/workguard-min.jpg",
+        image: "/img/projects/workwear/min/slides/workguard-min.jpg",
         color: "#73a301",
       },
       {
         title: "Yoko Hi-Vis",
-        image: "/img/min/projects/ps/workwear/slides/yoko-min.jpg",
+        image: "/img/projects/workwear/min/slides/yoko-min.jpg",
         color: "#ff6e01",
       },
     ],
     categories: [
       {
         title: "hi-vis",
-        image: "/img/min/projects/ps/workwear/categories/hi-vis-min.jpg",
+        image: "/img/projects/workwear/min/categories/hi-vis-min.jpg",
       },
       {
         title: "coats & jackets",
         image:
-          "/img/min/projects/ps/workwear/categories/coats-and-jackets-min.jpg",
+          "/img/projects/workwear/min/categories/coats-and-jackets-min.jpg",
       },
       {
         title: "footwear",
-        image: "/img/min/projects/ps/workwear/categories/footwear-min.jpg",
+        image: "/img/projects/workwear/min/categories/footwear-min.jpg",
       },
       {
         title: "workwear",
-        image: "/img/min/projects/ps/workwear/categories/workwear-min.jpg",
+        image: "/img/projects/workwear/min/categories/workwear-min.jpg",
       },
       {
         title: "hoodies",
-        image: "/img/min/projects/ps/workwear/categories/hoodies-min.jpg",
+        image: "/img/projects/workwear/min/categories/hoodies-min.jpg",
       },
       {
         title: "sweatshirts",
-        image: "/img/min/projects/ps/workwear/categories/sweatshirts-min.jpg",
+        image: "/img/projects/workwear/min/categories/sweatshirts-min.jpg",
       },
       {
         title: "hospitality",
-        image: "/img/min/projects/ps/workwear/categories/hospitality-min.jpg",
+        image: "/img/projects/workwear/min/categories/hospitality-min.jpg",
       },
       {
         title: "healthcare",
-        image: "/img/min/projects/ps/workwear/categories/healthcare-min.jpg",
+        image: "/img/projects/workwear/min/categories/healthcare-min.jpg",
       },
       {
         title: "chefwear",
-        image: "/img/min/projects/ps/workwear/categories/chefwear-min.jpg",
+        image: "/img/projects/workwear/min/categories/chefwear-min.jpg",
       },
       {
         title: "corporate",
-        image: "/img/min/projects/ps/workwear/categories/corporate-min.jpg",
+        image: "/img/projects/workwear/min/categories/corporate-min.jpg",
       },
       {
         title: "knitwear",
-        image: "/img/min/projects/ps/workwear/categories/knitwear-min.jpg",
+        image: "/img/projects/workwear/min/categories/knitwear-min.jpg",
       },
       {
         title: "suits & jackets",
         image:
-          "/img/min/projects/ps/workwear/categories/suits-and-jackets-min.jpg",
+          "/img/projects/workwear/min/categories/suits-and-jackets-min.jpg",
       },
     ],
     top_brands: [
       {
         title: "B&C",
-        image: "/img/min/projects/ps/workwear/brands/bandc-min.jpg",
+        image: "/img/projects/workwear/min/brands/bandc-min.jpg",
       },
       {
         title: "Dickies",
-        image: "/img/min/projects/ps/workwear/brands/dickies-min.jpg",
+        image: "/img/projects/workwear/min/brands/dickies-min.jpg",
       },
       {
         title: "Kustom Kit",
-        image: "/img/min/projects/ps/workwear/brands/kustom-kit-min.jpg",
+        image: "/img/projects/workwear/min/brands/kustom-kit-min.jpg",
       },
       {
         title: "Portwest",
-        image: "/img/min/projects/ps/workwear/brands/portwest-min.jpg",
+        image: "/img/projects/workwear/min/brands/portwest-min.jpg",
       },
       {
         title: "Premier",
-        image: "/img/min/projects/ps/workwear/brands/premier-min.jpg",
+        image: "/img/projects/workwear/min/brands/premier-min.jpg",
       },
       {
         title: "Result",
-        image: "/img/min/projects/ps/workwear/brands/result-min.jpg",
+        image: "/img/projects/workwear/min/brands/result-min.jpg",
       },
       {
         title: "RTX",
-        image: "/img/min/projects/ps/workwear/brands/rtx-min.jpg",
+        image: "/img/projects/workwear/min/brands/rtx-min.jpg",
       },
       {
         title: "Russell",
-        image: "/img/min/projects/ps/workwear/brands/russell-min.jpg",
+        image: "/img/projects/workwear/min/brands/russell-min.jpg",
       },
       {
         title: "Sols",
-        image: "/img/min/projects/ps/workwear/brands/sols-min.jpg",
+        image: "/img/projects/workwear/min/brands/sols-min.jpg",
       },
       {
         title: "Yoko",
-        image: "/img/min/projects/ps/workwear/brands/yoko-min.jpg",
+        image: "/img/projects/workwear/min/brands/yoko-min.jpg",
       },
     ],
-    links: { live: "/", code: "https://github.com/Dangereye/starwars" },
-  },
-  {
-    id: "5",
-    type: "xd",
-    date: "2020",
-    title: "Maynooth",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi veritatis voluptatem, voluptatibus dolore officia atque recusandae, autem ipsum, iste sunt perferendis velit modi blanditiis aliquid saepe totam nihil. Nostrum, possimus.",
-    portfolio_image: "/img/min/portfolio/starwars-project-min.jpg",
     links: { live: "/", code: "https://github.com/Dangereye/starwars" },
   },
 ];
