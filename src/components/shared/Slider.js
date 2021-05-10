@@ -9,7 +9,10 @@ const Slider = ({ images, sliderIndex, setSliderIsOpen }) => {
   const [btnColor, setBtnColor] = useState(images[sliderIndex].color);
   const strokeWidth = 30;
 
-  useEffect(() => setBtnColor(images[activeSlide].color), [activeSlide]);
+  useEffect(() => setBtnColor(images[activeSlide].color), [
+    images,
+    activeSlide,
+  ]);
 
   const nextSlide = () => {
     if (pos > 0 - (images.length - 1) * 100) {

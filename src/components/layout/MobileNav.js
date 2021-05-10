@@ -22,7 +22,7 @@ const MobileNav = ({ navIsOpen, setNavIsOpen }) => {
           </Link>
         </li>
         <li className="mobile-nav__link">
-          <Link to="/projects" onClick={() => setNavIsOpen(false)}>
+          <Link to="/#portfolio" onClick={() => setNavIsOpen(false)}>
             <IoMdBrush className="mobile-nav__icon" />
             <span className="mobile-nav__text">Portfolio</span>
           </Link>

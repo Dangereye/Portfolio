@@ -1,4 +1,7 @@
 .project {
+  &__type {
+    color: $accent-color;
+  }
   &__description {
     margin-bottom: 2rem;
     color: $text-black;
@@ -38,6 +41,15 @@
     @media (max-width: 400px) {
       display: block;
       width: 100%;
+    }
+  }
+
+  .preview {
+    margin-top: 8rem;
+    img {
+      padding: clamp(1.6rem, 3vw, 4rem);
+      border: 1px solid $light-grey;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     }
   }
 }

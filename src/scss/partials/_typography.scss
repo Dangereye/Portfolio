@@ -22,13 +22,13 @@ h1 {
 
 h3 {
   margin-bottom: 2rem;
-  font-weight: 400;
+  font-size: clamp(1.8rem, 2.5vw, 2.4rem);
+  font-weight: 500;
 
   &.section-title {
     text-align: center;
     color: $accent-color;
     text-transform: uppercase;
-    font-size: clamp(1.8rem, 2.5vw, 2.4rem);
   }
 
   &.subtitle {

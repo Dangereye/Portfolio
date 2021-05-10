@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Slider from "../components/shared/Slider";
 import myProjects from "../data/myProjects";
 
-const WorkwearClothingDirect = ({ match }) => {
+const WorkwearClothingDirect = ({ match, location, history }) => {
   const project = myProjects.find((x) => x.id === match.params.id);
   const [sliderIsOpen, setSliderIsOpen] = useState(false);
   const [sliderIndex, setSliderIndex] = useState(0);
@@ -12,42 +12,50 @@ const WorkwearClothingDirect = ({ match }) => {
     setSliderIsOpen(true);
   };
 
+  useEffect(() => {
+    const element = document.getElementById(location.hash.replace("#", ""));
+    window.scrollTo({
+      behavior: element ? "smooth" : "auto",
+      top: element ? element.offsetTop - 100 : 0,
+    });
+  });
+
   return (
     <>
-      <section className=" project workwear">
-        <div className="container ">
-          <div className="split-grid">
-            <div className="image">
-              <img
-                src="/img/projects/workwear/min/capture-full-min.jpg"
-                alt="www.workwearclothingdirect.com"
-              />
-            </div>
-            <div className="content">
-              <h1 className="project__title">
-                {project.title} - {project.date}
-              </h1>
-              <p>{project.description}</p>
-              <h3 className="subtitle">Deliverables</h3>
-              <ul className="list">
-                <li>9 Hero slides.</li>
-                <li>Banner + 3 SVG Icons.</li>
-                <li>12 Category images.</li>
-                <li>Installation.</li>
-              </ul>
-              <a
-                className="btn primary large"
-                href={project.links.live}
-                target="_blank"
-                rel="noreferrer"
-              >
-                Visit Site
-              </a>
-            </div>
+      <section className="project workwear">
+        <div className="container">
+          <h4 className="project__type">{project.type}</h4>
+          <h1 className="project__title">{project.title}.</h1>
+          <div className="project__date">Created: {project.date}</div>
+          <p className="project__description">{project.description}</p>
+          <h3 className="subtitle">Deliverables</h3>
+          <ul>
+            <li>9 Hero slides.</li>
+            <li>Banner + 3 SVG Icons.</li>
+            <li>12 Category images.</li>
+            <li>Installation.</li>
+          </ul>
+          <button
+            className="btn primary large"
+            onClick={() => history.push(`${location.pathname}#slides`)}
+          >
+            View Details
+          </button>
+          <a
+            className="btn secondary large"
+            href={project.links.live}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Visit Website
+          </a>
+
+          <div className="preview">
+            <img src={project.preview_image} alt={project.title} />
           </div>
         </div>
       </section>
-      <section className="workwear">
+      <section id="slides" className="project workwear">
         <div className="container">
           <h3 className="subtitle">Hero Slides</h3>
           <p>
@@ -141,7 +149,7 @@ const WorkwearClothingDirect = ({ match }) => {
           </div>
         </div>
       </section>
-      <section className="project">
+      <section className="workwear">
         <div className="container">
           <h3 className="subtitle">Top brands</h3>
           <p>

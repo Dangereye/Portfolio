@@ -1,12 +1,13 @@
 const myProjects = [
   {
     id: "1",
-    type: "react",
+    type: "React",
     date: "2021",
     title: "TMDB Movies",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi veritatis voluptatem, voluptatibus dolore officia atque recusandae, autem ipsum, iste sunt perferendis velit modi blanditiis aliquid saepe totam nihil. Nostrum, possimus.",
     portfolio_image: "/img/projects/tmdb-movies/min/capture-square-min.jpg",
+    preview_image: "/img/projects/tmdb-movies/raw/display.jpg",
     api: ["themoviedb.org"],
     technologies: [
       "html",
@@ -22,12 +23,13 @@ const myProjects = [
   },
   {
     id: "2",
-    type: "react",
+    type: "React",
     date: "2021",
     title: "The Weather",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi veritatis voluptatem, voluptatibus dolore officia atque recusandae, autem ipsum, iste sunt perferendis velit modi blanditiis aliquid saepe totam nihil. Nostrum, possimus.",
     portfolio_image: "/img/projects/the-weather/min/capture-square-min.jpg",
+    preview_image: "/img/projects/the-weather/raw/display.jpg",
     api: ["weatherapi.com", "unsplash.com"],
     technologies: [
       "html",
@@ -42,12 +44,13 @@ const myProjects = [
   },
   {
     id: "3",
-    type: "react",
+    type: "React",
     date: "2021",
     title: "Starwars",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi veritatis voluptatem, voluptatibus dolore officia atque recusandae, autem ipsum, iste sunt perferendis velit modi blanditiis aliquid saepe totam nihil. Nostrum, possimus.",
     portfolio_image: "/img/projects/starwars/min/capture-square-min.jpg",
+    preview_image: "/img/projects/starwars/raw/display.jpg",
     api: ["swapi.dev"],
     technologies: ["html", "css", "sass", "javascript", "react"],
     links: { live: "/", code: "https://github.com/Dangereye/starwars" },
@@ -55,12 +58,13 @@ const myProjects = [
   {
     id: "4",
     page: "workwearclothingdirect",
-    type: "ps",
+    type: "PS",
     date: "2020",
     title: "Workwear",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi veritatis voluptatem, voluptatibus dolore officia atque recusandae, autem ipsum, iste sunt perferendis velit modi blanditiis aliquid saepe totam nihil. Nostrum, possimus.",
     portfolio_image: "/img/projects/workwear/min/capture-square-min.jpg",
+    preview_image: "/img/projects/workwear/raw/display.jpg",
     slides: [
       {
         title: "AXQ Face Cover",
@@ -202,7 +206,7 @@ const myProjects = [
         image: "/img/projects/workwear/min/brands/yoko-min.jpg",
       },
     ],
-    links: { live: "/", code: "https://github.com/Dangereye/starwars" },
+    links: { live: "https://www.workwearclothingdirect.com/" },
   },
 ];
 
