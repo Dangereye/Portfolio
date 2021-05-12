@@ -13,47 +13,88 @@ const Project = ({ match, history }) => {
       <div className="container">
         {project ? (
           <>
-            <h4 className="project__type">{project.type}</h4>
+            <h4 className="project__type">
+              {project.type} - {project.date}
+            </h4>
             <h1 className="project__title">{project.title}.</h1>
-            <div className="project__date">Created: {project.date}</div>
-            <p className="project__description">{project.description}</p>
+
+            {project.tech && (
+              <>
+                <div className="project__technologies">
+                  {project.tech.map((tech, index) => (
+                    <img
+                      key={`tech-${index}`}
+                      src={tech.image}
+                      alt={tech.alt}
+                      title={tech.alt}
+                    />
+                  ))}
+                </div>
+              </>
+            )}
+
             {project.api && (
-              <>
-                <h3 className="subtitle">API</h3>
-                <ul className="project__api">
-                  {project.api.map((api, index) => (
-                    <li key={`api-${index}`}>{api}</li>
-                  ))}
-                </ul>
-              </>
+              <div className="project__api">
+                <span>API</span>
+                {project.api.map((item, index) => (
+                  <a
+                    key={`api-${index}`}
+                    href={item.url}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {item.title}
+                  </a>
+                ))}
+              </div>
             )}
-            {project.technologies && (
-              <>
-                <h3 className="subtitle">Technologies</h3>
-                <ul className="project__technologies">
-                  {project.technologies.map((tech, index) => (
-                    <li key={`tech-${index}`}>{tech}</li>
-                  ))}
-                </ul>
-              </>
+
+            {project.third_party && (
+              <div className="project__third-party">
+                <span>Third party</span>
+                {project.third_party.map((item, index) => (
+                  <a
+                    key={`third-party-${index}`}
+                    href={item.url}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {item.title}
+                  </a>
+                ))}
+              </div>
             )}
-            <a
-              className="btn primary large"
-              href={project.links.live}
-              target="_blank"
-              rel="noreferrer"
-            >
-              Launch Website
-            </a>
-            <a
-              className="btn secondary large"
-              href={project.links.code}
-              target="_blank"
-              rel="noreferrer"
-            >
-              View Code
-            </a>
-            <div className="preview">
+
+            {project.deliverables && (
+              <div className="project__third-party">
+                <span>Deliverables</span>
+                {project.deliverables.map((item, index) => (
+                  <span key={`deliverable-${index}`}>{item}</span>
+                ))}
+              </div>
+            )}
+
+            <p className="project__description">{project.description}</p>
+            <div className="project__buttons">
+              <a
+                className="btn primary large"
+                href={project.links.live}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Launch Website
+              </a>
+              <a
+                className="btn secondary large"
+                href={project.links.code}
+                target="_blank"
+                rel="noreferrer"
+              >
+                View Code
+              </a>
+            </div>
+
+            <div className="project__preview">
               <img src={project.preview_image} alt={project.title} />
             </div>
           </>

@@ -24,33 +24,70 @@ const WorkwearClothingDirect = ({ match, location, history }) => {
     <>
       <section className="project workwear">
         <div className="container">
-          <h4 className="project__type">{project.type}</h4>
+          <h4 className="project__type">
+            {project.type} - {project.date}
+          </h4>
           <h1 className="project__title">{project.title}.</h1>
-          <div className="project__date">Created: {project.date}</div>
-          <p className="project__description">{project.description}</p>
-          <h3 className="subtitle">Deliverables</h3>
-          <ul>
-            <li>9 Hero slides.</li>
-            <li>Banner + 3 SVG Icons.</li>
-            <li>12 Category images.</li>
-            <li>Installation.</li>
-          </ul>
-          <button
-            className="btn primary large"
-            onClick={() => history.push(`${location.pathname}#slides`)}
-          >
-            View Details
-          </button>
-          <a
-            className="btn secondary large"
-            href={project.links.live}
-            target="_blank"
-            rel="noreferrer"
-          >
-            Visit Website
-          </a>
 
-          <div className="preview">
+          {project.tech && (
+            <>
+              <div className="project__technologies">
+                {project.tech.map((tech, index) => (
+                  <img
+                    key={`tech-${index}`}
+                    src={tech.image}
+                    alt={tech.alt}
+                    title={tech.alt}
+                  />
+                ))}
+              </div>
+            </>
+          )}
+
+          {project.third_party && (
+            <div className="project__third-party">
+              <span>Third party</span>
+              {project.third_party.map((item, index) => (
+                <a
+                  key={`third-party-${index}`}
+                  href={item.url}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {item.title}
+                </a>
+              ))}
+            </div>
+          )}
+
+          {project.deliverables && (
+            <div className="project__third-party">
+              <span>Deliverables</span>
+              {project.deliverables.map((item, index) => (
+                <span key={`deliverable-${index}`}>{item}</span>
+              ))}
+            </div>
+          )}
+
+          <p className="project__description">{project.description}</p>
+          <div className="project__buttons">
+            <button
+              className="btn primary large"
+              onClick={() => history.push(`${location.pathname}#slides`)}
+            >
+              View Details
+            </button>
+            <a
+              className="btn secondary large"
+              href={project.links.live}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Visit Website
+            </a>
+          </div>
+
+          <div className="project__preview">
             <img src={project.preview_image} alt={project.title} />
           </div>
         </div>

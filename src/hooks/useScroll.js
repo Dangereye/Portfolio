@@ -8,7 +8,7 @@ const useScroll = () => {
         behavior: target ? "smooth" : "auto",
         top: target ? target.offsetTop - 100 : 0,
       });
-    }, 200);
+    }, 300);
   };
 
   return [hash, startScroll];

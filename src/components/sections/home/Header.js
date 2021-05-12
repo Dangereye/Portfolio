@@ -48,7 +48,9 @@ const Header = () => {
         </div>
         <div className="header__image">
           <img
-            src="/img/portfolio/min/header/profile-image-min.png"
+            width="600px"
+            height="600px"
+            src="/img/portfolio/min/header/profile-image-min.jpg"
             alt="Craig Puxty"
           />
         </div>

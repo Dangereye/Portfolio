@@ -1,3 +1,4 @@
+const svg = "/img/portfolio/svg";
 const myProjects = [
   {
     id: "1",
@@ -8,16 +9,29 @@ const myProjects = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi veritatis voluptatem, voluptatibus dolore officia atque recusandae, autem ipsum, iste sunt perferendis velit modi blanditiis aliquid saepe totam nihil. Nostrum, possimus.",
     portfolio_image: "/img/projects/tmdb-movies/min/capture-square-min.jpg",
     preview_image: "/img/projects/tmdb-movies/raw/display.jpg",
-    api: ["themoviedb.org"],
-    technologies: [
-      "html",
-      "css",
-      "sass",
-      "javascript",
-      "jsx",
-      "react",
-      "react-router-dom",
-      "react-query",
+    api: [
+      {
+        title: "themoviedb.org",
+        url: "https://www.themoviedb.org",
+      },
+    ],
+    tech: [
+      { image: `${svg}/html5.svg`, alt: "HTML5" },
+      { image: `${svg}/css3.svg`, alt: "CSS3" },
+      { image: `${svg}/sass.svg`, alt: "SCSS" },
+      { image: `${svg}/js.svg`, alt: "Javascript" },
+      { image: `${svg}/react.svg`, alt: "React" },
+    ],
+    third_party: [
+      {
+        title: "React Icons",
+        url: "https://react-icons.github.io/react-icons/",
+      },
+      {
+        title: "React Router",
+        url: "https://reactrouter.com/web/guides/quick-start",
+      },
+      { title: "React Query", url: "https://react-query.tanstack.com/" },
     ],
     links: { live: "/", code: "https://github.com/Dangereye/Movies" },
   },
@@ -30,15 +44,32 @@ const myProjects = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi veritatis voluptatem, voluptatibus dolore officia atque recusandae, autem ipsum, iste sunt perferendis velit modi blanditiis aliquid saepe totam nihil. Nostrum, possimus.",
     portfolio_image: "/img/projects/the-weather/min/capture-square-min.jpg",
     preview_image: "/img/projects/the-weather/raw/display.jpg",
-    api: ["weatherapi.com", "unsplash.com"],
-    technologies: [
-      "html",
-      "css",
-      "sass",
-      "javascript",
-      "jsx",
-      "react",
-      "react-router-dom",
+    api: [
+      {
+        title: "weatherapi.com",
+        url: "https://www.weatherapi.com/",
+      },
+      {
+        title: "unsplash.com",
+        url: "https://unsplash.com/developers",
+      },
+    ],
+    tech: [
+      { image: `${svg}/html5.svg`, alt: "HTML5" },
+      { image: `${svg}/css3.svg`, alt: "CSS3" },
+      { image: `${svg}/sass.svg`, alt: "SCSS" },
+      { image: `${svg}/js.svg`, alt: "Javascript" },
+      { image: `${svg}/react.svg`, alt: "React" },
+    ],
+    third_party: [
+      {
+        title: "React Icons",
+        url: "https://react-icons.github.io/react-icons/",
+      },
+      {
+        title: "React Router",
+        url: "https://reactrouter.com/web/guides/quick-start",
+      },
     ],
     links: { live: "/", code: "https://github.com/Dangereye/the-weather" },
   },
@@ -51,8 +82,30 @@ const myProjects = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi veritatis voluptatem, voluptatibus dolore officia atque recusandae, autem ipsum, iste sunt perferendis velit modi blanditiis aliquid saepe totam nihil. Nostrum, possimus.",
     portfolio_image: "/img/projects/starwars/min/capture-square-min.jpg",
     preview_image: "/img/projects/starwars/raw/display.jpg",
-    api: ["swapi.dev"],
-    technologies: ["html", "css", "sass", "javascript", "react"],
+    api: [
+      {
+        title: "swapi.dev",
+        url: "https://swapi.dev/",
+      },
+    ],
+    tech: [
+      { image: `${svg}/html5.svg`, alt: "HTML5" },
+      { image: `${svg}/css3.svg`, alt: "CSS3" },
+      { image: `${svg}/sass.svg`, alt: "SCSS" },
+      { image: `${svg}/js.svg`, alt: "Javascript" },
+      { image: `${svg}/react.svg`, alt: "React" },
+      { image: `${svg}/ps.svg`, alt: "Photoshop" },
+    ],
+    third_party: [
+      {
+        title: "React Icons",
+        url: "https://react-icons.github.io/react-icons/",
+      },
+      {
+        title: "React Router",
+        url: "https://reactrouter.com/web/guides/quick-start",
+      },
+    ],
     links: { live: "/", code: "https://github.com/Dangereye/starwars" },
   },
   {
@@ -65,6 +118,29 @@ const myProjects = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi veritatis voluptatem, voluptatibus dolore officia atque recusandae, autem ipsum, iste sunt perferendis velit modi blanditiis aliquid saepe totam nihil. Nostrum, possimus.",
     portfolio_image: "/img/projects/workwear/min/capture-square-min.jpg",
     preview_image: "/img/projects/workwear/raw/display.jpg",
+    tech: [
+      { image: `${svg}/html5.svg`, alt: "HTML5" },
+      { image: `${svg}/css3.svg`, alt: "CSS3" },
+      { image: `${svg}/ps.svg`, alt: "Adobe Photoshop" },
+      { image: `${svg}/ai.svg`, alt: "Adobe Illustrator" },
+    ],
+    third_party: [
+      {
+        title: "WordPress",
+        url: "https://wordpress.org/",
+      },
+      {
+        title: "Elementor",
+        url: "https://elementor.com/",
+      },
+    ],
+    deliverables: [
+      "9 Hero slides",
+      "Banner + 3 SVG icons",
+      "12 category images",
+      "10 Top brand images",
+      "Installation",
+    ],
     slides: [
       {
         title: "AXQ Face Cover",
