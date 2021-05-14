@@ -20,6 +20,9 @@
     a {
       margin: 5px 0;
     }
+    span:not(:first-child) {
+      color: $dark-grey;
+    }
 
     *:not(:first-child):not(:last-child)::after {
       margin-right: 1rem;
@@ -29,7 +32,7 @@
 
     span:first-of-type {
       margin-right: 1rem;
-      font-weight: 500;
+      font-weight: 700;
     }
 
     > img:not(:last-child) {
@@ -40,6 +43,10 @@
       width: 3.2rem;
       height: 3.2rem;
     }
+  }
+
+  &__technologies {
+    margin-bottom: 3rem;
   }
 
   &__description {

@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import ProjectDetails from "../components/sections/project/ProjectDetails";
+import ProjectPreview from "../components/sections/project/ProjectPreview";
 import Slider from "../components/shared/Slider";
 import myProjects from "../data/myProjects";
 
@@ -24,52 +26,7 @@ const WorkwearClothingDirect = ({ match, location, history }) => {
     <>
       <section className="project workwear">
         <div className="container">
-          <h4 className="project__type">
-            {project.type} - {project.date}
-          </h4>
-          <h1 className="project__title">{project.title}.</h1>
-
-          {project.tech && (
-            <>
-              <div className="project__technologies">
-                {project.tech.map((tech, index) => (
-                  <img
-                    key={`tech-${index}`}
-                    src={tech.image}
-                    alt={tech.alt}
-                    title={tech.alt}
-                  />
-                ))}
-              </div>
-            </>
-          )}
-
-          {project.third_party && (
-            <div className="project__third-party">
-              <span>Third party</span>
-              {project.third_party.map((item, index) => (
-                <a
-                  key={`third-party-${index}`}
-                  href={item.url}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  {item.title}
-                </a>
-              ))}
-            </div>
-          )}
-
-          {project.deliverables && (
-            <div className="project__third-party">
-              <span>Deliverables</span>
-              {project.deliverables.map((item, index) => (
-                <span key={`deliverable-${index}`}>{item}</span>
-              ))}
-            </div>
-          )}
-
-          <p className="project__description">{project.description}</p>
+          <ProjectDetails project={project} />
           <div className="project__buttons">
             <button
               className="btn primary large"
@@ -87,9 +44,7 @@ const WorkwearClothingDirect = ({ match, location, history }) => {
             </a>
           </div>
 
-          <div className="project__preview">
-            <img src={project.preview_image} alt={project.title} />
-          </div>
+          <ProjectPreview project={project} />
         </div>
       </section>
       <section id="slides" className="project workwear">
