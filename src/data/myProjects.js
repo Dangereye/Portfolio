@@ -123,6 +123,7 @@ const myProjects = [
       { image: `${svg}/css3.svg`, alt: "CSS3" },
       { image: `${svg}/ps.svg`, alt: "Adobe Photoshop" },
       { image: `${svg}/ai.svg`, alt: "Adobe Illustrator" },
+      { image: `${svg}/xd.svg`, alt: "Experience Design" },
     ],
     third_party: [
       {

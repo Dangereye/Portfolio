@@ -6,10 +6,10 @@ const Slides = ({ project, openSlider }) => {
       <div className="container">
         <h3 className="subtitle">Hero Slides</h3>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo officia
-          accusantium, est obcaecati sint veniam in quo, quas aliquam quis
-          temporibus sed? Iure repudiandae pariatur labore illum corporis, rem
-          architecto?
+          I created these image compositions using Adobe Photoshop. Product
+          images were sourced from supplier websites then cut, adjusted and
+          composited together with a little Photoshop know-how. Click an image
+          to view in fullscreen.
         </p>
         <div className="slides">
           {project.slides.map((slide, index) => (

@@ -9,10 +9,10 @@ const Slider = ({ images, sliderIndex, setSliderIsOpen }) => {
   const [btnColor, setBtnColor] = useState(images[sliderIndex].color);
   const strokeWidth = 30;
 
-  useEffect(() => setBtnColor(images[activeSlide].color), [
-    images,
-    activeSlide,
-  ]);
+  useEffect(
+    () => setBtnColor(images[activeSlide].color),
+    [images, activeSlide]
+  );
 
   const nextSlide = () => {
     if (pos > 0 - (images.length - 1) * 100) {
@@ -47,13 +47,16 @@ const Slider = ({ images, sliderIndex, setSliderIsOpen }) => {
           ))}
         </div>
       </div>
-      <button className="prev" onClick={prevSlide}>
+      <button className="btn slider-prev glass" onClick={prevSlide}>
         <Previous color={btnColor} stroke={strokeWidth} />
       </button>
-      <button className="next" onClick={nextSlide}>
+      <button className="btn slider-next glass" onClick={nextSlide}>
         <Next color={btnColor} stroke={strokeWidth} />
       </button>
-      <button className="close" onClick={() => setSliderIsOpen(false)}>
+      <button
+        className="btn slider-close glass"
+        onClick={() => setSliderIsOpen(false)}
+      >
         <Close color={btnColor} stroke={strokeWidth} />
       </button>
       <div className="navigator">

@@ -6,10 +6,9 @@ const TopBrands = ({ project }) => {
       <div className="container">
         <h3 className="subtitle">Top brands</h3>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-          reiciendis qui inventore sunt quos doloremque nostrum, in, eius,
-          corporis accusamus quidem? Odit qui nihil et provident delectus
-          tenetur voluptatum cumque!
+          These top brand logos could have benefited from some dynamic CSS
+          styling but as with the previously mentioned lack of control using
+          eBay, they were coloured using Photoshop.
         </p>
         <div className="top-brands">
           {project.top_brands.map((brand, index) => (

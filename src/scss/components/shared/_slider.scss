@@ -31,39 +31,15 @@
   }
 
   button {
-    padding: clamp(1rem, 1.5vw, 2rem);
-    position: absolute;
-    top: 50%;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 50%;
-    background-color: transparent;
-    background-image: linear-gradient(
-      to bottom right,
-      rgba(255, 255, 255, 0.1),
-      rgba(255, 255, 255, 0.05)
-    );
-    backdrop-filter: blur(6px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transform: translateY(-50%);
-
-    svg {
-      width: 2rem;
-      height: 2rem;
-
-      path {
-        transition: 0.4s;
-      }
-    }
-
-    &.prev {
+    &.slider-prev {
       left: 2rem;
     }
-    &.next {
+    &.slider-next {
       right: 2rem;
     }
 
-    &.close {
-      top: 4rem;
+    &.slider-close {
+      top: 6rem;
       right: 2rem;
     }
   }

@@ -6,10 +6,8 @@ const Banner = () => {
       <div className="container">
         <h3 className="subtitle">Banner</h3>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo officia
-          accusantium, est obcaecati sint veniam in quo, quas aliquam quis
-          temporibus sed? Iure repudiandae pariatur labore illum corporis, rem
-          architecto?
+          A straightforward HTML, CSS responsive banner.
+          <br /> SVG icons created using Adobe Illustrator.
         </p>
         <div className="banner">
           <div className="banner__block">
