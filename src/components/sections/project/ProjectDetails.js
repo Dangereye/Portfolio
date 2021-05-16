@@ -38,6 +38,7 @@ const ProjectDetails = ({ project, history }) => {
       )}
 
       <p className="project__description">{project.description}</p>
+      {project.brief && <p>{project.brief}</p>}
     </>
   );
 };

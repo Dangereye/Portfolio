@@ -35,7 +35,7 @@ const WorkwearClothingDirect = ({ match, location, history }) => {
               className="btn primary large"
               onClick={() => history.push(`${location.pathname}#slides`)}
             >
-              View Details
+              More Information
             </button>
             <a
               className="btn secondary large"

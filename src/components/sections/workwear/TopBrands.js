@@ -6,9 +6,8 @@ const TopBrands = ({ project }) => {
       <div className="container">
         <h3 className="subtitle">Top brands</h3>
         <p>
-          These top brand logos could have benefited from some dynamic CSS
-          styling but as with the previously mentioned lack of control using
-          eBay, they were coloured using Photoshop.
+          Simple jpeg images with hyperlinks to the relevant products, adjusted
+          in Adobe Photoshop for use across both platforms.
         </p>
         <div className="top-brands">
           {project.top_brands.map((brand, index) => (

@@ -4,20 +4,22 @@ const Categories = ({ project }) => {
   return (
     <section className="workwear">
       <div className="container">
-        <h3 className="subtitle">Categories</h3>
+        <h3 className="subtitle">Categories section</h3>
         <p>
-          My intention for the{" "}
+          The{" "}
           <a
             href="https://xd.adobe.com/view/682ffa14-a1cb-4b91-8646-29fc54834cd8-3d7c/?fullscreen"
             target="_blank"
             rel="noreferrer"
           >
-            original design
+            original concept
           </a>{" "}
-          was a CSS grid layout, which was a little more visually interesting.
-          However, as the products were to be initially used with an eBay store
-          where I had no control over the layout, the client requested the
-          images be uniform in size for consistency across both domains.
+          was based on a CSS grid layout, however, because of an inability to
+          edit the eBay store template, a compromise had to be made. To achieve
+          the desired result, images at predetermined sizes were necessary. A
+          similar style was applied to WordPress to keep consistency, but using
+          background images with rich HTML text for SEO with the addition of an
+          interactive button.
         </p>
         <div className="categories">
           {project.categories.map((category, index) => (

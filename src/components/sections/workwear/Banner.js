@@ -6,8 +6,8 @@ const Banner = () => {
       <div className="container">
         <h3 className="subtitle">Banner</h3>
         <p>
-          A straightforward HTML, CSS responsive banner.
-          <br /> SVG icons created using Adobe Illustrator.
+          The banner was provided as both a responsive HTML, CSS template with
+          SVG icons and as 3 separate images for use with eBay.
         </p>
         <div className="banner">
           <div className="banner__block">

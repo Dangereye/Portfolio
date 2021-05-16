@@ -115,7 +115,9 @@ const myProjects = [
     date: "2020",
     title: "Workwear",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi veritatis voluptatem, voluptatibus dolore officia atque recusandae, autem ipsum, iste sunt perferendis velit modi blanditiis aliquid saepe totam nihil. Nostrum, possimus.",
+      "Client workwearclothingdirect.com is an eCommerce platform that specialises in business apparel. At the helm, my brother Chris asked me to customise pre-purchased templates for both eBay and WordPress versions of the store.",
+    brief:
+      "Brief - Design and create product images to populate a carousel. A banner with short information concerning delivery, returns and discounts. A section containing images for quick access to products for specific sectors and to display top brand images, with links to browse relevant products.",
     portfolio_image: "/img/projects/workwear/min/capture-square-min.jpg",
     preview_image: "/img/projects/workwear/raw/display.jpg",
     tech: [
@@ -136,11 +138,10 @@ const myProjects = [
       },
     ],
     deliverables: [
-      "9 Hero slides",
-      "Banner + 3 SVG icons",
-      "12 category images",
-      "10 Top brand images",
-      "Installation",
+      "Carousel images",
+      "Banner + SVG icons",
+      "Category images",
+      "Top brand images",
     ],
     slides: [
       {
