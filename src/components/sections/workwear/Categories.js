@@ -8,7 +8,7 @@ const Categories = ({ project }) => {
         <p>
           My intention for the{" "}
           <a
-            href="https://xd.adobe.com/view/682ffa14-a1cb-4b91-8646-29fc54834cd8-3d7c/"
+            href="https://xd.adobe.com/view/682ffa14-a1cb-4b91-8646-29fc54834cd8-3d7c/?fullscreen"
             target="_blank"
             rel="noreferrer"
           >

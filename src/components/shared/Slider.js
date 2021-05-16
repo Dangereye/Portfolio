@@ -6,11 +6,11 @@ import Previous from "../../svg/Previous";
 const Slider = ({ images, sliderIndex, setSliderIsOpen }) => {
   const [pos, setPos] = useState(0 - sliderIndex * 100);
   const [activeSlide, setActiveSlide] = useState(sliderIndex);
-  const [btnColor, setBtnColor] = useState(images[sliderIndex].color);
+  const [activeColor, setActiveColor] = useState(images[sliderIndex].color);
   const strokeWidth = 30;
 
   useEffect(
-    () => setBtnColor(images[activeSlide].color),
+    () => setActiveColor(images[activeSlide].color),
     [images, activeSlide]
   );
 
@@ -48,26 +48,29 @@ const Slider = ({ images, sliderIndex, setSliderIsOpen }) => {
         </div>
       </div>
       <button className="btn slider-prev glass" onClick={prevSlide}>
-        <Previous color={btnColor} stroke={strokeWidth} />
+        <Previous color={activeColor} stroke={strokeWidth} />
       </button>
       <button className="btn slider-next glass" onClick={nextSlide}>
-        <Next color={btnColor} stroke={strokeWidth} />
+        <Next color={activeColor} stroke={strokeWidth} />
       </button>
       <button
         className="btn slider-close glass"
         onClick={() => setSliderIsOpen(false)}
       >
-        <Close color={btnColor} stroke={strokeWidth} />
+        <Close color={activeColor} stroke={strokeWidth} />
       </button>
       <div className="navigator">
         {images.map((item, index) => (
-          <div
+          <button
+            className="btn slider-navigation glass"
             key={`navigator-${index}`}
             style={{
-              backgroundColor: pos === 0 - index * 100 ? btnColor : "#fefefe",
+              color: pos === 0 - index * 100 ? activeColor : "#f9f9f9",
             }}
             onClick={() => setSlide(index)}
-          ></div>
+          >
+            {index + 1}
+          </button>
         ))}
       </div>
     </div>
