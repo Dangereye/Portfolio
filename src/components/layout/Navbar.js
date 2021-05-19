@@ -50,7 +50,11 @@ const Navbar = ({ navIsOpen, setNavIsOpen }) => {
           <li className="nav__link">
             <Link to="/about">About</Link>
           </li>
-          <li className="nav__link">Download CV</li>
+          <li className="nav__link">
+            <a href="/cv/cv.txt" download>
+              Download CV
+            </a>
+          </li>
           <li className="nav__link">
             <Link to="/contact">Contact</Link>
           </li>

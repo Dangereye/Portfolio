@@ -43,7 +43,7 @@ const Portfolio = () => {
                         : `/project/${item.id}`
                     }
                   >
-                    <img src={item.portfolio_image} alt={item.title} />
+                    <img src={item.preview_image} alt={item.title} />
                   </Link>
                 </div>
                 <div className="project__info">

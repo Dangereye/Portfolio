@@ -9,10 +9,10 @@ const Skills = () => {
         <h2 className="section-title">Experience</h2>
         <div className="skills-list">
           {mySkills.map((list, index) => (
-            <ul className="skills-list__group">
+            <ul className="skills-list__group" key={`list-${index}`}>
               <h3>{list.title}</h3>
               {list.skills.map((skill, index) => (
-                <li className="skills-list__item">
+                <li className="skills-list__item" key={skill.title}>
                   <img src={skill.svg} alt={skill.title} />
                   <span>{skill.title}</span>
                 </li>

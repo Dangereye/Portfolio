@@ -4,11 +4,10 @@ const myProjects = [
     id: "1",
     type: "React",
     date: "2021",
-    title: "TMDB Movies",
+    title: "Movies",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi veritatis voluptatem, voluptatibus dolore officia atque recusandae, autem ipsum, iste sunt perferendis velit modi blanditiis aliquid saepe totam nihil. Nostrum, possimus.",
-    portfolio_image: "/img/projects/tmdb-movies/min/capture-square-min.jpg",
-    preview_image: "/img/projects/tmdb-movies/raw/display.jpg",
+      "Movies is a website to search and explore movies, television and cast members. TMDB has vast, expansive and ever-evolving data, prompting experimentation with React Query for this project because of its ability to easily cache data, which I think worked well. The user experience feels smooth and optimised.",
+    preview_image: "/img/projects/tmdb-movies/min/preview-min.jpg",
     api: [
       {
         title: "themoviedb.org",
@@ -42,8 +41,7 @@ const myProjects = [
     title: "The Weather",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi veritatis voluptatem, voluptatibus dolore officia atque recusandae, autem ipsum, iste sunt perferendis velit modi blanditiis aliquid saepe totam nihil. Nostrum, possimus.",
-    portfolio_image: "/img/projects/the-weather/min/capture-square-min.jpg",
-    preview_image: "/img/projects/the-weather/raw/display.jpg",
+    preview_image: "/img/projects/the-weather/min/preview-min.jpg",
     api: [
       {
         title: "weatherapi.com",
@@ -80,8 +78,7 @@ const myProjects = [
     title: "Starwars",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi veritatis voluptatem, voluptatibus dolore officia atque recusandae, autem ipsum, iste sunt perferendis velit modi blanditiis aliquid saepe totam nihil. Nostrum, possimus.",
-    portfolio_image: "/img/projects/starwars/min/capture-square-min.jpg",
-    preview_image: "/img/projects/starwars/raw/display.jpg",
+    preview_image: "/img/projects/starwars/min/preview-min.jpg",
     api: [
       {
         title: "swapi.dev",
@@ -118,8 +115,7 @@ const myProjects = [
       "Client workwearclothingdirect.com is an eCommerce platform that specialises in business apparel. At the helm, my brother Chris asked me to customise pre-purchased templates for both eBay and WordPress versions of the store.",
     brief:
       "Brief - Design and create product images to populate a carousel. A banner with short information concerning delivery, returns and discounts. A section containing images for quick access to products for specific sectors and to display top brand images, with links to browse relevant products.",
-    portfolio_image: "/img/projects/workwear/min/capture-square-min.jpg",
-    preview_image: "/img/projects/workwear/raw/display.jpg",
+    preview_image: "/img/projects/workwear/min/preview-min.jpg",
     tech: [
       { image: `${svg}/html5.svg`, alt: "HTML5" },
       { image: `${svg}/css3.svg`, alt: "CSS3" },
@@ -285,6 +281,41 @@ const myProjects = [
       },
     ],
     links: { live: "https://www.workwearclothingdirect.com/" },
+  },
+  {
+    id: "5",
+    type: "React",
+    date: "2021",
+    title: "Portfolio",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi veritatis voluptatem, voluptatibus dolore officia atque recusandae, autem ipsum, iste sunt perferendis velit modi blanditiis aliquid saepe totam nihil. Nostrum, possimus.",
+    preview_image: "/img/projects/portfolio/min/preview-min.jpg",
+    tech: [
+      { image: `${svg}/html5.svg`, alt: "HTML5" },
+      { image: `${svg}/css3.svg`, alt: "CSS3" },
+      { image: `${svg}/sass.svg`, alt: "SCSS" },
+      { image: `${svg}/js.svg`, alt: "Javascript" },
+      { image: `${svg}/react.svg`, alt: "React" },
+      { image: `${svg}/ps.svg`, alt: "Photoshop" },
+      { image: `${svg}/ai.svg`, alt: "Illustrator" },
+      { image: `${svg}/xd.svg`, alt: "Experience Design" },
+      { image: `${svg}/gsap.svg`, alt: "GSAP" },
+    ],
+    third_party: [
+      {
+        title: "React Icons",
+        url: "https://react-icons.github.io/react-icons/",
+      },
+      {
+        title: "React Router",
+        url: "https://reactrouter.com/web/guides/quick-start",
+      },
+      {
+        title: "Node Sass",
+        url: "https://www.npmjs.com/package/node-sass",
+      },
+    ],
+    links: { live: "/", code: "https://github.com/Dangereye/the-weather" },
   },
 ];
 

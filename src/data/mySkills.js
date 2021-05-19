@@ -22,9 +22,9 @@ const mySkills = [
   {
     title: "Back-end",
     skills: [
-      { svg: `${svg}/nodejs.svg`, title: "NodeJS - basic" },
-      { svg: `${svg}/expressjs.svg`, title: "Express - basic" },
-      { svg: `${svg}/mongoose.svg`, title: "Mongoose - basic" },
+      { svg: `${svg}/nodejs.svg`, title: "Nodejs - basic" },
+      { svg: `${svg}/expressjs.svg`, title: "Expressjs - basic" },
+      { svg: `${svg}/mongoose.svg`, title: "Mongoosejs - basic" },
       { svg: `${svg}/mongodb.svg`, title: "MongoDB - basic" },
     ],
   },
