@@ -1,0 +1,43 @@
+.form {
+  width: 100%;
+  max-width: 80rem;
+  margin: 0 auto;
+  margin-top: $verticalPadding;
+
+  &__groups {
+    > *:not(:last-child) {
+      margin-right: 2rem;
+
+      @media (max-width: 561px) {
+        margin-right: 0;
+      }
+    }
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  }
+
+  &__group {
+    margin-bottom: 2rem;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 1.2rem;
+  }
+
+  &.double {
+    width: 50%;
+  }
+
+  textarea {
+    min-height: 20rem;
+    resize: vertical;
+  }
+}

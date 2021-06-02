@@ -30,6 +30,7 @@ const Portfolio = () => {
             PS
           </button>
         </div>
+
         <div className="projects">
           {myProjects
             .filter((item) => (option !== "all" ? item.type === option : item))

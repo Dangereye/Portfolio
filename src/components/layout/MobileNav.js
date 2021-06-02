@@ -16,7 +16,7 @@ const MobileNav = ({ navIsOpen, setNavIsOpen }) => {
           </Link>
         </li>
         <li className="mobile-nav__link">
-          <Link to="/about" onClick={() => setNavIsOpen(false)}>
+          <Link to="/#about" onClick={() => setNavIsOpen(false)}>
             <IoMdPerson className="mobile-nav__icon" />
             <span className="mobile-nav__text">About</span>
           </Link>
@@ -32,7 +32,7 @@ const MobileNav = ({ navIsOpen, setNavIsOpen }) => {
           <span className="mobile-nav__text">Download CV</span>
         </li>
         <li className="mobile-nav__link">
-          <Link to="/contact" onClick={() => setNavIsOpen(false)}>
+          <Link to="/#contact" onClick={() => setNavIsOpen(false)}>
             <FaComments className="mobile-nav__icon" />
             <span className="mobile-nav__text">Contact</span>
           </Link>
