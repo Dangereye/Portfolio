@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import myProjects from "../../data/myProjects";
+import SectionTitle from "../shared/SectionTitle";
 
 const Portfolio = () => {
   const [option, setOption] = useState("all");
   return (
     <section id="portfolio">
       <div className="container">
-        <h3 className="section-title">Portfolio</h3>
-        <h2 className="section-title">Recent Projects</h2>
+        <SectionTitle sub="Portfolio" title="Recent Projects" />
 
         <div className="options">
           <button

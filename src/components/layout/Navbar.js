@@ -48,7 +48,7 @@ const Navbar = ({ navIsOpen, setNavIsOpen }) => {
             <Link to="/#portfolio">Portfolio</Link>
           </li>
           <li className="nav__link">
-            <Link to="/about">About</Link>
+            <Link to="/#about">About</Link>
           </li>
           <li className="nav__link">
             <a href="/cv/cv.txt" download>
@@ -56,7 +56,7 @@ const Navbar = ({ navIsOpen, setNavIsOpen }) => {
             </a>
           </li>
           <li className="nav__link">
-            <Link to="/contact">Contact</Link>
+            <Link to="/#contact">Contact</Link>
           </li>
         </ul>
       </div>

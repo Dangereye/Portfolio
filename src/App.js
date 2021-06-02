@@ -3,8 +3,6 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navbar from "./components/layout/Navbar";
 import MobileNav from "./components/layout/MobileNav";
 import Home from "./pages/Home";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
 import Project from "./pages/Project";
 import WorkwearClothingDirect from "./pages/WorkwearClothingDirect";
 import Error404 from "./pages/Error404";
@@ -20,8 +18,6 @@ function App() {
         <main>
           <Switch>
             <Route path="/" exact component={Home} />
-            <Route path="/about" exact component={About} />
-            <Route path="/contact" exact component={Contact} />
             <Route path="/project/:id" exact component={Project} />
             <Route
               path="/project/:id/workwearclothingdirect"

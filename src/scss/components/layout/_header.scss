@@ -17,13 +17,18 @@
     flex: 1 1 60%;
 
     h1,
-    h3,
-    h4 {
+    &__subtitle {
       color: $light-color;
     }
 
-    h4 span {
-      color: $accent-color;
+    &__subtitle {
+      font-size: clamp(1.8rem, 2.5vw, 2.4rem);
+      font-weight: 600;
+      margin-bottom: 1rem;
+
+      span {
+        color: $accent-color;
+      }
     }
 
     &__paragraph {
@@ -32,6 +37,11 @@
 
       p {
         color: $light-grey;
+
+        a {
+          color: inherit;
+          text-decoration: underline;
+        }
       }
 
       @media (max-width: 500px) {

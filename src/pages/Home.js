@@ -1,8 +1,10 @@
 import React, { useEffect } from "react";
 import useScroll from "../hooks/useScroll";
-import Header from "../components/sections/home/Header";
+import Header from "../components/sections/Header";
 import Skills from "../components/sections/Skills";
 import Portfolio from "../components/sections/Portfolio";
+import Contact from "../components/sections/Contact";
+import About from "../components/sections/About";
 
 const Home = () => {
   const [hash, startScroll] = useScroll();
@@ -16,6 +18,8 @@ const Home = () => {
       <Header />
       <Skills />
       <Portfolio />
+      <About />
+      <Contact />
     </>
   );
 };

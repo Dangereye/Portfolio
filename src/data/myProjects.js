@@ -32,7 +32,10 @@ const myProjects = [
       },
       { title: "React Query", url: "https://react-query.tanstack.com/" },
     ],
-    links: { live: "/", code: "https://github.com/Dangereye/Movies" },
+    links: {
+      live: "https://pux-movies.netlify.app",
+      code: "https://github.com/Dangereye/Movies",
+    },
   },
   {
     id: "2",
@@ -40,7 +43,7 @@ const myProjects = [
     date: "2021",
     title: "The Weather",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi veritatis voluptatem, voluptatibus dolore officia atque recusandae, autem ipsum, iste sunt perferendis velit modi blanditiis aliquid saepe totam nihil. Nostrum, possimus.",
+      "The weather utilises the context API and a single reducer to achieve its global state. Header images provided by Unsplash update using keywords from the current weather conditions. Other functionality includes geolocation, manual location search, current conditions, hourly conditions, precipitation, wind, astronomy and settings.",
     preview_image: "/img/projects/the-weather/min/preview-min.jpg",
     api: [
       {
@@ -69,7 +72,10 @@ const myProjects = [
         url: "https://reactrouter.com/web/guides/quick-start",
       },
     ],
-    links: { live: "/", code: "https://github.com/Dangereye/the-weather" },
+    links: {
+      live: "https://pux-the-weather.netlify.app",
+      code: "https://github.com/Dangereye/the-weather",
+    },
   },
   {
     id: "3",
@@ -77,7 +83,7 @@ const myProjects = [
     date: "2021",
     title: "Starwars",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi veritatis voluptatem, voluptatibus dolore officia atque recusandae, autem ipsum, iste sunt perferendis velit modi blanditiis aliquid saepe totam nihil. Nostrum, possimus.",
+      "As a massive fan of the series myself, Starwars was a fun project to create. Users can explore detailed information regarding movies, people, species, vehicles, planets and starships from the first six movies. While able to acquire some imagery, icons are primarily to avoid any nasty copyright issues.",
     preview_image: "/img/projects/starwars/min/preview-min.jpg",
     api: [
       {
@@ -103,7 +109,10 @@ const myProjects = [
         url: "https://reactrouter.com/web/guides/quick-start",
       },
     ],
-    links: { live: "/", code: "https://github.com/Dangereye/starwars" },
+    links: {
+      live: "https://pux-starwars.netlify.app",
+      code: "https://github.com/Dangereye/starwars",
+    },
   },
   {
     id: "4",
