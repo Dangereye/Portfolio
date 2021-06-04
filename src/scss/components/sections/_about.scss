@@ -1,0 +1,31 @@
+#about {
+  .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: $verticalPadding;
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+  .section-title {
+    text-align: left;
+  }
+
+  .location {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    font-size: clamp(1.8rem, 2.5vw, 2.4rem);
+
+    svg {
+      margin-right: 5px;
+      fill: $accent-color;
+    }
+    span {
+      font-weight: 500;
+    }
+  }
+}

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { IoHome } from "react-icons/io5";
 import { IoMdPerson, IoMdBrush } from "react-icons/io";
 import { HiDocumentDownload } from "react-icons/hi";
-import { FaComments } from "react-icons/fa";
+import { FaComments, FaBook } from "react-icons/fa";
 
 const MobileNav = ({ navIsOpen, setNavIsOpen }) => {
   return (
@@ -16,15 +16,21 @@ const MobileNav = ({ navIsOpen, setNavIsOpen }) => {
           </Link>
         </li>
         <li className="mobile-nav__link">
-          <Link to="/#about" onClick={() => setNavIsOpen(false)}>
-            <IoMdPerson className="mobile-nav__icon" />
-            <span className="mobile-nav__text">About</span>
+          <Link to="/#skills" onClick={() => setNavIsOpen(false)}>
+            <FaBook className="mobile-nav__icon" />
+            <span className="mobile-nav__text">Skills</span>
           </Link>
         </li>
         <li className="mobile-nav__link">
           <Link to="/#portfolio" onClick={() => setNavIsOpen(false)}>
             <IoMdBrush className="mobile-nav__icon" />
             <span className="mobile-nav__text">Portfolio</span>
+          </Link>
+        </li>
+        <li className="mobile-nav__link">
+          <Link to="/#about" onClick={() => setNavIsOpen(false)}>
+            <IoMdPerson className="mobile-nav__icon" />
+            <span className="mobile-nav__text">About</span>
           </Link>
         </li>
         <li className="mobile-nav__link">

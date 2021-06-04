@@ -45,6 +45,9 @@ const Navbar = ({ navIsOpen, setNavIsOpen }) => {
 
         <ul className="nav__links">
           <li className="nav__link">
+            <Link to="/#skills">Skills</Link>
+          </li>
+          <li className="nav__link">
             <Link to="/#portfolio">Portfolio</Link>
           </li>
           <li className="nav__link">
