@@ -10,14 +10,14 @@ const Skills = () => {
     gsap.from(".skills-list__group", {
       y: 100,
       opacity: 0,
-      duration: 0.4,
+      duration: 1,
       stagger: 0.1,
-      ease: "ease-in",
+      ease: "back.out(2.5)",
       scrollTrigger: {
         trigger: "#skills",
         start: "top 101",
         toggleActions: "play none none none",
-        markers: true,
+        markers: false,
       },
     });
   }, []);
