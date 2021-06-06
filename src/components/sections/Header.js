@@ -27,9 +27,7 @@ const Header = () => {
           <div className="header__typography__subtitle three">
             Front-end Developer.
           </div>
-          <h1 className="header__typography__title two">
-            Craig <span className="start">Pux</span>ty
-          </h1>
+          <h1 className="header__typography__title two">Craig Puxty</h1>
           <p className="one">
             Projects created with <span>p</span>assion, producing great{" "}
             <span>u</span>
