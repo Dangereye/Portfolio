@@ -10,7 +10,7 @@
   text-align: center;
   border: none;
   outline: none;
-  transition: 0.4s;
+  transition: color 0.4s, background-color 0.4s;
   cursor: pointer;
 
   &.block {

@@ -2,60 +2,47 @@ import React, { useEffect } from "react";
 import gsap from "gsap";
 import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
+import Pux from "./Pux";
 
 const Header = () => {
   const history = useHistory();
+
   useEffect(() => {
-    gsap.from(".header__typography__subtitle", {
-      y: -50,
-      duration: 0.5,
-      opacity: 0,
+    const tl = gsap.timeline({
+      delay: 1,
+      duration: 1,
+      ease: "ease-in-out",
     });
-    gsap.from(".header__typography__title", {
-      y: -50,
-      duration: 0.5,
-      opacity: 0,
-      delay: 0.2,
-    });
-    gsap.from(".header__typography__paragraph", {
-      y: -50,
-      duration: 0.5,
-      opacity: 0,
-      delay: 0.4,
-    });
-  });
+    tl.from(".one", { scale: 0, opacity: 0 });
+    tl.from(".two", { y: -100, delay: 1, opacity: 0 });
+    tl.from(".three", { y: -100, opacity: 0 }, "<.3");
+    tl.from(".four", { y: 100, opacity: 0, ease: "back.out(2.7)" }, "<.6");
+  }, []);
 
   return (
     <header className="header">
+      <Pux />
       <div className="container">
         <div className="header__typography">
-          <div className="header__typography__subtitle">
-            <span>Hello,</span> I'm Craig Puxty.
+          <div className="header__typography__subtitle three">
+            Front-end Developer.
           </div>
-          <h1 className="header__typography__title">Front-end Developer</h1>
-          <div className="header__typography__paragraph">
-            <p>
-              Browse a selection of my recent projects, or download my CV.
-              <br /> Would you like to know more?{" "}
-              <Link to="/#contact">Let's talk!</Link>
-            </p>
-          </div>
-          <button
-            className="btn primary large"
-            onClick={() => history.push("/#portfolio")}
-          >
-            Recent Projects
-          </button>
-          <button className="btn secondary large">Download CV</button>
+          <h1 className="header__typography__title two">
+            Craig <span className="start">Pux</span>ty
+          </h1>
+          <p className="one">
+            Projects created with <span>p</span>assion, producing great{" "}
+            <span>u</span>
+            ser e<span>x</span>
+            periences!
+          </p>
         </div>
-        <div className="header__image">
-          <img
-            width="600px"
-            height="600px"
-            src="/img/portfolio/min/header/profile-image-min.jpg"
-            alt="Craig Puxty"
-          />
-        </div>
+        <button
+          className="btn secondary large four"
+          onClick={() => history.push("/#portfolio")}
+        >
+          Recent Projects
+        </button>
       </div>
     </header>
   );

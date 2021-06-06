@@ -13,6 +13,7 @@ const Home = () => {
     const target = document.getElementById(hash);
     startScroll(target);
   });
+
   return (
     <>
       <Header />

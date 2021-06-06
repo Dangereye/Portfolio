@@ -108,6 +108,13 @@
   &__link {
     color: inherit;
 
+    &:last-child {
+      padding: 0.8rem 1.6rem;
+      color: #fff;
+      border-radius: 4.3rem;
+      background-color: $accent-color;
+    }
+
     a {
       padding: 0.4rem 0;
       color: inherit;
