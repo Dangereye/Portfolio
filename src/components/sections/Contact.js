@@ -10,6 +10,7 @@ const Contact = () => {
       y: 100,
       opacity: 0,
       stagger: 0.1,
+      ease: "back.out(2.5)",
       scrollTrigger: {
         trigger: "#contact",
         start: "top 300",

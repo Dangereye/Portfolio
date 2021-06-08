@@ -1,18 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
+import gsap from "gsap";
 import ProjectLinkList from "./ProjectLinkList";
 
-const ProjectDetails = ({ project, history }) => {
+const ProjectDetails = ({ project }) => {
+  useEffect(() => {
+    gsap.from(".image", { scale: 0, stagger: 0.1, ease: "back.out(4)" });
+  }, []);
   return (
     <>
-      <h4 className="project__type">
+      <div className="project__type">
         {project.type} - {project.date}
-      </h4>
+      </div>
       <h1 className="project__title">{project.title}.</h1>
 
       {project.tech && (
         <div className="project__technologies">
           {project.tech.map((tech, index) => (
             <img
+              className="image"
               key={`tech-${index}`}
               src={tech.image}
               alt={tech.alt}
