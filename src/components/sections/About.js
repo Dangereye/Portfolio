@@ -1,6 +1,4 @@
 import React from "react";
-import { ImLocation } from "react-icons/im";
-import SectionTitle from "../shared/SectionTitle";
 
 const About = () => {
   return (

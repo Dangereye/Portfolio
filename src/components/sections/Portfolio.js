@@ -1,10 +1,42 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import myProjects from "../../data/myProjects";
 import SectionTitle from "../shared/SectionTitle";
+gsap.registerPlugin(ScrollTrigger);
 
 const Portfolio = () => {
   const [option, setOption] = useState("all");
+
+  useEffect(() => {
+    gsap.from(".option", {
+      scale: 0,
+      duration: 1,
+      stagger: 0.2,
+      ease: "back.out(2.5)",
+      scrollTrigger: {
+        trigger: "#portfolio",
+        start: "top center",
+        toggleActions: "play none none none",
+        markers: true,
+      },
+    });
+
+    gsap.from(".project", {
+      y: 100,
+      opacity: 0,
+      duration: 1,
+      stagger: 0.1,
+      ease: "back.out(2.5)",
+      scrollTrigger: {
+        trigger: "#portfolio",
+        start: "top 300",
+        toggleActions: "play none none none",
+        markers: true,
+      },
+    });
+  }, []);
   return (
     <section id="portfolio">
       <div className="container">

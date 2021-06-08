@@ -15,7 +15,7 @@ const Skills = () => {
       ease: "back.out(2.5)",
       scrollTrigger: {
         trigger: "#skills",
-        start: "top 101",
+        start: "top 300",
         toggleActions: "play none none none",
         markers: false,
       },

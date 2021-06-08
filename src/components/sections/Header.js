@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import gsap from "gsap";
 import { useHistory } from "react-router-dom";
-import { Link } from "react-router-dom";
 import Pux from "./Pux";
 
 const Header = () => {
@@ -20,7 +19,7 @@ const Header = () => {
       stagger: 0.3,
       ease: "ease-in",
     });
-    tl.from(".btn", { y: 100, opacity: 0, ease: "back.out(2.5)" });
+    tl.from(".header-btn", { y: 100, opacity: 0, ease: "back.out(2.5)" });
   }, []);
 
   return (
@@ -40,7 +39,7 @@ const Header = () => {
           </p>
         </div>
         <button
-          className="btn secondary large"
+          className="btn header-btn secondary large"
           onClick={() => history.push("/#portfolio")}
         >
           Recent Projects
