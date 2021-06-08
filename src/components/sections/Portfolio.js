@@ -19,7 +19,7 @@ const Portfolio = () => {
         trigger: "#portfolio",
         start: "top center",
         toggleActions: "play none none none",
-        markers: true,
+        markers: false,
       },
     });
 
@@ -33,7 +33,7 @@ const Portfolio = () => {
         trigger: "#portfolio",
         start: "top 300",
         toggleActions: "play none none none",
-        markers: true,
+        markers: false,
       },
     });
   }, []);
