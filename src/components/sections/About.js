@@ -9,7 +9,7 @@ const About = () => {
       .timeline({
         scrollTrigger: {
           trigger: "#about",
-          start: "top center",
+          start: "top 300",
           toggleActions: "play none none none",
           markers: false,
         },
