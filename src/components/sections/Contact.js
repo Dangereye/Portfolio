@@ -54,6 +54,7 @@ const Contact = () => {
           className="form"
           onSubmit={handleSubmit}
         >
+          <input type="hidden" name="form-name" value="contact" />
           <div className="form__group line">
             <label htmlFor="company">Company</label>
             <input
