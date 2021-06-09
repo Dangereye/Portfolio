@@ -64,11 +64,11 @@ const Contact = () => {
             />
           </div>
           <div className="form__group line">
-            <label htmlFor="name">Name xyz</label>
+            <label htmlFor="names">Name</label>
             <input
               type="text"
-              id="name"
-              name="name"
+              id="names"
+              name="names"
               value={name}
               onChange={(e) => setName(e.target.value)}
             />
