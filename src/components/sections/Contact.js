@@ -64,7 +64,7 @@ const Contact = () => {
             />
           </div>
           <div className="form__group line">
-            <label htmlFor="first-name">Name</label>
+            <label htmlFor="name">Name xyz</label>
             <input
               type="text"
               id="name"
