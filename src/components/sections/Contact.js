@@ -13,13 +13,21 @@ const Contact = () => {
   const [message, setMessage] = useState("");
   const [all, setAll] = useState("");
 
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(
+        (key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+      )
+      .join("&");
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setAll({ company, firstName, lastName, email, subject, message });
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encodeURI({
+      body: encode({
         "form-name": "contact",
         ...all,
       }),
@@ -47,13 +55,14 @@ const Contact = () => {
     <section id="contact">
       <div className="container">
         <SectionTitle sub="Let's talk" title="Contact Me" />
-        <form name="contact" onSubmit={handleSubmit}>
+        <form className="form" name="contact" onSubmit={handleSubmit}>
           <div className="form__group line">
             <label htmlFor="company">Company</label>
             <input
               type="text"
               id="company"
               name="company"
+              value="company"
               onChange={(e) => setCompany(e.target.value)}
             />
           </div>
@@ -64,6 +73,7 @@ const Contact = () => {
                 type="text"
                 id="first-name"
                 name="first-name"
+                value="firstName"
                 onChange={(e) => setFirstName(e.target.value)}
               />
             </div>
@@ -73,6 +83,7 @@ const Contact = () => {
                 type="text"
                 id="last-name"
                 name="last-name"
+                value="lastName"
                 onChange={(e) => setLastName(e.target.value)}
               />
             </div>
@@ -83,6 +94,7 @@ const Contact = () => {
               type="email"
               id="email"
               name="email"
+              value="email"
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
@@ -92,6 +104,7 @@ const Contact = () => {
               type="text"
               id="subject"
               name="subject"
+              value="email"
               onChange={(e) => setSubject(e.target.value)}
             />
           </div>
@@ -100,6 +113,7 @@ const Contact = () => {
             <textarea
               id="message"
               name="message"
+              value="message"
               onChange={(e) => setMessage(e.target.value)}
             ></textarea>
           </div>
