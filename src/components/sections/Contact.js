@@ -62,7 +62,7 @@ const Contact = () => {
               type="text"
               id="company"
               name="company"
-              value="company"
+              value={company}
               onChange={(e) => setCompany(e.target.value)}
             />
           </div>
@@ -73,7 +73,7 @@ const Contact = () => {
                 type="text"
                 id="first-name"
                 name="first-name"
-                value="firstName"
+                value={firstName}
                 onChange={(e) => setFirstName(e.target.value)}
               />
             </div>
@@ -83,7 +83,7 @@ const Contact = () => {
                 type="text"
                 id="last-name"
                 name="last-name"
-                value="lastName"
+                value={lastName}
                 onChange={(e) => setLastName(e.target.value)}
               />
             </div>
@@ -94,7 +94,7 @@ const Contact = () => {
               type="email"
               id="email"
               name="email"
-              value="email"
+              value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
@@ -104,7 +104,7 @@ const Contact = () => {
               type="text"
               id="subject"
               name="subject"
-              value="email"
+              value={subject}
               onChange={(e) => setSubject(e.target.value)}
             />
           </div>
@@ -113,7 +113,7 @@ const Contact = () => {
             <textarea
               id="message"
               name="message"
-              value="message"
+              value={message}
               onChange={(e) => setMessage(e.target.value)}
             ></textarea>
           </div>
