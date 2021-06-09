@@ -20,7 +20,7 @@ const Contact = () => {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encodeURI({
-        "form-name": "Contact",
+        "form-name": "contact",
         ...all,
       }),
     })
@@ -47,14 +47,7 @@ const Contact = () => {
     <section id="contact">
       <div className="container">
         <SectionTitle sub="Let's talk" title="Contact Me" />
-        <form
-          name="contact"
-          method="POST"
-          data-netlify="true"
-          className="form"
-          onSubmit={handleSubmit}
-        >
-          <input type="hidden" name="form-name" value="contact" />
+        <form name="contact" onSubmit={handleSubmit}>
           <div className="form__group line">
             <label htmlFor="company">Company</label>
             <input
