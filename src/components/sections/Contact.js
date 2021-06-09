@@ -11,7 +11,6 @@ const Contact = () => {
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
-  const [all, setAll] = useState("");
 
   const encode = (data) => {
     return Object.keys(data)
@@ -23,13 +22,12 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setAll({ company, firstName, lastName, email, subject, message });
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
         "form-name": "contact",
-        ...all,
+        ...{ company, firstName, lastName, email, subject, message },
       }),
     })
       .then(() => {
