@@ -16,7 +16,7 @@ const Contact = () => {
   const encode = (data) => {
     return Object.keys(data)
       .map(
-        (key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
       )
       .join("&");
   };
@@ -55,7 +55,7 @@ const Contact = () => {
     <section id="contact">
       <div className="container">
         <SectionTitle sub="Let's talk" title="Contact Me" />
-        <form className="form" name="contact" netlify onSubmit={handleSubmit}>
+        <form className="form" onSubmit={handleSubmit}>
           <div className="form__group line">
             <label htmlFor="company">Company</label>
             <input
