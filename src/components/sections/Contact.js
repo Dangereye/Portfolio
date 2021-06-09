@@ -6,7 +6,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Contact = () => {
   const [company, setCompany] = useState("");
-  const [names, setNames] = useState("");
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
@@ -26,7 +26,7 @@ const Contact = () => {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
         "form-name": "contact",
-        ...{ company, names, email, subject, message },
+        ...{ company, name, email, subject, message },
       }),
     })
       .then(() => {
@@ -69,8 +69,8 @@ const Contact = () => {
               type="text"
               id="name"
               name="name"
-              value={names}
-              onChange={(e) => setNames(e.target.value)}
+              value={name}
+              onChange={(e) => setName(e.target.value)}
             />
           </div>
           <div className="form__group line">
