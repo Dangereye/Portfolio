@@ -55,7 +55,7 @@ const Contact = () => {
     <section id="contact">
       <div className="container">
         <SectionTitle sub="Let's talk" title="Contact Me" />
-        <form className="form" onSubmit={handleSubmit}>
+        <form className="form" name="contact" onSubmit={handleSubmit}>
           <div className="form__group line">
             <label htmlFor="company">Company</label>
             <input
