@@ -6,7 +6,7 @@ import Portfolio from "../components/sections/Portfolio";
 import Contact from "../components/sections/Contact";
 import About from "../components/sections/About";
 
-const Home = () => {
+const Home = ({ history }) => {
   const [hash, startScroll] = useScroll();
 
   useEffect(() => {
@@ -20,7 +20,7 @@ const Home = () => {
       <Skills />
       <Portfolio />
       <About />
-      <Contact />
+      <Contact history={history} />
     </>
   );
 };

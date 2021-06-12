@@ -4,19 +4,29 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SectionTitle from "../shared/SectionTitle";
 gsap.registerPlugin(ScrollTrigger);
 
-const Contact = () => {
-  const [company, setCompany] = useState("");
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [subject, setSubject] = useState("");
-  const [message, setMessage] = useState("");
-
+const Contact = ({ history }) => {
+  const [formData, setFormData] = useState({
+    company: "",
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+  console.log(formData);
   const encode = (data) => {
     return Object.keys(data)
       .map(
         (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
       )
       .join("&");
+  };
+
+  const formatValue = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value.replace(/[=<>/()[\]{}]/g, "").trim(),
+    });
   };
 
   const handleSubmit = (e) => {
@@ -26,14 +36,27 @@ const Contact = () => {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
         "form-name": "contact",
-        ...{ company, name, email, subject, message },
+        ...formData,
       }),
     })
-      .then(() => {
-        alert("Success!");
+      .then((res) => {
+        if (!res.status.ok) {
+          alert("Oops! Something went wrong. Please try again.");
+          history.push("/#contact");
+        } else {
+          alert("Message Sent Successfully! ");
+          setFormData({
+            company: "",
+            name: "",
+            email: "",
+            subject: "",
+            message: "",
+          });
+        }
       })
-      .catch((error) => alert(error));
+      .catch((error) => alert("error"));
   };
+
   useEffect(() => {
     gsap.from(".line", {
       y: 100,
@@ -52,15 +75,24 @@ const Contact = () => {
     <section id="contact">
       <div className="container">
         <SectionTitle sub="Let's talk" title="Contact Me" />
-        <form className="form" name="contact" onSubmit={handleSubmit}>
+        <form
+          className="form"
+          name="contact"
+          method="POST"
+          onSubmit={handleSubmit}
+        >
+          <input type="hidden" name="form-name" value="contact" />
           <div className="form__group line">
             <label htmlFor="company">Company</label>
             <input
               type="text"
               id="company"
               name="company"
-              value={company}
-              onChange={(e) => setCompany(e.target.value)}
+              value={formData.company}
+              onChange={(e) =>
+                setFormData({ ...formData, company: e.target.value })
+              }
+              onBlur={(e) => formatValue(e)}
             />
           </div>
           <div className="form__group line">
@@ -69,8 +101,12 @@ const Contact = () => {
               type="text"
               id="name"
               name="name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
+              value={formData.name}
+              onChange={(e) =>
+                setFormData({ ...formData, name: e.target.value })
+              }
+              onBlur={(e) => formatValue(e)}
+              required
             />
           </div>
           <div className="form__group line">
@@ -79,8 +115,12 @@ const Contact = () => {
               type="email"
               id="email"
               name="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              value={formData.email}
+              onChange={(e) =>
+                setFormData({ ...formData, email: e.target.value })
+              }
+              onBlur={(e) => formatValue(e)}
+              required
             />
           </div>
           <div className="form__group line">
@@ -89,8 +129,12 @@ const Contact = () => {
               type="text"
               id="subject"
               name="subject"
-              value={subject}
-              onChange={(e) => setSubject(e.target.value)}
+              value={formData.subject}
+              onChange={(e) =>
+                setFormData({ ...formData, subject: e.target.value })
+              }
+              onBlur={(e) => formatValue(e)}
+              required
             />
           </div>
           <div className="form__group line">
@@ -98,8 +142,12 @@ const Contact = () => {
             <textarea
               id="message"
               name="message"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
+              value={formData.message}
+              onChange={(e) =>
+                setFormData({ ...formData, message: e.target.value })
+              }
+              onBlur={(e) => formatValue(e)}
+              required
             ></textarea>
           </div>
           <button type="submit" className="btn primary large">

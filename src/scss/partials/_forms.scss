@@ -30,14 +30,38 @@
   textarea {
     width: 100%;
     padding: 1.2rem;
-  }
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-family: "Montserrat", sans-serif;
 
-  &.double {
-    width: 50%;
+    &.error {
+      border-color: $accent-color;
+    }
   }
 
   textarea {
     min-height: 20rem;
     resize: vertical;
+  }
+  .status {
+    margin-bottom: 2rem;
+    padding: 1.3rem;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-weight: 500;
+
+    &.error {
+      color: $accent-color;
+      border-color: $accent-color;
+    }
+
+    &.success {
+      color: #2aa965;
+      border-color: #2aa965;
+    }
+  }
+
+  p.error {
+    color: $accent-color;
   }
 }
