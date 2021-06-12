@@ -8,19 +8,12 @@ html {
   letter-spacing: 0.5px;
 }
 
-h4 {
-  font-size: clamp(1.8rem, 2.5vw, 2.4rem);
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
+h2 {
+  font-weight: 700;
 
-h3 {
-  margin-bottom: 2rem;
-  font-size: clamp(1.8rem, 2.5vw, 2.4rem);
-  font-weight: 500;
-
-  &.subtitle {
-    text-align: left;
+  &.section-title {
+    text-align: center;
+    font-size: clamp(2.4rem, 3.5vw, 4rem);
     color: $text-black;
   }
 }
@@ -34,14 +27,21 @@ div.section-title {
   text-transform: uppercase;
 }
 
-h2 {
-  font-weight: 700;
+h3 {
+  margin-bottom: 2rem;
+  font-size: clamp(1.8rem, 2.5vw, 2.4rem);
+  font-weight: 500;
 
-  &.section-title {
-    text-align: center;
-    font-size: clamp(2.4rem, 3.5vw, 4rem);
+  &.subtitle {
+    text-align: left;
     color: $text-black;
   }
+}
+
+h4 {
+  font-size: clamp(1.8rem, 2.5vw, 2.4rem);
+  font-weight: 500;
+  margin-bottom: 2rem;
 }
 
 p {

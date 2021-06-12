@@ -18,10 +18,12 @@ const Contact = ({ history }) => {
     status: false,
     message: "",
   });
+
   const [success, setSuccess] = useState({
     status: false,
     message: "",
   });
+
   const encode = (data) => {
     return Object.keys(data)
       .map(
@@ -41,6 +43,10 @@ const Contact = ({ history }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setError({
+      status: false,
+      message: "",
+    });
+    setSuccess({
       status: false,
       message: "",
     });
@@ -177,7 +183,7 @@ const Contact = ({ history }) => {
               required
             ></textarea>
           </div>
-          <button type="submit" className="btn primary large submit">
+          <button type="submit" className="btn primary large icon">
             {processing && <ImSpinner2 className="spinner" />}
             <span>Submit</span>
           </button>

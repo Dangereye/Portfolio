@@ -1,8 +1,62 @@
 .footer {
-  height: 10rem;
-  display: flex;
-  align-items: center;
   padding: 0 $horizontalPadding;
-  color: $light-color;
+  color: $mid-grey;
   background-color: $dark-color;
+
+  &__columns {
+    padding: $verticalPadding 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: $verticalPadding;
+
+    .logo {
+      margin-bottom: 2rem;
+      display: block;
+      font-size: clamp(1.8rem, 2.5vw, 2.4rem);
+      color: $light-color;
+      font-weight: 800;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    p {
+      margin-bottom: 2rem;
+      color: $mid-grey;
+    }
+
+    .links {
+      svg {
+        font-size: clamp(2.4rem, 3.5vw, 4rem);
+        height: auto;
+        fill: $mid-grey;
+      }
+      > *:not(:last-child) {
+        margin-right: 1rem;
+      }
+    }
+
+    h4 {
+      color: $dark-grey;
+    }
+
+    a {
+      color: $light-color;
+    }
+  }
+
+  &__back-to-top {
+    padding-bottom: $verticalPadding;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.footer__bottom {
+  border-top: 1px solid $dark-grey;
+  padding: 2rem $horizontalPadding;
+  background-color: $dark-color;
+
+  p {
+    color: $mid-grey;
+  }
 }

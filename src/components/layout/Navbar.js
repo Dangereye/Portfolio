@@ -45,18 +45,13 @@ const Navbar = ({ navIsOpen, setNavIsOpen }) => {
 
         <ul className="nav__links">
           <li className="nav__link">
-            <Link to="/#skills">Skills</Link>
-          </li>
-          <li className="nav__link">
             <Link to="/#portfolio">Portfolio</Link>
           </li>
           <li className="nav__link">
-            <Link to="/#about">About</Link>
+            <Link to="/#skills">Skills</Link>
           </li>
           <li className="nav__link">
-            <a href="/cv/cv.txt" download>
-              Download CV
-            </a>
+            <Link to="/#about">About</Link>
           </li>
           <li className="nav__link">
             <Link to="/#contact">Contact</Link>

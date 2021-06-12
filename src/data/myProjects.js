@@ -81,9 +81,9 @@ const myProjects = [
     id: "3",
     type: "React",
     date: "2021",
-    title: "Starwars",
+    title: "Star Wars",
     description:
-      "As a massive fan of the series myself, Starwars was a fun project to create. Users can explore detailed information regarding movies, people, species, vehicles, planets and starships from the first six movies. While able to acquire some imagery, icons are primarily to avoid any nasty copyright issues.",
+      "As a massive fan of the series myself, Star Wars was a fun project to create. Users can explore detailed information regarding movies, people, species, vehicles, planets and starships from the first six movies. While able to acquire some imagery, icons are primarily to avoid any nasty copyright issues.",
     preview_image: "/img/projects/starwars/min/preview-min.jpg",
     api: [
       {
@@ -308,7 +308,6 @@ const myProjects = [
       { image: `${svg}/ps.svg`, alt: "Photoshop" },
       { image: `${svg}/ai.svg`, alt: "Illustrator" },
       { image: `${svg}/xd.svg`, alt: "Experience Design" },
-      { image: `${svg}/gsap.svg`, alt: "GSAP" },
     ],
     third_party: [
       {
@@ -323,8 +322,12 @@ const myProjects = [
         title: "Node Sass",
         url: "https://www.npmjs.com/package/node-sass",
       },
+      {
+        title: "GSAP",
+        url: "https://greensock.com/gsap",
+      },
     ],
-    links: { live: "/", code: "https://github.com/Dangereye/the-weather" },
+    links: { live: "/", code: "https://github.com/Dangereye/Portfolio" },
   },
 ];
 

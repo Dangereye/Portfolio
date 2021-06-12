@@ -17,8 +17,8 @@ const Home = ({ history }) => {
   return (
     <>
       <Header />
-      <Skills />
       <Portfolio />
+      <Skills />
       <About />
       <Contact history={history} />
     </>
