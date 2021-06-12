@@ -12,7 +12,6 @@ const Contact = ({ history }) => {
     subject: "",
     message: "",
   });
-  console.log(formData);
   const encode = (data) => {
     return Object.keys(data)
       .map(
@@ -75,12 +74,7 @@ const Contact = ({ history }) => {
     <section id="contact">
       <div className="container">
         <SectionTitle sub="Let's talk" title="Contact Me" />
-        <form
-          className="form"
-          name="contact"
-          method="POST"
-          onSubmit={handleSubmit}
-        >
+        <form className="form" name="contact" onSubmit={handleSubmit}>
           <input type="hidden" name="form-name" value="contact" />
           <div className="form__group line">
             <label htmlFor="company">Company</label>
