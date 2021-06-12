@@ -33,6 +33,7 @@
     border: 2px solid #ccc;
     border-radius: 5px;
     font-family: "Montserrat", sans-serif;
+    font-size: 1.6rem;
 
     &.error {
       border-color: $accent-color;
@@ -43,25 +44,39 @@
     min-height: 20rem;
     resize: vertical;
   }
-  .status {
+
+  .errors,
+  .success {
     margin-bottom: 2rem;
     padding: 1.3rem;
-    border: 2px solid #ccc;
+    border: 2px solid transparent;
     border-radius: 5px;
     font-weight: 500;
-
-    &.error {
-      color: $accent-color;
-      border-color: $accent-color;
-    }
-
-    &.success {
-      color: #2aa965;
-      border-color: #2aa965;
-    }
   }
 
-  p.error {
+  .errors {
     color: $accent-color;
+    border-color: $accent-color;
+    background-color: lighten($accent-color, 45%);
+  }
+
+  .success {
+    color: #2aa965;
+    border-color: #2aa965;
+  }
+
+  .submit {
+    display: flex;
+    align-items: center;
+  }
+  .spinner {
+    margin-right: 1rem;
+    animation: spinner 1s forwards linear infinite;
+  }
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
   }
 }

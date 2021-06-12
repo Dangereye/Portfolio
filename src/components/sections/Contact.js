@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ImSpinner2 } from "react-icons/im";
 import SectionTitle from "../shared/SectionTitle";
 gsap.registerPlugin(ScrollTrigger);
 
@@ -10,6 +11,15 @@ const Contact = ({ history }) => {
     name: "",
     email: "",
     subject: "",
+    message: "",
+  });
+  const [processing, setProcessing] = useState(false);
+  const [error, setError] = useState({
+    status: false,
+    message: "",
+  });
+  const [success, setSuccess] = useState({
+    status: false,
     message: "",
   });
   const encode = (data) => {
@@ -30,6 +40,12 @@ const Contact = ({ history }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setError({
+      status: false,
+      message: "",
+    });
+    setProcessing(true);
+
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -40,11 +56,18 @@ const Contact = ({ history }) => {
     })
       .then((res) => {
         if (!res.ok) {
-          alert("Oops! Something went wrong. Please try again.");
-          console.log(res);
+          setError({
+            status: true,
+            message: "Error! Something went wrong? Please try again.",
+          });
+          setProcessing(false);
           history.push("/#contact");
         } else {
-          alert("Message Sent Successfully! ");
+          setSuccess({
+            status: true,
+            message: "Success! Please allow up to 48hrs for a response. ",
+          });
+          setProcessing(false);
           setFormData({
             company: "",
             name: "",
@@ -52,9 +75,16 @@ const Contact = ({ history }) => {
             subject: "",
             message: "",
           });
+          history.push("/#contact");
         }
       })
-      .catch((error) => alert("error"));
+      .catch((error) => {
+        setError({
+          status: true,
+          message: "Error! Something went wrong? Please try again.",
+        });
+        setProcessing(false);
+      });
   };
 
   useEffect(() => {
@@ -77,6 +107,8 @@ const Contact = ({ history }) => {
         <SectionTitle sub="Let's talk" title="Contact Me" />
         <form className="form" name="contact" onSubmit={handleSubmit}>
           <input type="hidden" name="form-name" value="contact" />
+          {error.status && <div className="errors">{error.message}</div>}
+          {success.status && <div className="success">{success.message}</div>}
           <div className="form__group line">
             <label htmlFor="company">Company</label>
             <input
@@ -145,8 +177,9 @@ const Contact = ({ history }) => {
               required
             ></textarea>
           </div>
-          <button type="submit" className="btn primary large">
-            Submit
+          <button type="submit" className="btn primary large submit">
+            {processing && <ImSpinner2 className="spinner" />}
+            <span>Submit</span>
           </button>
         </form>
       </div>
