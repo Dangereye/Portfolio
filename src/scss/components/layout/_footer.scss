@@ -6,7 +6,7 @@
   &__columns {
     padding: $verticalPadding 0;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
     gap: $verticalPadding;
 
     .logo {
@@ -20,6 +20,7 @@
     }
 
     p {
+      max-width: 20ch;
       margin-bottom: 2rem;
       color: $mid-grey;
     }
@@ -28,7 +29,7 @@
       svg {
         font-size: clamp(2.4rem, 3.5vw, 4rem);
         height: auto;
-        fill: $mid-grey;
+        fill: $light-grey;
       }
       > *:not(:last-child) {
         margin-right: 1rem;
@@ -40,7 +41,21 @@
     }
 
     a {
-      color: $light-color;
+      display: inline-block;
+      color: $mid-grey;
+      transition: color 0.4s;
+      &:hover {
+        color: $light-color;
+      }
+    }
+
+    ul li {
+      margin: 0.5rem 0;
+    }
+    ul li:before {
+      margin-right: 1rem;
+      content: "\276F";
+      color: $accent-color;
     }
   }
 

@@ -46,6 +46,11 @@ const About = () => {
               excepturi, corrupti adipisci quas hic autem expedita fuga vel rem
               esse assumenda dolorum!
             </p>
+            <p className="text">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet
+              vitae quisquam quasi, impedit accusantium tenetur nulla qui
+              mollitia libero molestiae.
+            </p>
           </div>
         </div>
       </div>

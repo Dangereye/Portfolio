@@ -42,6 +42,9 @@ const Footer = () => {
                 <li>
                   <Link to="/project/4/workwearclothingdirect">Workwear</Link>
                 </li>
+                <li>
+                  <Link to="/project/5">Portfolio</Link>
+                </li>
               </ul>
             </div>
             <div className="column">
