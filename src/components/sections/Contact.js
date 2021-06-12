@@ -39,7 +39,7 @@ const Contact = ({ history }) => {
       }),
     })
       .then((res) => {
-        if (!res.status.ok) {
+        if (!res.ok) {
           alert("Oops! Something went wrong. Please try again.");
           console.log(res);
           history.push("/#contact");
