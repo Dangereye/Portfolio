@@ -41,6 +41,7 @@ const Contact = ({ history }) => {
       .then((res) => {
         if (!res.status.ok) {
           alert("Oops! Something went wrong. Please try again.");
+          console.log(res);
           history.push("/#contact");
         } else {
           alert("Message Sent Successfully! ");
