@@ -19,10 +19,10 @@ const Footer = () => {
                 <span>u</span>ser e<span>x</span>periences!
               </p>
               <div className="links">
-                <a href="#">
+                <a href="/">
                   <FaGithub />
                 </a>
-                <a href="#">
+                <a href="/">
                   <FaLinkedin />
                 </a>
               </div>
