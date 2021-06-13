@@ -28,7 +28,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="column">
-              <h4>Projects</h4>
+              <h3>Projects</h3>
               <ul>
                 <li>
                   <Link to="/project/1">Movies</Link>
@@ -48,7 +48,7 @@ const Footer = () => {
               </ul>
             </div>
             <div className="column">
-              <h4>Downloads</h4>
+              <h3>Downloads</h3>
               <ul>
                 <li>
                   <a href="/cv/cv.txt" download>
@@ -58,7 +58,7 @@ const Footer = () => {
               </ul>
             </div>
             <div className="column">
-              <h4>Email</h4>
+              <h3>Email</h3>
               <ul>
                 <li>
                   <a href="mailto:craig_puxty@talktalk.net">

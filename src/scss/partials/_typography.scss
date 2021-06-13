@@ -30,18 +30,16 @@ div.section-title {
 h3 {
   margin-bottom: 2rem;
   font-size: clamp(1.8rem, 2.5vw, 2.4rem);
-  font-weight: 500;
-
-  &.subtitle {
-    text-align: left;
-    color: $text-black;
-  }
+  font-weight: 400;
+  text-align: left;
+  color: $text-black;
 }
 
 h4 {
+  padding: 1.6rem;
   font-size: clamp(1.8rem, 2.5vw, 2.4rem);
   font-weight: 400;
-  margin-bottom: 1.5rem;
+  color: $dark-grey;
 }
 
 p {
