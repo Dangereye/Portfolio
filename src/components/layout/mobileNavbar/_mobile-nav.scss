@@ -1,0 +1,23 @@
+.mobile-nav {
+  position: fixed;
+  top: 10rem;
+  left: -100%;
+  width: 100%;
+  height: calc(100vh - 10rem);
+  padding: 4rem 1.6rem;
+  background-color: $dark-color;
+  transition: left 0.4s;
+  z-index: 9;
+
+  &.open {
+    left: 0;
+  }
+
+  .list-group {
+    margin-bottom: 4rem;
+  }
+
+  @media (min-width: 601px) {
+    display: none;
+  }
+}

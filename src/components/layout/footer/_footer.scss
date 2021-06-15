@@ -25,35 +25,16 @@
       color: $mid-grey;
     }
 
-    .links {
+    .icon-links {
       svg {
         font-size: clamp(2.4rem, 3.5vw, 4rem);
         height: auto;
         fill: $light-grey;
       }
+
       > *:not(:last-child) {
         margin-right: 1rem;
       }
-    }
-
-    h3 {
-      color: $dark-grey;
-    }
-
-    a {
-      color: $mid-grey;
-      &:hover {
-        color: $light-color;
-      }
-    }
-
-    ul li {
-      margin: 0.5rem 0;
-    }
-    ul li:before {
-      margin-right: 1rem;
-      content: "\276F";
-      color: $accent-color;
     }
   }
 

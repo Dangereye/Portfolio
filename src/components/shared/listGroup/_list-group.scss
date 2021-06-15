@@ -1,0 +1,26 @@
+.list-group {
+  > *:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  h3 {
+    color: $dark-grey;
+  }
+
+  .list-link {
+    margin: 0.5rem 0;
+
+    &::before {
+      margin-right: 1rem;
+      content: "\276F";
+      color: $accent-color;
+    }
+
+    a {
+      color: $mid-grey;
+      &:hover {
+        color: $light-color;
+      }
+    }
+  }
+}

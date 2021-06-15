@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import NavLink from "./NavLink";
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 
@@ -44,18 +45,10 @@ const Navbar = ({ navIsOpen, setNavIsOpen }) => {
         </Link>
 
         <ul className="nav__links">
-          <li className="nav__link">
-            <Link to="/#portfolio">Portfolio</Link>
-          </li>
-          <li className="nav__link">
-            <Link to="/#skills">Skills</Link>
-          </li>
-          <li className="nav__link">
-            <Link to="/#about">About</Link>
-          </li>
-          <li className="nav__link">
-            <Link to="/#contact">Contact</Link>
-          </li>
+          <NavLink name="portfolio" />
+          <NavLink name="skills" />
+          <NavLink name="about" />
+          <NavLink name="contact" />
         </ul>
       </div>
     </nav>

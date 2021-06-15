@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Navbar from "./components/layout/Navbar";
-import MobileNav from "./components/layout/MobileNav";
+import Navbar from "./components/layout/navbar/Navbar";
+import MobileNav from "./components/layout/mobileNavbar/MobileNav";
 import Home from "./pages/Home";
 import Project from "./pages/Project";
 import WorkwearClothingDirect from "./pages/WorkwearClothingDirect";
 import Error404 from "./pages/Error404";
-import Footer from "./components/layout/Footer";
+import Footer from "./components/layout/footer/Footer";
 
 function App() {
   const [navIsOpen, setNavIsOpen] = useState(false);
