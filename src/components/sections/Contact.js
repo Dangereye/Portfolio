@@ -37,7 +37,7 @@ const Contact = ({ history }) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
-      [name]: value.replace(/[=<>/()[\]{}]/g, "").trim(),
+      [name]: value.replace(/[=<>/()[\]{}]/g, ""),
     });
   };
 
