@@ -2,12 +2,11 @@ import React, { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import mySkills from "../../data/mySkills";
-import SectionTitle from "../shared/SectionTitle";
 gsap.registerPlugin(ScrollTrigger);
 
 const Skills = () => {
   useEffect(() => {
-    gsap.from(".skills-list__group", {
+    gsap.from(".skills-item", {
       y: 100,
       opacity: 0,
       duration: 1,
@@ -24,13 +23,17 @@ const Skills = () => {
   return (
     <section id="skills">
       <div className="container">
-        <SectionTitle sub="Skills" title="My Experience" />
+        <div className="skills-item section-subtitle">Skills</div>
+        <h2 className="skills-item section-title">My Experience</h2>
         <div className="skills-list">
           {mySkills.map((list, index) => (
-            <div key={`list-${index}`} className="skills-list__group">
+            <div
+              key={`list-${index}`}
+              className="skills-list__group skills-item"
+            >
               <h3>{list.title}</h3>
               <ul>
-                {list.skills.map((skill, index) => (
+                {list.skills.map((skill) => (
                   <li className="skills-list__item" key={skill.title}>
                     <img src={skill.svg} alt={skill.title} />
                     <span>{skill.title}</span>

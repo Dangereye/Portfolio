@@ -17,6 +17,7 @@ const mySkills = [
       { svg: `${svg}/sass.svg`, title: "SCSS" },
       { svg: `${svg}/js.svg`, title: "Javascript" },
       { svg: `${svg}/react.svg`, title: "React" },
+      { svg: `${svg}/redux.svg`, title: "Redux" },
     ],
   },
   {
