@@ -1,6 +1,6 @@
 #portfolio {
   .options {
-    margin: 3rem 0 $verticalPadding 0;
+    margin: 4rem 0 $verticalPadding 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,12 +60,14 @@
     }
 
     &__subtitle {
+      text-align: center;
       margin-bottom: 1rem;
       color: $accent-color;
       font-size: 1.6rem;
     }
 
     &__title {
+      text-align: center;
       margin-bottom: 1rem;
       color: $text-black;
       font-size: 1.6rem;

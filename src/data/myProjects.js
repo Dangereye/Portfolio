@@ -117,7 +117,7 @@ const myProjects = [
   {
     id: "4",
     page: "workwearclothingdirect",
-    type: "PS",
+    type: "Photoshop",
     date: "2020",
     title: "Workwear",
     description:
