@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ImSpinner2 } from "react-icons/im";
-import SectionTitle from "../shared/SectionTitle";
+import FormGroup from "../shared/forms/FormGroup";
+import Button from "../shared/buttons/Button";
 gsap.registerPlugin(ScrollTrigger);
 
 const Contact = ({ history }) => {
@@ -94,9 +95,10 @@ const Contact = ({ history }) => {
   };
 
   useEffect(() => {
-    gsap.from(".line", {
+    gsap.from(".contact-item", {
       y: 100,
       opacity: 0,
+      duration: 1,
       stagger: 0.1,
       ease: "back.out(2.5)",
       scrollTrigger: {
@@ -110,83 +112,55 @@ const Contact = ({ history }) => {
   return (
     <section id="contact">
       <div className="container">
-        <SectionTitle sub="Let's talk" title="Contact Me" />
+        <div className="section-subtitle contact-item">Let's talk</div>
+        <h2 className="section-title contact-item">Contact Me</h2>
         <form className="form" name="contact" onSubmit={handleSubmit}>
           <input type="hidden" name="form-name" value="contact" />
           {error.status && <div className="errors">{error.message}</div>}
           {success.status && <div className="success">{success.message}</div>}
-          <div className="form__group line">
-            <label htmlFor="company">Company</label>
-            <input
-              type="text"
-              id="company"
-              name="company"
-              value={formData.company}
-              onChange={(e) =>
-                setFormData({ ...formData, company: e.target.value })
-              }
-              onBlur={(e) => formatValue(e)}
-            />
-          </div>
-          <div className="form__group line">
-            <label htmlFor="name">Name</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              value={formData.name}
-              onChange={(e) =>
-                setFormData({ ...formData, name: e.target.value })
-              }
-              onBlur={(e) => formatValue(e)}
-              required
-            />
-          </div>
-          <div className="form__group line">
-            <label htmlFor="email">Email</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={(e) =>
-                setFormData({ ...formData, email: e.target.value })
-              }
-              onBlur={(e) => formatValue(e)}
-              required
-            />
-          </div>
-          <div className="form__group line">
-            <label htmlFor="subject">Subject</label>
-            <input
-              type="text"
-              id="subject"
-              name="subject"
-              value={formData.subject}
-              onChange={(e) =>
-                setFormData({ ...formData, subject: e.target.value })
-              }
-              onBlur={(e) => formatValue(e)}
-              required
-            />
-          </div>
-          <div className="form__group line">
-            <label htmlFor="message">Message</label>
+          <FormGroup
+            name="company"
+            type="text"
+            value={formData.company}
+            fn={formatValue}
+          />
+          <FormGroup
+            name="name"
+            type="text"
+            value={formData.name}
+            fn={formatValue}
+            required
+          />
+          <FormGroup
+            name="email"
+            type="email"
+            value={formData.email}
+            fn={formatValue}
+            required
+          />
+          <FormGroup
+            name="subject"
+            type="subject"
+            value={formData.subject}
+            fn={formatValue}
+            required
+          />
+          <div className="form__group contact-item">
+            <label htmlFor="message">message</label>
             <textarea
               id="message"
               name="message"
               value={formData.message}
-              onChange={(e) =>
-                setFormData({ ...formData, message: e.target.value })
-              }
-              onBlur={(e) => formatValue(e)}
+              onChange={formatValue}
               required
             ></textarea>
           </div>
-          <button type="submit" className="btn primary large icon">
-            {processing && <ImSpinner2 className="spinner" />}
-            <span>Submit</span>
-          </button>
+          <Button
+            type="submit"
+            cn="btn primary large icon contact-item"
+            icon={processing && <ImSpinner2 className="spinner" />}
+            text="Submit"
+          />
         </form>
       </div>
     </section>
