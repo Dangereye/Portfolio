@@ -14,9 +14,10 @@ const About = () => {
           markers: false,
         },
       })
-      .from(".text", {
+      .from(".about-text", {
         y: 100,
         opacity: 0,
+        duration: 1,
         stagger: 0.1,
         ease: "back.out(2.5)",
       })
@@ -36,20 +37,28 @@ const About = () => {
             />
           </div>
           <div className="content__text">
-            <h2 className="section-title text">Hello, I am Craig.</h2>
-            <div className="location text">
+            <h2 className="section-title about-text">
+              <span>Hello,</span> I am Craig.
+            </h2>
+            <div className="location about-text">
               Currently living in a small town in Flintshire, United Kingdom.
             </div>
-            <p className="text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab nisi
-              assumenda, perspiciatis id ad doloremque quibusdam. Fugiat
-              excepturi, corrupti adipisci quas hic autem expedita fuga vel rem
-              esse assumenda dolorum!
+            <p className="about-text">
+              My experience thus far has primarily been front-end. However, I do
+              have basic knowledge of backend technologies such as Node,
+              Express, Mongoose and Mongo DB.
             </p>
-            <p className="text">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet
-              vitae quisquam quasi, impedit accusantium tenetur nulla qui
-              mollitia libero molestiae.
+            <p className="about-text">
+              Through passion, constant practice, learning and attention to
+              detail, I can produce aesthetically pleasing software to a high
+              standard, considering performance, accessibility, SEO and
+              utilising best practices.
+            </p>
+            <p className="about-text">
+              React has predominantly been my focus during the last 12 months,
+              with several small projects under my belt. I intend to explore
+              Next.js to use in conjunction with React and take a deeper dive
+              into backend technologies over the coming months.
             </p>
           </div>
         </div>
