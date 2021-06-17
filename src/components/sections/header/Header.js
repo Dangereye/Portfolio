@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import gsap from "gsap";
 import { useHistory } from "react-router-dom";
-import Pux from "./Pux";
-import Button from "../shared/buttons/Button";
+import Pux from "../Pux";
+import Button from "../../shared/buttons/Button";
 
 const Header = () => {
   const history = useHistory();
