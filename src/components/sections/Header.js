@@ -2,24 +2,28 @@ import React, { useEffect } from "react";
 import gsap from "gsap";
 import { useHistory } from "react-router-dom";
 import Pux from "./Pux";
+import Button from "../shared/buttons/Button";
 
 const Header = () => {
   const history = useHistory();
+  const goToPortfolio = () => {
+    history.push("/#portfolio");
+  };
 
   useEffect(() => {
-    const tl = gsap.timeline({
+    const header = gsap.timeline({
       delay: 1,
       duration: 1,
     });
-    tl.from(".caption", { scale: 0, opacity: 0, ease: "power1" });
-    tl.from(".title", {
+    header.from(".caption", { scale: 0, opacity: 0, ease: "power1" });
+    header.from(".header-title", {
       y: -100,
       delay: 1,
       opacity: 0,
       stagger: 0.3,
       ease: "ease-in",
     });
-    tl.from(".header-btn", { y: 100, opacity: 0, ease: "back.out(2.5)" });
+    header.from(".header-btn", { y: 100, opacity: 0, ease: "back.out(2.5)" });
   }, []);
 
   return (
@@ -27,10 +31,12 @@ const Header = () => {
       <Pux />
       <div className="container">
         <div className="header__typography">
-          <div className="header__typography__subtitle title">
+          <div className="header__typography__subtitle header-title">
             Front-end Developer.
           </div>
-          <h1 className="header__typography__title title">Craig Puxty</h1>
+          <h1 className="header__typography__title header-title">
+            Craig Puxty
+          </h1>
           <p className="caption">
             Projects created with <span>p</span>assion, producing great{" "}
             <span>u</span>
@@ -38,12 +44,11 @@ const Header = () => {
             periences!
           </p>
         </div>
-        <button
-          className="btn header-btn secondary large"
-          onClick={() => history.push("/#portfolio")}
-        >
-          Recent Projects
-        </button>
+        <Button
+          cn="secondary large header-btn"
+          fn={goToPortfolio}
+          text="Recent Projects"
+        />
       </div>
     </header>
   );
