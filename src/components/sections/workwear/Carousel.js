@@ -1,16 +1,14 @@
 import React from "react";
 
-const Slides = ({ project, openSlider }) => {
+const Carousel = ({ project, openSlideshow }) => {
   return (
-    <section id="slides" className="workwear">
+    <section id="carousel" className="workwear">
       <div className="container">
         <h3 className="subtitle">Carousel images</h3>
         <p>
-          Each composition was created using Adobe Photoshop at 2x its display
-          size to preserve quality on higher resolution screens. Encompassing a
-          variety of techniques from cutting, masking, matching colours and
-          brightness, painting shadows and more. Image optimisation using
-          Optimizilla.
+          Each image contains multiple layers composited using numerous learned
+          techniques to blend layers onto newly selected/created backgrounds.
+          Click any image to view as a slideshow.
         </p>
         <div className="slides">
           {project.slides.map((slide, index) => (
@@ -18,7 +16,7 @@ const Slides = ({ project, openSlider }) => {
               <img
                 src={slide.image}
                 alt={slide.title}
-                onClick={() => openSlider(index)}
+                onClick={() => openSlideshow(index)}
               />
               <div className="slide__title">{slide.title}</div>
             </div>
@@ -29,4 +27,4 @@ const Slides = ({ project, openSlider }) => {
   );
 };
 
-export default Slides;
+export default Carousel;

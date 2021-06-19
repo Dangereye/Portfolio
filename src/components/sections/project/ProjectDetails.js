@@ -1,50 +1,30 @@
-import React, { useEffect } from "react";
-import gsap from "gsap";
-import ProjectLinkList from "./ProjectLinkList";
+import React from "react";
+import ProjectTechnologies from "./ProjectTechnologies";
+import ProjectAPIs from "./ProjectAPIs";
+import ProjectThirdParty from "./ProjectThirdParty";
+import ProjectDeliverables from "./ProjectDeliverables";
 
 const ProjectDetails = ({ project }) => {
-  useEffect(() => {
-    gsap.from(".image", { scale: 0, stagger: 0.1, ease: "back.out(4)" });
-  }, []);
   return (
-    <>
-      <div className="project__type">
-        {project.type} - {project.date}
+    <div className="project__details">
+      <div className="project__details__main">
+        <div className="project__type">{project.type} project.</div>
+        <h1 className="project__title">{project.title}.</h1>
+
+        {project.tech && <ProjectTechnologies project={project} />}
+        <h2>Description</h2>
+        <p>{project.description}</p>
       </div>
-      <h1 className="project__title">{project.title}.</h1>
-
-      {project.tech && (
-        <div className="project__technologies">
-          {project.tech.map((tech, index) => (
-            <img
-              className="image"
-              key={`tech-${index}`}
-              src={tech.image}
-              alt={tech.alt}
-              title={tech.alt}
-            />
-          ))}
-        </div>
-      )}
-
-      {project.api && <ProjectLinkList title="API" list={project.api} />}
-
-      {project.third_party && (
-        <ProjectLinkList title="Third Party" list={project.third_party} />
-      )}
-
-      {project.deliverables && (
-        <div className="project__third-party">
-          <span>Deliverables</span>
-          {project.deliverables.map((item, index) => (
-            <span key={`deliverable-${index}`}>{item}</span>
-          ))}
-        </div>
-      )}
-
-      <p className="project__description">{project.description}</p>
-      {project.brief && <p>{project.brief}</p>}
-    </>
+      <div className="project__details__extra">
+        {project.api && <ProjectAPIs list={project.api} />}
+        {project.third_party && (
+          <ProjectThirdParty list={project.third_party} />
+        )}
+        {project.deliverables && (
+          <ProjectDeliverables list={project.deliverables} />
+        )}
+      </div>
+    </div>
   );
 };
 

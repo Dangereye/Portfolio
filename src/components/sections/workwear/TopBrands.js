@@ -2,7 +2,7 @@ import React from "react";
 
 const TopBrands = ({ project }) => {
   return (
-    <section className="workwear">
+    <section id="brands" className="workwear">
       <div className="container">
         <h3 className="subtitle">Top brands</h3>
         <p>

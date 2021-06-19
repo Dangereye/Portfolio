@@ -57,7 +57,7 @@ const Footer = () => {
                 <IconAnchor href="/" name="Linkedin" icon={<FaLinkedin />} />
               </div>
             </div>
-            <ListGroup title="Projects" cn="footer-item">
+            <ListGroup title="Projects" cn="footer-item light">
               <ListLink to="/project/1" name="Movies" />
               <ListLink to="/project/2" name="The Weather" />
               <ListLink to="/project/3" name="Star Wars" />
@@ -65,11 +65,11 @@ const Footer = () => {
               <ListLink to="/project/5" name="Portfolio" />
             </ListGroup>
 
-            <ListGroup title="Downloads" cn="footer-item">
+            <ListGroup title="Downloads" cn="footer-item light">
               <ListAnchor href="/cv/cv.txt" name="Curriculum vitae" download />
             </ListGroup>
 
-            <ListGroup title="Email" cn="footer-item">
+            <ListGroup title="Email" cn="footer-item light">
               <ListAnchor
                 href="mailto:craig_puxty@talktalk.net"
                 name="Send Email"

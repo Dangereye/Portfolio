@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import Close from "../../svg/Close";
-import Next from "../../svg/Next";
-import Previous from "../../svg/Previous";
+import Close from "../../../svg/Close";
+import Next from "../../../svg/Next";
+import Previous from "../../../svg/Previous";
 
-const Slider = ({ images, sliderIndex, setSliderIsOpen }) => {
-  const [pos, setPos] = useState(0 - sliderIndex * 100);
-  const [activeSlide, setActiveSlide] = useState(sliderIndex);
-  const [activeColor, setActiveColor] = useState(images[sliderIndex].color);
+const Slideshow = ({ images, slideshowIndex, setSlideshowIsOpen }) => {
+  const [pos, setPos] = useState(0 - slideshowIndex * 100);
+  const [activeSlide, setActiveSlide] = useState(slideshowIndex);
+  const [activeColor, setActiveColor] = useState(images[slideshowIndex].color);
   const strokeWidth = 30;
 
   useEffect(
@@ -55,7 +55,7 @@ const Slider = ({ images, sliderIndex, setSliderIsOpen }) => {
       </button>
       <button
         className="btn slider-close glass"
-        onClick={() => setSliderIsOpen(false)}
+        onClick={() => setSlideshowIsOpen(false)}
       >
         <Close color={activeColor} stroke={strokeWidth} />
       </button>
@@ -77,4 +77,4 @@ const Slider = ({ images, sliderIndex, setSliderIsOpen }) => {
   );
 };
 
-export default Slider;
+export default Slideshow;

@@ -1,9 +1,9 @@
 import React from "react";
 
-const ListAnchor = ({ href, name, download }) => {
+const ListAnchor = ({ href, name, target, rel, download }) => {
   return (
     <li className="list-link">
-      <a href={href} download={download}>
+      <a href={href} target={target} rel={rel} download={download}>
         {name}
       </a>
     </li>

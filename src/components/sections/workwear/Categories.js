@@ -2,7 +2,7 @@ import React from "react";
 
 const Categories = ({ project }) => {
   return (
-    <section className="workwear">
+    <section id="categories" className="workwear">
       <div className="container">
         <h3 className="subtitle">Categories section</h3>
         <p>

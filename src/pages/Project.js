@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import ProjectButtons from "../components/sections/project/ProjectButtons";
 import ProjectDetails from "../components/sections/project/ProjectDetails";
+import ProjectButtons from "../components/sections/project/ProjectButtons";
 import ProjectPreview from "../components/sections/project/ProjectPreview";
 
 import myProjects from "../data/myProjects";
@@ -15,7 +15,7 @@ const Project = ({ match, history }) => {
   return (
     <>
       {project ? (
-        <section className="project-details">
+        <section className="project">
           <div className="container">
             <ProjectDetails project={project} />
             <ProjectButtons project={project} />

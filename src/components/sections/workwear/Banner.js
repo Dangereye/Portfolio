@@ -2,7 +2,7 @@ import React from "react";
 
 const Banner = () => {
   return (
-    <section className="workwear">
+    <section id="banner" className="workwear">
       <div className="container">
         <h3 className="subtitle">Banner</h3>
         <p>

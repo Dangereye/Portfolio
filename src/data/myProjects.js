@@ -6,7 +6,7 @@ const myProjects = [
     date: "2021",
     title: "Movies",
     description:
-      "Movies is a website to search and explore movies, television and cast members. TMDB has vast, expansive and ever-evolving data, prompting experimentation with React Query for this project because of its ability to easily cache data, which I think worked well. The user experience feels smooth and optimised.",
+      "Movies is a React application to search and explore movies, television and related cast/crew members. The TMDB API provides vast, expansive and ever-evolving data, prompting experimentation with React Query for this project because of its ability to easily cache fetched data.",
     preview_image: "/img/projects/tmdb-movies/min/preview-min.jpg",
     api: [
       {
@@ -32,9 +32,19 @@ const myProjects = [
       },
       { title: "React Query", url: "https://react-query.tanstack.com/" },
     ],
-    links: {
-      live: "https://pux-movies.netlify.app",
-      code: "https://github.com/Dangereye/Movies",
+    buttons: {
+      primary: {
+        type: "anchor",
+        url: "https://pux-movies.netlify.app",
+        styles: "primary large",
+        text: "Launch Site",
+      },
+      secondary: {
+        type: "anchor",
+        url: "https://github.com/Dangereye/Movies",
+        styles: "secondary dark large",
+        text: "View Code",
+      },
     },
   },
   {
@@ -43,7 +53,7 @@ const myProjects = [
     date: "2021",
     title: "The Weather",
     description:
-      "The weather utilises the context API and a single reducer to achieve its global state. Header images provided by Unsplash update using keywords from the current weather conditions. Other functionality includes geolocation, manual location search, current conditions, hourly conditions, precipitation, wind, astronomy and settings.",
+      "The weather is a React application utilising the Context API to achieve its global state. Header images provided by Unsplash update (somewhat reliably) using keywords from current weather conditions. Additional functionality includes geolocation, location search, current conditions, hourly conditions, precipitation, wind, astronomy and multiple adjustable settings.",
     preview_image: "/img/projects/the-weather/min/preview-min.jpg",
     api: [
       {
@@ -72,9 +82,19 @@ const myProjects = [
         url: "https://reactrouter.com/web/guides/quick-start",
       },
     ],
-    links: {
-      live: "https://pux-the-weather.netlify.app",
-      code: "https://github.com/Dangereye/the-weather",
+    buttons: {
+      primary: {
+        type: "anchor",
+        url: "https://pux-the-weather.netlify.app",
+        styles: "primary large",
+        text: "Launch Site",
+      },
+      secondary: {
+        type: "anchor",
+        url: "https://github.com/Dangereye/the-weather",
+        styles: "secondary dark large",
+        text: "View Code",
+      },
     },
   },
   {
@@ -83,7 +103,7 @@ const myProjects = [
     date: "2021",
     title: "Star Wars",
     description:
-      "As a massive fan of the series myself, Star Wars was a fun project to create. Users can explore detailed information regarding movies, people, species, vehicles, planets and starships from the first six movies. While able to acquire some imagery, icons are primarily to avoid any nasty copyright issues.",
+      "Star Wars is a React application utilising the SWAPI API. Users can explore information about Star Wars movies, people, species, vehicles, and starships. I used movie posters and several images from various sources (credited) but decided to use icons primarily to avoid any nasty copyright issues.",
     preview_image: "/img/projects/starwars/min/preview-min.jpg",
     api: [
       {
@@ -109,9 +129,19 @@ const myProjects = [
         url: "https://reactrouter.com/web/guides/quick-start",
       },
     ],
-    links: {
-      live: "https://pux-starwars.netlify.app",
-      code: "https://github.com/Dangereye/starwars",
+    buttons: {
+      primary: {
+        type: "anchor",
+        url: "https://pux-starwars.netlify.app",
+        styles: "primary large",
+        text: "Launch Site",
+      },
+      secondary: {
+        type: "anchor",
+        url: "https://github.com/Dangereye/starwars",
+        styles: "secondary dark large",
+        text: "View Code",
+      },
     },
   },
   {
@@ -121,9 +151,7 @@ const myProjects = [
     date: "2020",
     title: "Workwear",
     description:
-      "Client workwearclothingdirect.com is an eCommerce platform that specialises in business apparel. At the helm, my brother Chris asked me to customise pre-purchased templates for both eBay and WordPress versions of the store.",
-    brief:
-      "Brief - Design and create product images to populate a carousel. A banner with short information concerning delivery, returns and discounts. A section containing images for quick access to products for specific sectors and to display top brand images, with links to browse relevant products.",
+      "Workwear was a freelance project primarily image-focused but with a small amount of HTML and CSS included with certain pieces. Operating both eBay and WordPress versions of their store, requirements were different for each.",
     preview_image: "/img/projects/workwear/min/preview-min.jpg",
     tech: [
       { image: `${svg}/html5.svg`, alt: "HTML5" },
@@ -143,10 +171,22 @@ const myProjects = [
       },
     ],
     deliverables: [
-      "Carousel images",
-      "Banner + SVG icons",
-      "Category images",
-      "Top brand images",
+      {
+        title: "Carousel images",
+        url: "/project/4/workwearclothingdirect/#carousel",
+      },
+      {
+        title: "Banner + SVG icons",
+        url: "/project/4/workwearclothingdirect/#banner",
+      },
+      {
+        title: "Category images",
+        url: "/project/4/workwearclothingdirect/#categories",
+      },
+      {
+        title: "Top brand images",
+        url: "/project/4/workwearclothingdirect/#brands",
+      },
     ],
     slides: [
       {
@@ -289,7 +329,20 @@ const myProjects = [
         image: "/img/projects/workwear/min/brands/yoko-min.jpg",
       },
     ],
-    links: { live: "https://www.workwearclothingdirect.com/" },
+    buttons: {
+      primary: {
+        type: "button",
+        url: "/project/4/workwearclothingdirect/#carousel",
+        styles: "primary large",
+        text: "Carousel Images",
+      },
+      secondary: {
+        type: "anchor",
+        url: "https://www.workwearclothingdirect.com/",
+        styles: "secondary dark large",
+        text: "View Code",
+      },
+    },
   },
   {
     id: "5",
@@ -327,7 +380,14 @@ const myProjects = [
         url: "https://greensock.com/gsap",
       },
     ],
-    links: { live: "/", code: "https://github.com/Dangereye/Portfolio" },
+    buttons: {
+      secondary: {
+        type: "anchor",
+        url: "https://github.com/Dangereye/Portfolio",
+        styles: "secondary dark large",
+        text: "View Code",
+      },
+    },
   },
 ];
 

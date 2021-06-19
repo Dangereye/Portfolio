@@ -12,51 +12,48 @@
     margin-bottom: 1rem;
   }
 
-  &__technologies,
-  &__api,
-  &__third-party,
-  &__deliverables {
-    margin: 2rem 0;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+  &__details {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    gap: 4rem;
 
-    span,
-    a {
-      margin: 5px 0;
-    }
-    span:not(:first-child) {
-      color: $dark-grey;
+    @media (max-width: 540px) {
+      grid-template-columns: 1fr;
     }
 
-    *:not(:first-child):not(:last-child)::after {
-      margin-right: 1rem;
-      display: inline-block;
-      content: ",";
+    &__main {
+      h2 {
+        margin: 4rem 0 2rem 0;
+      }
     }
 
-    span:first-of-type {
-      margin-right: 1rem;
-      font-weight: 700;
+    &__extra {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, max-content);
+      gap: 4rem;
+
+      &__api,
+      &__third-party,
+      &__deliverables {
+        width: max-content;
+      }
     }
 
-    > img:not(:last-child) {
-      margin-right: 1rem;
+    &__technologies {
+      margin: 2rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+
+      > img:not(:last-child) {
+        margin-right: 1rem;
+      }
+
+      img {
+        width: 3.2rem;
+        height: 3.2rem;
+      }
     }
-
-    img {
-      width: 3.2rem;
-      height: 3.2rem;
-    }
-  }
-
-  &__technologies {
-    margin-bottom: 3rem;
-  }
-
-  &__description {
-    margin-bottom: 2rem;
-    color: $dark-grey;
   }
 
   &__buttons {

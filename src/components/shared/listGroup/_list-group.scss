@@ -3,10 +3,6 @@
     margin-bottom: 1rem;
   }
 
-  h3 {
-    color: $dark-grey;
-  }
-
   .list-link {
     margin: 0.5rem 0;
 
@@ -17,9 +13,24 @@
     }
 
     a {
-      color: $mid-grey;
+      color: $link-color;
+      transition: color 0.4s;
       &:hover {
-        color: $light-color;
+        color: $accent-color;
+      }
+    }
+  }
+
+  &.light {
+    h3 {
+      color: $dark-grey;
+    }
+    .list-link {
+      a {
+        color: $mid-grey;
+        &:hover {
+          color: $light-color;
+        }
       }
     }
   }
