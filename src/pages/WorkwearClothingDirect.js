@@ -43,6 +43,7 @@ const WorkwearClothingDirect = ({ match }) => {
         <Slideshow
           images={project.slides}
           slideshowIndex={slideshowIndex}
+          slideshowIsOpen={slideshowIsOpen}
           setSlideshowIsOpen={setSlideshowIsOpen}
         />
       )}

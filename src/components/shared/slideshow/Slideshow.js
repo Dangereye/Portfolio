@@ -2,8 +2,14 @@ import React, { useState, useEffect } from "react";
 import Close from "../../../svg/Close";
 import Next from "../../../svg/Next";
 import Previous from "../../../svg/Previous";
+import gsap from "gsap";
 
-const Slideshow = ({ images, slideshowIndex, setSlideshowIsOpen }) => {
+const Slideshow = ({
+  images,
+  slideshowIndex,
+  slideshowIsOpen,
+  setSlideshowIsOpen,
+}) => {
   const [pos, setPos] = useState(0 - slideshowIndex * 100);
   const [activeSlide, setActiveSlide] = useState(slideshowIndex);
   const [activeColor, setActiveColor] = useState(images[slideshowIndex].color);
@@ -13,6 +19,68 @@ const Slideshow = ({ images, slideshowIndex, setSlideshowIsOpen }) => {
     () => setActiveColor(images[activeSlide].color),
     [images, activeSlide]
   );
+
+  useEffect(() => {
+    if (slideshowIsOpen) {
+      console.log("slider");
+      const slideshow = gsap.timeline();
+      slideshow.from(".slider", {
+        opacity: 0,
+        duration: 0.6,
+        ease: "ease",
+      });
+      slideshow.from(
+        ".slider__slide",
+        {
+          scale: 0,
+          opacity: 0,
+          duration: 0.6,
+          ease: "ease",
+        },
+        0
+      );
+      slideshow.from(
+        ".slider-prev",
+        {
+          x: -100,
+          opacity: 0,
+          duration: 0.6,
+          ease: "ease",
+        },
+        0.3
+      );
+      slideshow.from(
+        ".slider-next",
+        {
+          x: 100,
+          opacity: 0,
+          duration: 0.6,
+          ease: "ease",
+        },
+        0.3
+      );
+      slideshow.from(
+        ".slider-navigation",
+        {
+          y: 100,
+          opacity: 0,
+          duration: 0.6,
+          ease: "ease",
+        },
+        0.3
+      );
+      slideshow.from(
+        ".slider-close",
+        {
+          y: -100,
+          opacity: 0,
+          duration: 0.6,
+          ease: "ease",
+        },
+        0.3
+      );
+    }
+  }, [slideshowIsOpen]);
 
   const nextSlide = () => {
     if (pos > 0 - (images.length - 1) * 100) {

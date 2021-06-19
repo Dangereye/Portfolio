@@ -6,7 +6,7 @@ const Carousel = ({ project, openSlideshow }) => {
       <div className="container">
         <h3 className="subtitle">Carousel images</h3>
         <p>
-          Each image contains multiple layers composited using numerous learned
+          Each image contains multiple layers, composited using numerous learned
           techniques to blend layers onto newly selected/created backgrounds.
           Click any image to view as a slideshow.
         </p>
