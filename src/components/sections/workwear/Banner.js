@@ -5,13 +5,13 @@ const Banner = () => {
   const animate = useAnimation();
   useEffect(() => {
     animate("#banner", ".banner-item");
-  }, [animate]);
+  });
   return (
     <section id="banner">
       <div className="container">
         <div className="section-subtitle banner-item">Banner</div>
         <h2 className="section-title banner-item">Quick Information</h2>
-        <p className="section-description banner-item">
+        <p className="section-description center banner-item">
           Provided as a responsive HTML, CSS template including SVG icons for
           WordPress, then three separate images for eBay.
         </p>

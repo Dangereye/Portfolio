@@ -40,4 +40,12 @@ p {
   color: $dark-grey;
   line-height: 1.618;
   max-width: 80ch;
+
+  &.section-description {
+    margin: 4rem auto $verticalPadding auto;
+  }
+
+  &.center {
+    text-align: center;
+  }
 }

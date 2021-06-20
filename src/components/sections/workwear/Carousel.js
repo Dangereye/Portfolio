@@ -4,8 +4,9 @@ import useAnimation from "../../../hooks/useAnimation";
 const Carousel = ({ project, openSlideshow }) => {
   const animate = useAnimation();
   useEffect(() => {
+    console.log("Animated");
     animate("#carousel", ".carousel-item, .slide");
-  }, [animate]);
+  });
   return (
     <section id="carousel">
       <div className="container">
