@@ -1,26 +1,11 @@
 import React, { useEffect } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
+import useAnimation from "../../../hooks/useAnimation";
 
 const Carousel = ({ project, openSlideshow }) => {
+  const animate = useAnimation();
   useEffect(() => {
-    const carousel = gsap.timeline({
-      scrollTrigger: {
-        trigger: "#carousel",
-        start: "top 300",
-        toggleActions: "play none none none",
-        markers: false,
-      },
-    });
-    carousel.from(".carousel-item, .slide", {
-      y: 100,
-      opacity: 0,
-      duration: 1,
-      stagger: 0.1,
-      ease: "back.out(2.5)",
-    });
-  }, []);
+    animate("#carousel", ".carousel-item, .slide");
+  }, [animate]);
   return (
     <section id="carousel">
       <div className="container">

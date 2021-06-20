@@ -1,26 +1,11 @@
 import React, { useEffect } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
+import useAnimation from "../../../hooks/useAnimation";
 
 const Banner = () => {
+  const animate = useAnimation();
   useEffect(() => {
-    const banner = gsap.timeline({
-      scrollTrigger: {
-        trigger: "#banner",
-        start: "top 300",
-        toggleActions: "play none none none",
-        markers: false,
-      },
-    });
-    banner.from(".banner-item", {
-      y: 100,
-      opacity: 0,
-      stagger: 0.1,
-      duration: 1,
-      ease: "back.out(2.5)",
-    });
-  }, []);
+    animate("#banner", ".banner-item");
+  }, [animate]);
   return (
     <section id="banner">
       <div className="container">
