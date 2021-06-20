@@ -1,7 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import gsap from "gsap";
 
 const ProjectButtons = ({ project }) => {
+  useEffect(() => {
+    gsap.from(".btn", {
+      delay: 0.5,
+      y: 100,
+      opacity: 0,
+      duration: 1,
+      stagger: 0.1,
+      ease: "back.out(2.5)",
+    });
+  }, []);
   return (
     <div className="project__buttons">
       {project.buttons.primary &&
