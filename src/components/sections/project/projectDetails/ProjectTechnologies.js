@@ -1,15 +1,11 @@
-import React, { useEffect } from "react";
-import gsap from "gsap";
+import React from "react";
 
-const ProjectTechnologies = ({ project }) => {
-  useEffect(() => {
-    gsap.from(".image", { scale: 0, stagger: 0.1, ease: "back.out(4)" });
-  }, []);
+const ProjectTechnologies = ({ project, cn }) => {
   return (
     <div className="project__details__technologies">
       {project.tech.map((tech, index) => (
         <img
-          className="image"
+          className={`image ${cn}`}
           key={`tech-${index}`}
           src={tech.image}
           alt={tech.alt}

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import useScroll from "../hooks/useScroll";
 import myProjects from "../data/myProjects";
-import ProjectDetails from "../components/sections/project/ProjectDetails";
+import ProjectDetails from "../components/sections/project/projectDetails/ProjectDetails";
 import ProjectButtons from "../components/sections/project/ProjectButtons";
 import ProjectPreview from "../components/sections/project/ProjectPreview";
 import Carousel from "../components/sections/workwear/Carousel";

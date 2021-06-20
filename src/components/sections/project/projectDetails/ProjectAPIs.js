@@ -1,11 +1,11 @@
 import React from "react";
-import ListAnchor from "../../shared/listGroup/ListAnchor";
-import ListGroup from "../../shared/listGroup/ListGroup";
+import ListAnchor from "../../../shared/listGroup/ListAnchor";
+import ListGroup from "../../../shared/listGroup/ListGroup";
 
-const ProjectThirdParty = ({ list }) => {
+const ProjectAPIs = ({ list }) => {
   return (
-    <div className="project__details__extra__third-party">
-      <ListGroup title="Third party">
+    <div className="project__details__extra__api">
+      <ListGroup title="APIs" cn="project-item">
         {list.map((item, index) => (
           <ListAnchor
             key={`${item.title}-${index}`}
@@ -20,4 +20,4 @@ const ProjectThirdParty = ({ list }) => {
   );
 };
 
-export default ProjectThirdParty;
+export default ProjectAPIs;

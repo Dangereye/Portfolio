@@ -1,19 +1,29 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ProjectTechnologies from "./ProjectTechnologies";
 import ProjectAPIs from "./ProjectAPIs";
 import ProjectThirdParty from "./ProjectThirdParty";
 import ProjectDeliverables from "./ProjectDeliverables";
+import useAnimation from "../../../../hooks/useAnimation";
 
 const ProjectDetails = ({ project }) => {
-  return (
-    <div className="project__details">
-      <div className="project__details__main">
-        <div className="project__type">{project.type} project.</div>
-        <h1 className="project__title">{project.title}.</h1>
+  const animate = useAnimation();
 
-        {project.tech && <ProjectTechnologies project={project} />}
-        <h2>Description</h2>
-        <p>{project.description}</p>
+  useEffect(() => {
+    animate("#details", ".project-item", ".project-item2");
+  });
+  return (
+    <div id="details" className="project__details">
+      <div className="project__details__main">
+        <div className="project__type project-item">
+          {project.type} project.
+        </div>
+        <h1 className="project__title project-item">{project.title}.</h1>
+
+        {project.tech && (
+          <ProjectTechnologies project={project} cn="project-item2" />
+        )}
+        <h2 className="project-item">Description</h2>
+        <p className="project-item">{project.description}</p>
       </div>
       <div className="project__details__extra">
         {project.api && <ProjectAPIs list={project.api} />}

@@ -1,13 +1,11 @@
 import React, { useEffect } from "react";
-import ProjectDetails from "../components/sections/project/ProjectDetails";
+import myProjects from "../data/myProjects";
+import ProjectDetails from "../components/sections/project/projectDetails/ProjectDetails";
 import ProjectButtons from "../components/sections/project/ProjectButtons";
 import ProjectPreview from "../components/sections/project/ProjectPreview";
 
-import myProjects from "../data/myProjects";
-
 const Project = ({ match, history }) => {
   const project = myProjects.find((x) => x.id === match.params.id);
-
   useEffect(() => {
     window.scrollTo(0, 0);
   });
