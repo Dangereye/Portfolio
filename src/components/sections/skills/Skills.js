@@ -1,25 +1,16 @@
-import React, { useEffect } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import React, { useState, useEffect } from "react";
 import mySkills from "../../../data/mySkills";
-gsap.registerPlugin(ScrollTrigger);
+import useAnimation from "../../../hooks/useAnimation";
 
 const Skills = () => {
+  const [complete, setComplete] = useState(false);
+  const animate = useAnimation();
   useEffect(() => {
-    gsap.from(".skills-item", {
-      y: 100,
-      opacity: 0,
-      duration: 1,
-      stagger: 0.1,
-      ease: "back.out(2.5)",
-      scrollTrigger: {
-        trigger: "#skills",
-        start: "top 300",
-        toggleActions: "play none none none",
-        markers: false,
-      },
-    });
-  }, []);
+    if (!complete) {
+      animate("#skills", ".skills-item");
+      setComplete(true);
+    }
+  }, [animate, complete]);
   return (
     <section id="skills">
       <div className="container">

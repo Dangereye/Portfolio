@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ImSpinner2 } from "react-icons/im";
 import FormGroup from "../shared/forms/FormGroup";
 import Button from "../shared/buttons/Button";
-gsap.registerPlugin(ScrollTrigger);
+import useAnimation from "../../hooks/useAnimation";
 
 const Contact = ({ history }) => {
+  const animate = useAnimation();
+  const [complete, setComplete] = useState(false);
   const [formData, setFormData] = useState({
     company: "",
     name: "",
@@ -95,20 +95,11 @@ const Contact = ({ history }) => {
   };
 
   useEffect(() => {
-    gsap.from(".contact-item", {
-      y: 100,
-      opacity: 0,
-      duration: 1,
-      stagger: 0.1,
-      ease: "back.out(2.5)",
-      scrollTrigger: {
-        trigger: "#contact",
-        start: "top 300",
-        toggleActions: "play none none none",
-        markers: false,
-      },
-    });
-  }, []);
+    if (!complete) {
+      animate("#contact", ".contact-item");
+      setComplete(true);
+    }
+  }, [animate, complete]);
   return (
     <section id="contact">
       <div className="container">

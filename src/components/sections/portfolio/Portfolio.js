@@ -1,47 +1,25 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import myProjects from "../../../data/myProjects";
+import useAnimation from "../../../hooks/useAnimation";
 import Button from "../../shared/buttons/Button";
 
-gsap.registerPlugin(ScrollTrigger);
-
 const Portfolio = () => {
+  const [complete, setComplete] = useState(false);
   const [option, setOption] = useState("All");
   const style = { active: "btn option active", inactive: "btn option" };
+  const animate = useAnimation();
 
   const options = (e) => {
     setOption(e.target.innerText);
   };
-
   useEffect(() => {
-    const port = gsap.timeline({
-      scrollTrigger: {
-        trigger: "#portfolio",
-        start: "top center",
-        toggleActions: "play none none none",
-        markers: false,
-      },
-    });
-    port.from(".port-title, .project", {
-      y: 100,
-      opacity: 0,
-      duration: 1,
-      stagger: 0.1,
-      ease: "back.out(2.5)",
-    });
-    port.from(
-      ".option",
-      {
-        scale: 0,
-        duration: 1,
-        stagger: 0.2,
-        ease: "back.out(2.5)",
-      },
-      1
-    );
-  }, []);
+    if (!complete) {
+      animate("#portfolio", ".port-title, .project", ".option");
+      setComplete(true);
+    }
+  }, [animate, complete]);
+
   return (
     <section id="portfolio">
       <div className="container">

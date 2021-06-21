@@ -4,10 +4,10 @@ import React, { useEffect } from "react";
 const ProjectPreview = ({ project }) => {
   useEffect(() => {
     gsap.from(".project__preview", {
-      delay: 2.5,
+      delay: 0.8,
       y: 100,
       opacity: 0,
-      duration: 2,
+      duration: 1,
       ease: "back.out(2.5)",
     });
   }, []);

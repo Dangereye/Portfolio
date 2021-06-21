@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import ProjectTechnologies from "./ProjectTechnologies";
 import ProjectAPIs from "./ProjectAPIs";
 import ProjectThirdParty from "./ProjectThirdParty";
@@ -6,11 +6,14 @@ import ProjectDeliverables from "./ProjectDeliverables";
 import useAnimation from "../../../../hooks/useAnimation";
 
 const ProjectDetails = ({ project }) => {
+  const [complete, setComplete] = useState(false);
   const animate = useAnimation();
-
   useEffect(() => {
-    animate("#details", ".project-item", ".project-item2");
-  });
+    if (!complete) {
+      animate("#details", ".project-item", ".project-tech");
+      setComplete(true);
+    }
+  }, [animate, complete]);
   return (
     <div id="details" className="project__details">
       <div className="project__details__main">
@@ -20,7 +23,7 @@ const ProjectDetails = ({ project }) => {
         <h1 className="project__title project-item">{project.title}.</h1>
 
         {project.tech && (
-          <ProjectTechnologies project={project} cn="project-item2" />
+          <ProjectTechnologies project={project} cn="project-tech" />
         )}
         <h2 className="project-item">Description</h2>
         <p className="project-item">{project.description}</p>

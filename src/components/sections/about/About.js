@@ -1,31 +1,15 @@
-import React, { useEffect } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
+import React, { useState, useEffect } from "react";
+import useAnimation from "../../../hooks/useAnimation";
 
 const About = () => {
+  const [complete, setComplete] = useState(false);
+  const animate = useAnimation();
   useEffect(() => {
-    gsap
-      .timeline({
-        scrollTrigger: {
-          trigger: "#about",
-          start: "top 300",
-          toggleActions: "play none none none",
-          markers: false,
-        },
-      })
-      .from(".about-text", {
-        y: 100,
-        opacity: 0,
-        duration: 1,
-        stagger: 0.1,
-        ease: "back.out(2.5)",
-      })
-      .from(".content__image", {
-        scale: 0,
-        ease: "back.out(2.5)",
-      });
-  }, []);
+    if (!complete) {
+      animate("#about", ".about-text", ".content__image");
+      setComplete(true);
+    }
+  }, [animate, complete]);
   return (
     <section id="about">
       <div className="container">

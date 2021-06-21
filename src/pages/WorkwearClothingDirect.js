@@ -11,8 +11,8 @@ import TopBrands from "../components/sections/workwear/TopBrands";
 import Slideshow from "../components/shared/slideshow/Slideshow";
 
 const WorkwearClothingDirect = ({ match }) => {
-  const [hash, startScroll] = useScroll();
   const project = myProjects.find((x) => x.id === match.params.id);
+  const [hash, startScroll] = useScroll();
   const [slideshowIsOpen, setSlideshowIsOpen] = useState(false);
   const [slideshowIndex, setSlideshowIndex] = useState(0);
 

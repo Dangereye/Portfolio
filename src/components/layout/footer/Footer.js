@@ -1,44 +1,28 @@
-import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useHistory } from "react-router-dom";
 import { FaGithub, FaLinkedin, FaArrowUp } from "react-icons/fa";
-import { useHistory } from "react-router-dom";
 import IconAnchor from "../../shared/icon_links/IconAnchor";
 import ListGroup from "../../shared/listGroup/ListGroup";
 import ListLink from "../../shared/listGroup/ListLink";
 import ListAnchor from "../../shared/listGroup/ListAnchor";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Button from "../../shared/buttons/Button";
-gsap.registerPlugin(ScrollTrigger);
+import useAnimation from "../../../hooks/useAnimation";
 
 const Footer = () => {
   const history = useHistory();
+  const animate = useAnimation();
+  const [complete, setComplete] = useState(false);
+
   const backToTop = () => {
     history.push("/");
   };
 
   useEffect(() => {
-    const footer = gsap.timeline({
-      scrollTrigger: {
-        trigger: "#footer",
-        start: "top 300",
-        toggleActions: "play none none none",
-        markers: false,
-      },
-    });
-    footer.from(".footer-item", {
-      y: 100,
-      opacity: 0,
-      duration: 1,
-      stagger: 0.1,
-      ease: "back.out(2.5)",
-    });
-    footer.from(".footer-btn", {
-      scale: 0,
-      duration: 1,
-      ease: "back.out(2.5)",
-    });
-  }, []);
+    if (!complete) {
+      animate("#footer", ".footer-item", ".footer-btn");
+      setComplete(true);
+    }
+  }, [animate, complete]);
   return (
     <>
       <footer id="footer" className="footer">

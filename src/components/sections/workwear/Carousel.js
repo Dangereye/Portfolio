@@ -1,11 +1,15 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import useAnimation from "../../../hooks/useAnimation";
 
 const Carousel = ({ project, openSlideshow }) => {
+  const [complete, setComplete] = useState(false);
   const animate = useAnimation();
   useEffect(() => {
-    animate("#carousel", ".carousel-item, .slide");
-  });
+    if (!complete) {
+      animate("#carousel", ".carousel-item, .slide");
+      setComplete(true);
+    }
+  }, [animate, complete]);
   return (
     <section id="carousel">
       <div className="container">

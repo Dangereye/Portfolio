@@ -53,7 +53,7 @@ const myProjects = [
     date: "2021",
     title: "The Weather",
     description:
-      "The weather is a React application utilising the Context API to achieve its global state. Header images provided by Unsplash update (somewhat reliably) using keywords from current weather conditions. Additional functionality includes geolocation, location search, current conditions, hourly conditions, precipitation, wind, astronomy and multiple adjustable settings.",
+      "The weather is a React application utilising the Context API to achieve its global state. Header images provided by Unsplash update (somewhat reliably) using keywords from current weather conditions. Additional functionality includes geolocation, location search (saved to local storage), current conditions, hourly conditions, precipitation, wind, astronomy and multiple settings.",
     preview_image: "/img/projects/the-weather/min/preview-min.jpg",
     api: [
       {
