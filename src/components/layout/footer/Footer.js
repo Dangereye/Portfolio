@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { FaGithub, FaLinkedin, FaArrowUp } from "react-icons/fa";
 import IconAnchor from "../../shared/icon_links/IconAnchor";
 import ListGroup from "../../shared/listGroup/ListGroup";
@@ -9,12 +9,11 @@ import Button from "../../shared/buttons/Button";
 import useAnimation from "../../../hooks/useAnimation";
 
 const Footer = () => {
-  const history = useHistory();
   const animate = useAnimation();
   const [complete, setComplete] = useState(false);
 
   const backToTop = () => {
-    history.push("/");
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   };
 
   useEffect(() => {
