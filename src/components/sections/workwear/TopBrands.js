@@ -21,7 +21,7 @@ const TopBrands = ({ project }) => {
         <div className="top-brands">
           {project.top_brands.map((brand, index) => (
             <div key={`top-brand-${index}`} className="brand brand-item">
-              <img src={brand.image} alt={brand.title} />
+              <img src={brand.image} alt={brand.title} loading="lazy"/>
               <div className="slide__title">{brand.title}</div>
             </div>
           ))}

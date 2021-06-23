@@ -7,20 +7,42 @@
   z-index: 10;
 
   &.light {
-    color: $text-black;
     background-color: $light-color;
 
     .bar {
       background-color: $text-black;
     }
+
+    .nav__logo {
+      color: $text-black;
+    }
+
+    a {
+      color: $dark-grey;
+
+      &:hover {
+        color: $text-black;
+      }
+    }
   }
 
   &.dark {
-    color: $light-color;
     background-color: $dark-color;
 
     .bar {
       background-color: $light-color;
+    }
+
+    .nav__logo {
+      color: $light-color;
+    }
+
+    a {
+      color: $mid-grey;
+
+      &:hover {
+        color: $light-color;
+      }
     }
   }
 
@@ -85,7 +107,6 @@
   }
 
   &__logo {
-    color: inherit;
     font-weight: 800;
     text-transform: uppercase;
     text-decoration: none;
@@ -107,23 +128,23 @@
   }
 
   &__link {
-    color: inherit;
+    a {
+      padding: 0.4rem 0;
+      text-transform: capitalize;
+      line-height: 1;
+      cursor: pointer;
+      transition: color 0.4s;
+    }
 
     &:last-child {
       padding: 0.8rem 1.6rem;
-      color: #fff;
       border-radius: 4.3rem;
       background-color: $accent-color;
-    }
 
-    a {
-      padding: 0.4rem 0;
-      color: inherit;
-      text-transform: capitalize;
-      font-weight: 400;
-      line-height: 1;
-      text-decoration: none;
-      cursor: pointer;
+      a,
+      a:hover {
+        color: #fff;
+      }
     }
   }
 }

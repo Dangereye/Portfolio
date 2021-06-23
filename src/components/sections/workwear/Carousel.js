@@ -27,6 +27,7 @@ const Carousel = ({ project, openSlideshow }) => {
                 src={slide.images.mobile}
                 alt={slide.title}
                 onClick={() => openSlideshow(index)}
+                loading="lazy"
               />
               
               <div className="slide__title">{slide.title}</div>

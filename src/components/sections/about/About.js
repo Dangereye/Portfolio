@@ -23,6 +23,7 @@ const About = () => {
               alt="Craig Puxty"
               width="1000px" 
               height="1000px"
+              loading="lazy"
             />
               </picture>
           </div>
