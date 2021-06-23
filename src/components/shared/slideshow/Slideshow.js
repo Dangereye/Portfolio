@@ -110,7 +110,13 @@ const Slideshow = ({
         >
           {images.map((item, index) => (
             <div className="slider__slide" key={`slider-slide-${index}`}>
-              <img src={item.image} alt={item.title} />
+              <picture className="preview-item">
+        <source srcSet={item.images.desktop} width="1920px" height="819px" media="(min-width:961px)"/>
+        <source srcSet={item.images.tablet} width="960px" height="410px" media="(min-width:481px)"/>
+        <source srcSet={item.images.mobile} width="480px" height="204px" media="(max-width:480px)"/>
+      <img src={item.images.desktop} width="1920px" height="1080px" alt={item.title} /> 
+      </picture>
+              
             </div>
           ))}
         </div>

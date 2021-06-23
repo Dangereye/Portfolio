@@ -5,7 +5,7 @@ import useAnimation from "../../../hooks/useAnimation";
 import Button from "../../shared/buttons/Button";
 
 const Portfolio = () => {
-  const [complete, setComplete] = useState(false);
+  const [animIsLoaded, setAnimIsLoaded] = useState(false);
   const [option, setOption] = useState("All");
   const style = { active: "btn option active", inactive: "btn option" };
   const animate = useAnimation();
@@ -13,12 +13,13 @@ const Portfolio = () => {
   const options = (e) => {
     setOption(e.target.innerText);
   };
+
   useEffect(() => {
-    if (!complete) {
+    if (!animIsLoaded) {
       animate("#portfolio", ".port-title, .project", ".option");
-      setComplete(true);
+      setAnimIsLoaded(true);
     }
-  }, [animate, complete]);
+  }, [animate, animIsLoaded]);
 
   return (
     <section id="portfolio">
@@ -57,7 +58,7 @@ const Portfolio = () => {
                         : `/project/${item.id}`
                     }
                   >
-                    <img src={item.preview_image} alt={item.title} />
+                    <img src={item.preview_images.mobile} width="480px" height="270px" alt={item.title} />
                   </Link>
                 </div>
                 <div className="project__info">

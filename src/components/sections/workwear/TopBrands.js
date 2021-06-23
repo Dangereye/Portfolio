@@ -2,14 +2,14 @@ import React, { useState, useEffect } from "react";
 import useAnimation from "../../../hooks/useAnimation";
 
 const TopBrands = ({ project }) => {
-  const [complete, setComplete] = useState(false);
+  const [animIsLoaded, setAnimIsLoaded] = useState(false);
   const animate = useAnimation();
   useEffect(() => {
-    if (!complete) {
+    if (!animIsLoaded) {
       animate("#brands", ".brand-item");
-      setComplete(true);
+      setAnimIsLoaded(true);
     }
-  }, [animate, complete]);
+  }, [animate, animIsLoaded]);
   return (
     <section id="brands" className="workwear">
       <div className="container">

@@ -2,14 +2,14 @@ import React, { useState, useEffect } from "react";
 import useAnimation from "../../../hooks/useAnimation";
 
 const Banner = () => {
-  const [complete, setComplete] = useState(false);
+  const [animIsLoaded, setAnimIsLoaded] = useState(false);
   const animate = useAnimation();
   useEffect(() => {
-    if (!complete) {
+    if (!animIsLoaded) {
       animate("#banner", ".banner-item");
-      setComplete(true);
+      setAnimIsLoaded(true);
     }
-  }, [animate, complete]);
+  }, [animate, animIsLoaded]);
   return (
     <section id="banner">
       <div className="container">

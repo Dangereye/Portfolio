@@ -6,14 +6,14 @@ import ProjectDeliverables from "./ProjectDeliverables";
 import useAnimation from "../../../../hooks/useAnimation";
 
 const ProjectDetails = ({ project }) => {
-  const [complete, setComplete] = useState(false);
+  const [animIsLoaded, setAnimIsLoaded] = useState(false);
   const animate = useAnimation();
   useEffect(() => {
-    if (!complete) {
+    if (!animIsLoaded) {
       animate("#details", ".project-item", ".project-tech");
-      setComplete(true);
+      setAnimIsLoaded(true);
     }
-  }, [animate, complete]);
+  }, [animate, animIsLoaded]);
   return (
     <div id="details" className="project__details">
       <div className="project__details__main">

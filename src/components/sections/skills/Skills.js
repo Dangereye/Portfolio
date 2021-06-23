@@ -3,14 +3,14 @@ import mySkills from "../../../data/mySkills";
 import useAnimation from "../../../hooks/useAnimation";
 
 const Skills = () => {
-  const [complete, setComplete] = useState(false);
+  const [animIsLoaded, setAnimIsLoaded] = useState(false);
   const animate = useAnimation();
   useEffect(() => {
-    if (!complete) {
+    if (!animIsLoaded) {
       animate("#skills", ".skills-item");
-      setComplete(true);
+      setAnimIsLoaded(true);
     }
-  }, [animate, complete]);
+  }, [animate, animIsLoaded]);
   return (
     <section id="skills">
       <div className="container">

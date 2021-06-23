@@ -25,10 +25,15 @@ const useAnimation = () => {
         },
         onComplete: () => {
           console.log("fadeUp Completed: ", section);
+          if (!elTwo) {
+            tl.kill();
+            console.log("fadeUp Killed: ", section);
+          }
         },
       });
       tl.add(fadeUp);
     }
+
     if (elTwo) {
       const scaleUp = gsap.from(elTwo, {
         scale: 0,
@@ -40,6 +45,8 @@ const useAnimation = () => {
         },
         onComplete: () => {
           console.log("scaleUp Completed: ", section);
+          tl.kill();
+          console.log("scaleUp Killed: ", section);
         },
       });
       tl.add(scaleUp);

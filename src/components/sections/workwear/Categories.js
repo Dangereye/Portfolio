@@ -2,14 +2,14 @@ import React, { useState, useEffect } from "react";
 import useAnimation from "../../../hooks/useAnimation";
 
 const Categories = ({ project }) => {
-  const [complete, setComplete] = useState(false);
+  const [animIsLoaded, setAnimIsLoaded] = useState(false);
   const animate = useAnimation();
   useEffect(() => {
-    if (!complete) {
+    if (!animIsLoaded) {
       animate("#categories", ".categories-item");
-      setComplete(true);
+      setAnimIsLoaded(true);
     }
-  }, [animate, complete]);
+  }, [animate, animIsLoaded]);
   return (
     <section id="categories">
       <div className="container">

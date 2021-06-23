@@ -2,14 +2,14 @@ import React, { useState, useEffect } from "react";
 import useAnimation from "../../../hooks/useAnimation";
 
 const Carousel = ({ project, openSlideshow }) => {
-  const [complete, setComplete] = useState(false);
+  const [animIsLoaded, setAnimIsLoaded] = useState(false);
   const animate = useAnimation();
   useEffect(() => {
-    if (!complete) {
+    if (!animIsLoaded) {
       animate("#carousel", ".carousel-item, .slide");
-      setComplete(true);
+      setAnimIsLoaded(true);
     }
-  }, [animate, complete]);
+  }, [animate, animIsLoaded]);
   return (
     <section id="carousel">
       <div className="container">
@@ -23,11 +23,12 @@ const Carousel = ({ project, openSlideshow }) => {
         <div className="slides">
           {project.slides.map((slide, index) => (
             <div key={`gallery-item-${index}`} className="slide">
-              <img
-                src={slide.image}
+        <img
+                src={slide.images.mobile}
                 alt={slide.title}
                 onClick={() => openSlideshow(index)}
               />
+              
               <div className="slide__title">{slide.title}</div>
             </div>
           ))}

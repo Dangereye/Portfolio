@@ -6,22 +6,13 @@ import ListGroup from "../../shared/listGroup/ListGroup";
 import ListLink from "../../shared/listGroup/ListLink";
 import ListAnchor from "../../shared/listGroup/ListAnchor";
 import Button from "../../shared/buttons/Button";
-import useAnimation from "../../../hooks/useAnimation";
 
 const Footer = () => {
-  const animate = useAnimation();
-  const [complete, setComplete] = useState(false);
 
   const backToTop = () => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   };
-
-  useEffect(() => {
-    if (!complete) {
-      animate("#footer", ".footer-item", ".footer-btn");
-      setComplete(true);
-    }
-  }, [animate, complete]);
+  
   return (
     <>
       <footer id="footer" className="footer">

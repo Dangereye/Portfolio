@@ -6,7 +6,7 @@ import useAnimation from "../../hooks/useAnimation";
 
 const Contact = ({ history }) => {
   const animate = useAnimation();
-  const [complete, setComplete] = useState(false);
+  const [animIsLoaded, setAnimIsLoaded] = useState(false);
   const [formData, setFormData] = useState({
     company: "",
     name: "",
@@ -95,11 +95,11 @@ const Contact = ({ history }) => {
   };
 
   useEffect(() => {
-    if (!complete) {
+    if (!animIsLoaded) {
       animate("#contact", ".contact-item");
-      setComplete(true);
+      setAnimIsLoaded(true);
     }
-  }, [animate, complete]);
+  }, [animate, animIsLoaded]);
   return (
     <section id="contact">
       <div className="container">
