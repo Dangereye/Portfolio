@@ -20,14 +20,9 @@ const useAnimation = () => {
         duration: 0.7,
         stagger: 0.1,
         ease: "back.out(2.5)",
-        onStart: () => {
-          console.log("fadeUp Started: ", section);
-        },
         onComplete: () => {
-          console.log("fadeUp Completed: ", section);
           if (!elTwo) {
             tl.kill();
-            console.log("fadeUp Killed: ", section);
           }
         },
       });
@@ -40,13 +35,8 @@ const useAnimation = () => {
         duration: 0.7,
         stagger: 0.1,
         ease: "back.out(2.5)",
-        onStart: () => {
-          console.log("scaleUp Started: ", section);
-        },
         onComplete: () => {
-          console.log("scaleUp Completed: ", section);
           tl.kill();
-          console.log("scaleUp Killed: ", section);
         },
       });
       tl.add(scaleUp);
