@@ -16,7 +16,7 @@ const Portfolio = () => {
 
   useEffect(() => {
     if (!animIsLoaded) {
-      animate("#portfolio", ".port-title, .project", ".option");
+      animate("#portfolio", ".port-title, .project");
       setAnimIsLoaded(true);
     }
   }, [animate, animIsLoaded]);
@@ -27,38 +27,19 @@ const Portfolio = () => {
         <div className="port-title section-subtitle">Portfolio</div>
         <h2 className="port-title section-title">Recent Projects</h2>
 
-        <div className="options">
-          <Button
-            cn={option === "All" ? style.active : style.inactive}
-            fn={options}
-            text="All"
-          />
-          <Button
-            cn={option === "React" ? style.active : style.inactive}
-            fn={options}
-            text="React"
-          />
-          <Button
-            cn={option === "Photoshop" ? style.active : style.inactive}
-            fn={options}
-            text="Photoshop"
-          />
-        </div>
-
         <div className="projects">
           {myProjects
             .filter((item) => (option !== "All" ? item.type === option : item))
             .map((item) => (
               <div className="project" key={`project-${item.id}`}>
                 <div className="project__image">
-                  <Link
-                    to={
-                      item.page
-                        ? `/project/${item.id}/${item.page}`
-                        : `/project/${item.id}`
-                    }
-                  >
-                    <img src={item.preview_images.mobile} width="480px" height="270px" alt={item.title} />
+                  <Link to={`/project/${item.id}`}>
+                    <img
+                      src={item.preview_images.mobile}
+                      width="480px"
+                      height="270px"
+                      alt={item.title}
+                    />
                   </Link>
                 </div>
                 <div className="project__info">

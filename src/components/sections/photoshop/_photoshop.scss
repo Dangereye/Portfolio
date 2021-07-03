@@ -15,3 +15,27 @@
     opacity: 0;
   }
 }
+
+.slides {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 2rem;
+
+  .slide {
+    overflow: hidden;
+    cursor: pointer;
+    img {
+      width: 100%;
+      transition: 0.4s;
+    }
+
+    &__title {
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+    &:hover > img {
+      transform: scale(1.1);
+    }
+  }
+}

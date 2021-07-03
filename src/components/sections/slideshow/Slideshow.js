@@ -3,21 +3,17 @@ import Close from "../../../svg/Close";
 import Next from "../../../svg/Next";
 import Previous from "../../../svg/Previous";
 import gsap from "gsap";
+import slides from "../../../data/photoshopSlides";
 
-const Slideshow = ({
-  images,
-  slideshowIndex,
-  slideshowIsOpen,
-  setSlideshowIsOpen,
-}) => {
+const Slideshow = ({ slideshowIndex, slideshowIsOpen, setSlideshowIsOpen }) => {
   const [pos, setPos] = useState(0 - slideshowIndex * 100);
   const [activeSlide, setActiveSlide] = useState(slideshowIndex);
-  const [activeColor, setActiveColor] = useState(images[slideshowIndex].color);
+  const [activeColor, setActiveColor] = useState(slides[slideshowIndex].color);
   const strokeWidth = 30;
 
   useEffect(
-    () => setActiveColor(images[activeSlide].color),
-    [images, activeSlide]
+    () => setActiveColor(slides[activeSlide].color),
+    [slides, activeSlide]
   );
 
   useEffect(() => {
@@ -83,7 +79,7 @@ const Slideshow = ({
   }, [slideshowIsOpen]);
 
   const nextSlide = () => {
-    if (pos > 0 - (images.length - 1) * 100) {
+    if (pos > 0 - (slides.length - 1) * 100) {
       setPos((pos) => pos - 100);
       setActiveSlide((activeSlide) => activeSlide + 1);
     }
@@ -106,17 +102,24 @@ const Slideshow = ({
       <div className="container">
         <div
           className="slider__wrapper"
-          style={{ width: `${100 * images.length}%`, left: `${pos}%` }}
+          style={{ width: `${100 * slides.length}%`, left: `${pos}%` }}
         >
-          {images.map((item, index) => (
+          {slides.map((item, index) => (
             <div className="slider__slide" key={`slider-slide-${index}`}>
               <picture className="preview-item">
-        <source srcSet={item.images.desktop} width="1920px" height="819px" media="(min-width:961px)"/>
-        <source srcSet={item.images.tablet} width="960px" height="410px" media="(min-width:481px)"/>
-        <source srcSet={item.images.mobile} width="480px" height="204px" media="(max-width:480px)"/>
-      <img src={item.images.desktop} width="1920px" height="1080px" alt={item.title} /> 
-      </picture>
-              
+                <source
+                  srcSet={item.images.desktop}
+                  media="(min-width:961px)"
+                />
+                <source srcSet={item.images.tablet} media="(max-width:960px)" />
+                <source srcSet={item.images.mobile} media="(max-width:480px)" />
+                <img
+                  src={item.images.desktop}
+                  width="1920px"
+                  height="1080px"
+                  alt={item.title}
+                />
+              </picture>
             </div>
           ))}
         </div>
@@ -134,7 +137,7 @@ const Slideshow = ({
         <Close color={activeColor} stroke={strokeWidth} />
       </button>
       <div className="navigator">
-        {images.map((item, index) => (
+        {slides.map((item, index) => (
           <button
             className="btn slider-navigation glass"
             key={`navigator-${index}`}

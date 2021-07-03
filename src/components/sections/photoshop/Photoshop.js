@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
+import slides from "../../../data/photoshopSlides";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-const Photoshop = () => {
+const Photoshop = ({ openSlideshow }) => {
   useEffect(() => {
     const hero = gsap.timeline({
       scrollTrigger: {
@@ -23,7 +24,7 @@ const Photoshop = () => {
     hero.to(".hero__final", {
       clipPath: "circle(100% at 50% 50%)",
       opacity: 1,
-      duration: 4,
+      duration: 3,
     });
   }, []);
   return (
@@ -74,6 +75,20 @@ const Photoshop = () => {
               />
             </picture>
           </div>
+        </div>
+        <div className="slides">
+          {slides.map((slide, index) => (
+            <div key={`gallery-item-${index}`} className="slide">
+              <img
+                src={slide.images.mobile}
+                alt={slide.title}
+                onClick={() => openSlideshow(index)}
+                loading="lazy"
+              />
+
+              {/* <div className="slide__title">{slide.title}</div> */}
+            </div>
+          ))}
         </div>
       </div>
     </section>
