@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import useScroll from "../hooks/useScroll";
 import Header from "../components/sections/header/Header";
-import Skills from "../components/sections/skills/Skills";
 import Portfolio from "../components/sections/portfolio/Portfolio";
-import Contact from "../components/sections/Contact";
-import About from "../components/sections/about/About";
+import Skills from "../components/sections/skills/Skills";
 import Photoshop from "../components/sections/photoshop/Photoshop";
+import About from "../components/sections/about/About";
+import Contact from "../components/sections/Contact";
 import Slideshow from "../components/sections/slideshow/Slideshow";
 
 const Home = ({ history }) => {

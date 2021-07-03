@@ -11,14 +11,10 @@ const Slideshow = ({ slideshowIndex, slideshowIsOpen, setSlideshowIsOpen }) => {
   const [activeColor, setActiveColor] = useState(slides[slideshowIndex].color);
   const strokeWidth = 30;
 
-  useEffect(
-    () => setActiveColor(slides[activeSlide].color),
-    [slides, activeSlide]
-  );
+  useEffect(() => setActiveColor(slides[activeSlide].color), [activeSlide]);
 
   useEffect(() => {
     if (slideshowIsOpen) {
-      console.log("slider");
       const slideshow = gsap.timeline();
       slideshow.from(".slider", {
         opacity: 0,

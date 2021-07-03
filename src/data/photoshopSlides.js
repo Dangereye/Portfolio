@@ -15,7 +15,7 @@ const slides = [
       tablet: "/img/slides/bandc-tablet.jpg",
       mobile: "/img/slides/bandc-mobile.jpg",
     },
-    color: "#c79a63",
+    color: "#a67f24",
   },
   {
     title: "Beechfield Trawler Beanie",

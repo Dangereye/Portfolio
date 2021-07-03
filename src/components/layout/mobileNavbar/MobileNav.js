@@ -19,7 +19,7 @@ const MobileNav = ({ navIsOpen, setNavIsOpen }) => {
       </ListGroup>
 
       <ListGroup title="Downloads" cn="light">
-        <ListAnchor href="/cv/cv.txt" name="Curriculum vitae" download />
+        <ListAnchor href="/cv/cv.txt" name="Curriculum Vitae" download />
       </ListGroup>
 
       <ListGroup title="Email" cn="light">
