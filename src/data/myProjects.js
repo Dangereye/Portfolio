@@ -6,11 +6,12 @@ const myProjects = [
     date: "2021",
     title: "Movies",
     description:
-      "Movies is a React application to search and explore movies, television and related cast/crew members. The TMDB API provides vast, expansive and ever-evolving data, prompting experimentation with React Query for this project because of its ability to easily cache fetched data.",
-    preview_images:{
-      desktop:"/img/projects/tmdb-movies/min/previews-desktop.jpg",
-      tablet:"/img/projects/tmdb-movies/min/previews-tablet.jpg",
-      mobile:"/img/projects/tmdb-movies/min/previews-mobile.jpg"},
+      "A fully responsive, React application using functional components and hooks. Search and explore millions of movies, television shows, cast and crew members. The TMDB API provides vast, expansive and ever-evolving data, prompting experimentation with React Query for this project because of its ability to easily cache fetched data.",
+    preview_images: {
+      desktop: "/img/projects/tmdb-movies/min/previews-desktop.jpg",
+      tablet: "/img/projects/tmdb-movies/min/previews-tablet.jpg",
+      mobile: "/img/projects/tmdb-movies/min/previews-mobile.jpg",
+    },
     api: [
       {
         title: "themoviedb.org",
@@ -56,11 +57,12 @@ const myProjects = [
     date: "2021",
     title: "The Weather",
     description:
-      "The weather is a React application utilising the Context API to achieve its global state. Header images provided by Unsplash update (somewhat reliably) using keywords from current weather conditions. Additional functionality includes geolocation, location search (saved to local storage), current conditions, hourly conditions, precipitation, wind, astronomy and multiple settings.",
-    preview_images:{
-      desktop:"/img/projects/the-weather/min/previews-desktop.jpg",
-      tablet:"/img/projects/the-weather/min/previews-tablet.jpg",
-      mobile:"/img/projects/the-weather/min/previews-mobile.jpg"},
+      "A fully responsive, React application with functional components and hooks, utilising the Context API to achieve its global state. Header images provided by the Unsplash API, update (somewhat reliably) using keywords from current weather conditions. Functionality includes geolocation, location search (saved to local storage), current conditions, hourly conditions, precipitation, wind, astronomy and multiple settings.",
+    preview_images: {
+      desktop: "/img/projects/the-weather/min/previews-desktop.jpg",
+      tablet: "/img/projects/the-weather/min/previews-tablet.jpg",
+      mobile: "/img/projects/the-weather/min/previews-mobile.jpg",
+    },
     api: [
       {
         title: "weatherapi.com",
@@ -109,11 +111,12 @@ const myProjects = [
     date: "2021",
     title: "Star Wars",
     description:
-      "Star Wars is a React application utilising the SWAPI API. Users can explore information about Star Wars movies, people, species, vehicles, and starships. I used movie posters and several images from various sources (credited) but decided to use icons primarily to avoid any nasty copyright issues.",
-    preview_images:{
-      desktop:"/img/projects/starwars/min/previews-desktop.jpg",
-      tablet:"/img/projects/starwars/min/previews-tablet.jpg",
-      mobile:"/img/projects/starwars/min/previews-mobile.jpg",},
+      "A fully responsive, React application using functional components, hooks and the SWAPI API. Explore information about movies, characters, species, vehicles, starships and the associations between them. I collected movie posters and several royalty-free stock images (credited) for illustration purposes. However, primarily icons have been used to avoid any nasty copyright issues.",
+    preview_images: {
+      desktop: "/img/projects/starwars/min/previews-desktop.jpg",
+      tablet: "/img/projects/starwars/min/previews-tablet.jpg",
+      mobile: "/img/projects/starwars/min/previews-mobile.jpg",
+    },
     api: [
       {
         title: "swapi.dev",
@@ -161,10 +164,11 @@ const myProjects = [
     title: "Workwear",
     description:
       "Workwear was a freelance project primarily image-focused, with a small amount of HTML and CSS included with certain pieces. Operating both eBay and WordPress versions of their store, requirements were different for each.",
-    preview_images:{
-      desktop:"/img/projects/workwear/min/previews-desktop.jpg",
-      tablet:"/img/projects/workwear/min/previews-tablet.jpg",
-      mobile:"/img/projects/workwear/min/previews-mobile.jpg"},
+    preview_images: {
+      desktop: "/img/projects/workwear/min/previews-desktop.jpg",
+      tablet: "/img/projects/workwear/min/previews-tablet.jpg",
+      mobile: "/img/projects/workwear/min/previews-mobile.jpg",
+    },
     tech: [
       { image: `${svg}/html5.svg`, alt: "HTML5" },
       { image: `${svg}/css3.svg`, alt: "CSS3" },
@@ -203,83 +207,92 @@ const myProjects = [
     slides: [
       {
         title: "AXQ Face Cover",
-        images:{
-          desktop:"/img/projects/workwear/min/slides/axq-desktop.jpg",
-          tablet:"/img/projects/workwear/min/slides/axq-tablet.jpg",
-          mobile:"/img/projects/workwear/min/slides/axq-mobile.jpg"
+        images: {
+          desktop: "/img/projects/workwear/min/slides/axq-desktop.jpg",
+          tablet: "/img/projects/workwear/min/slides/axq-tablet.jpg",
+          mobile: "/img/projects/workwear/min/slides/axq-mobile.jpg",
         },
         color: "#fe6a00",
       },
       {
         title: "B&C Corporate Shirts",
-        images:{
-          desktop:"/img/projects/workwear/min/slides/bandc-desktop.jpg",
-          tablet:"/img/projects/workwear/min/slides/bandc-tablet.jpg",
-          mobile:"/img/projects/workwear/min/slides/bandc-mobile.jpg"
+        images: {
+          desktop: "/img/projects/workwear/min/slides/bandc-desktop.jpg",
+          tablet: "/img/projects/workwear/min/slides/bandc-tablet.jpg",
+          mobile: "/img/projects/workwear/min/slides/bandc-mobile.jpg",
         },
         color: "#c79a63",
       },
       {
         title: "Beechfield Trawler Beanie",
-        images:{
-          desktop:"/img/projects/workwear/min/slides/beechfield-beanie-desktop.jpg",
-          tablet:"/img/projects/workwear/min/slides/beechfield-beanie-tablet.jpg",
-          mobile:"/img/projects/workwear/min/slides/beechfield-beanie-mobile.jpg"
+        images: {
+          desktop:
+            "/img/projects/workwear/min/slides/beechfield-beanie-desktop.jpg",
+          tablet:
+            "/img/projects/workwear/min/slides/beechfield-beanie-tablet.jpg",
+          mobile:
+            "/img/projects/workwear/min/slides/beechfield-beanie-mobile.jpg",
         },
         color: "#dcad21",
       },
       {
         title: "Beechfield Original Morf",
-        images:{
-          desktop:"/img/projects/workwear/min/slides/beechfield-morf-desktop.jpg",
-          tablet:"/img/projects/workwear/min/slides/beechfield-morf-tablet.jpg",
-          mobile:"/img/projects/workwear/min/slides/beechfield-morf-mobile.jpg"
+        images: {
+          desktop:
+            "/img/projects/workwear/min/slides/beechfield-morf-desktop.jpg",
+          tablet:
+            "/img/projects/workwear/min/slides/beechfield-morf-tablet.jpg",
+          mobile:
+            "/img/projects/workwear/min/slides/beechfield-morf-mobile.jpg",
         },
         color: "#0693c9",
       },
       {
         title: "Fruit Of The Loom T-Shirt",
-        images:{
-          desktop:"/img/projects/workwear/min/slides/fruit-of-the-loom-desktop.jpg",
-          tablet:"/img/projects/workwear/min/slides/fruit-of-the-loom-tablet.jpg",
-          mobile:"/img/projects/workwear/min/slides/fruit-of-the-loom-mobile.jpg"
+        images: {
+          desktop:
+            "/img/projects/workwear/min/slides/fruit-of-the-loom-desktop.jpg",
+          tablet:
+            "/img/projects/workwear/min/slides/fruit-of-the-loom-tablet.jpg",
+          mobile:
+            "/img/projects/workwear/min/slides/fruit-of-the-loom-mobile.jpg",
         },
         color: "#b2356f",
       },
       {
         title: "Portwest Hi-Vis",
-        images:{
-          desktop:"/img/projects/workwear/min/slides/portwest-desktop.jpg",
-          tablet:"/img/projects/workwear/min/slides/portwest-tablet.jpg",
-          mobile:"/img/projects/workwear/min/slides/portwest-mobile.jpg"
+        images: {
+          desktop: "/img/projects/workwear/min/slides/portwest-desktop.jpg",
+          tablet: "/img/projects/workwear/min/slides/portwest-tablet.jpg",
+          mobile: "/img/projects/workwear/min/slides/portwest-mobile.jpg",
         },
-        
+
         color: "#fffe54",
       },
       {
         title: "Premier Poplin Shirts",
-        images:{
-          desktop:"/img/projects/workwear/min/slides/premier-desktop.jpg",
-          tablet:"/img/projects/workwear/min/slides/premier-tablet.jpg",
-          mobile:"/img/projects/workwear/min/slides/premier-mobile.jpg"
+        images: {
+          desktop: "/img/projects/workwear/min/slides/premier-desktop.jpg",
+          tablet: "/img/projects/workwear/min/slides/premier-tablet.jpg",
+          mobile: "/img/projects/workwear/min/slides/premier-mobile.jpg",
         },
         color: "#d58665",
       },
       {
         title: "Workguard Saftey Boots",
-        images:{
-          desktop:"/img/projects/workwear/min/slides/workguard-desktop.jpg",
-          tablet:"/img/projects/workwear/min/slides/workguard-tablet.jpg",
-          mobile:"/img/projects/workwear/min/slides/workguard-mobile.jpg"
+        images: {
+          desktop: "/img/projects/workwear/min/slides/workguard-desktop.jpg",
+          tablet: "/img/projects/workwear/min/slides/workguard-tablet.jpg",
+          mobile: "/img/projects/workwear/min/slides/workguard-mobile.jpg",
         },
         color: "#73a301",
       },
       {
         title: "Yoko Hi-Vis",
-        images:{
-          desktop:"/img/projects/workwear/min/slides/yoko-desktop.jpg",
-          tablet:"/img/projects/workwear/min/slides/yoko-tablet.jpg",
-          mobile:"/img/projects/workwear/min/slides/yoko-mobile.jpg"
+        images: {
+          desktop: "/img/projects/workwear/min/slides/yoko-desktop.jpg",
+          tablet: "/img/projects/workwear/min/slides/yoko-tablet.jpg",
+          mobile: "/img/projects/workwear/min/slides/yoko-mobile.jpg",
         },
         color: "#ff6e01",
       },
@@ -399,11 +412,12 @@ const myProjects = [
     date: "2021",
     title: "Portfolio",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi veritatis voluptatem, voluptatibus dolore officia atque recusandae, autem ipsum, iste sunt perferendis velit modi blanditiis aliquid saepe totam nihil. Nostrum, possimus.",
-    preview_images:{
-      desktop:"/img/projects/portfolio/min/previews-desktop.jpg",
-      tablet:"/img/projects/portfolio/min/previews-tablet.jpg",
-      mobile:"/img/projects/portfolio/min/previews-mobile.jpg",}, 
+      "A fully responsive, React application using functional components and hooks to showcase recent projects, current knowledge, skills, and little about me. I wanted to experiment with GSAP on this project. I created timeline and scroll trigger animations for visually interesting transitions between pages and sections. While I've only scratched the surface of GSAPs potential here, I will be using it within future projects without a doubt.",
+    preview_images: {
+      desktop: "/img/projects/portfolio/min/previews-desktop.jpg",
+      tablet: "/img/projects/portfolio/min/previews-tablet.jpg",
+      mobile: "/img/projects/portfolio/min/previews-mobile.jpg",
+    },
     tech: [
       { image: `${svg}/html5.svg`, alt: "HTML5" },
       { image: `${svg}/css3.svg`, alt: "CSS3" },

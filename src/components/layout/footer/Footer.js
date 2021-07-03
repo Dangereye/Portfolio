@@ -8,11 +8,10 @@ import ListAnchor from "../../shared/listGroup/ListAnchor";
 import Button from "../../shared/buttons/Button";
 
 const Footer = () => {
-
   const backToTop = () => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   };
-  
+
   return (
     <>
       <footer id="footer" className="footer">
@@ -35,12 +34,11 @@ const Footer = () => {
               <ListLink to="/project/1" name="Movies" />
               <ListLink to="/project/2" name="The Weather" />
               <ListLink to="/project/3" name="Star Wars" />
-              <ListLink to="/project/4" name="Workwear" />
               <ListLink to="/project/5" name="Portfolio" />
             </ListGroup>
 
             <ListGroup title="Downloads" cn="footer-item light">
-              <ListAnchor href="/cv/cv.txt" name="Curriculum vitae" download />
+              <ListAnchor href="/cv/cv.txt" name="Curriculum Vitae" download />
             </ListGroup>
 
             <ListGroup title="Email" cn="footer-item light">

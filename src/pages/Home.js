@@ -5,6 +5,7 @@ import Skills from "../components/sections/skills/Skills";
 import Portfolio from "../components/sections/portfolio/Portfolio";
 import Contact from "../components/sections/Contact";
 import About from "../components/sections/about/About";
+import Photoshop from "../components/sections/photoshop/Photoshop";
 
 const Home = ({ history }) => {
   const [hash, startScroll] = useScroll();
@@ -19,6 +20,7 @@ const Home = ({ history }) => {
       <Header />
       <Portfolio />
       <Skills />
+      <Photoshop />
       <About />
       <Contact history={history} />
     </>
