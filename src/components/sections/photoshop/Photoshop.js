@@ -24,7 +24,7 @@ const Photoshop = ({ openSlideshow }) => {
     hero.to(".hero__final", {
       clipPath: "circle(100% at 50% 50%)",
       opacity: 1,
-      duration: 3,
+      duration: 2,
     });
   }, []);
   return (

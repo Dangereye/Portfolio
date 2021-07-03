@@ -47,6 +47,7 @@ const Navbar = ({ navIsOpen, setNavIsOpen }) => {
         <ul className="nav__links">
           <NavLink name="portfolio" />
           <NavLink name="skills" />
+          <NavLink name="photoshop" />
           <NavLink name="about" />
           <NavLink name="contact" />
         </ul>

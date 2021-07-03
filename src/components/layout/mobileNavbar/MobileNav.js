@@ -13,6 +13,7 @@ const MobileNav = ({ navIsOpen, setNavIsOpen }) => {
       <ListGroup title="Navigation" cn="light">
         <ListLink to="/#portfolio" name="Portfolio" fn={closeNav} />
         <ListLink to="/#skills" name="Skills" fn={closeNav} />
+        <ListLink to="/#photoshop" name="Photoshop" fn={closeNav} />
         <ListLink to="/#about" name="About" fn={closeNav} />
         <ListLink to="/#contact" name="Contact" fn={closeNav} />
       </ListGroup>
