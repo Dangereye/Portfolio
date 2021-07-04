@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import gsap from "gsap";
 import { useHistory } from "react-router-dom";
-import Pux from "../Pux";
+import Pux from "../../../svg/Pux";
 import Button from "../../shared/buttons/Button";
 
 const Header = () => {

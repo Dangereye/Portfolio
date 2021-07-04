@@ -22,16 +22,16 @@ const Photoshop = ({ openSlideshow }) => {
       ease: "back.out(2.5)",
     });
     hero.to(".hero__final", {
+      delay: 0.5,
       clipPath: "circle(100% at 50% 50%)",
-      opacity: 1,
-      duration: 2,
+      duration: 2.5,
     });
   }, []);
   return (
     <section id="photoshop">
       <div className="container">
         <div className="photoshop-item section-subtitle">Photoshop</div>
-        <h2 className="photoshop-item section-title">Showcase</h2>
+        <h2 className="photoshop-item section-title">Carousel Showcase</h2>
         <div className="hero photoshop-item">
           <div className="hero__cutouts">
             <picture>
@@ -78,7 +78,7 @@ const Photoshop = ({ openSlideshow }) => {
         </div>
         <div className="slides">
           {slides.map((slide, index) => (
-            <div key={`gallery-item-${index}`} className="slide">
+            <div key={`gallery-item-${index}`} className="slide photoshop-item">
               <img
                 src={slide.images.mobile}
                 alt={slide.title}
