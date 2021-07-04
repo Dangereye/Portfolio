@@ -22,9 +22,10 @@ const Photoshop = ({ openSlideshow }) => {
       ease: "back.out(2.5)",
     });
     hero.to(".hero__final", {
-      delay: 0.5,
       clipPath: "circle(100% at 50% 50%)",
-      duration: 2.5,
+      duration: 2,
+      opacity: 1,
+      ease: "ease-out",
     });
   }, []);
   return (
