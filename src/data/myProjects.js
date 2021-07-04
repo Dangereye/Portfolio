@@ -6,7 +6,7 @@ const myProjects = [
     date: "2021",
     title: "Movies",
     description:
-      "A fully responsive, React application using functional components and hooks. Search and explore millions of movies, television shows, cast and crew members. The TMDB API provides vast, expansive and ever-evolving data, prompting experimentation with React Query for this project because of its ability to easily cache fetched data.",
+      "A responsive React app, utilising functional components, hooks, and the TMDB API. Search and explore millions of movies, television shows, cast and crew members from any era. TMDB provides vast, expansive and ever-evolving data, prompting experimentation with React Query for this project because of its ability to easily cache fetched data.",
     preview_images: {
       desktop: "/img/projects/tmdb-movies/min/previews-desktop.jpg",
       tablet: "/img/projects/tmdb-movies/min/previews-tablet.jpg",
@@ -57,7 +57,7 @@ const myProjects = [
     date: "2021",
     title: "The Weather",
     description:
-      "A fully responsive, React application with functional components and hooks, utilising the Context API to achieve its global state. Header images provided by the Unsplash API, update (somewhat reliably) using keywords from current weather conditions. Functionality includes geolocation, location search (saved to local storage), current conditions, hourly conditions, precipitation, wind, astronomy and multiple settings.",
+      "A responsive React app, utilising functional components and hooks, including the Context API. Header images provided by Unsplash, update (somewhat reliably) using keywords from current weather conditions. Additional functionality includes geolocation, location search (saved to local storage), current conditions, hourly conditions, precipitation, wind, astronomy and multiple settings.",
     preview_images: {
       desktop: "/img/projects/the-weather/min/previews-desktop.jpg",
       tablet: "/img/projects/the-weather/min/previews-tablet.jpg",
@@ -111,7 +111,7 @@ const myProjects = [
     date: "2021",
     title: "Star Wars",
     description:
-      "A fully responsive, React application using functional components, hooks and the SWAPI API. Explore information about movies, characters, species, vehicles, starships and the associations between them. I collected movie posters and several royalty-free stock images (credited) for illustration purposes. However, primarily icons have been used to avoid any nasty copyright issues.",
+      "A responsive React app, utilising functional components, hooks and the SWAPI API. Explore data regarding movies, characters, species, vehicles, starships and the associations between them. I sourced movie posters and several royalty-free stock images (credited) for illustration purposes. However, I decided to use icons primarily to save time and avoid any nasty copyright issues.",
     preview_images: {
       desktop: "/img/projects/starwars/min/previews-desktop.jpg",
       tablet: "/img/projects/starwars/min/previews-tablet.jpg",
@@ -162,7 +162,7 @@ const myProjects = [
     date: "2021",
     title: "Portfolio",
     description:
-      "A fully responsive, React application using functional components and hooks to showcase recent projects, current knowledge, skills, and little about me. I wanted to experiment with GSAP on this project. I created timeline and scroll trigger animations for visually interesting transitions between pages and sections. While I've only scratched the surface of GSAPs potential here, I will be using it within future projects without a doubt.",
+      "A responsive React app, utilising functional components and hooks to showcase recent projects, current knowledge, skills, and a little about myself. I've taken a rewarding dive into the world of GSAP with this project, experimenting with timeline and scroll trigger animations. Now, transitions between pages and sections are a little more visually interesting, adding a touch of extra polish. I realise I've only scratched the surface of GSAPs potential here but, I will be using it with future projects without a doubt!",
     preview_images: {
       desktop: "/img/projects/portfolio/min/previews-desktop.jpg",
       tablet: "/img/projects/portfolio/min/previews-tablet.jpg",
