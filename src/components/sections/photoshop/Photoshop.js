@@ -58,19 +58,19 @@ const Photoshop = ({ openSlideshow }) => {
           <div className="hero__final">
             <picture>
               <source
-                srcSet="/img/portfolio/min/photoshop/composite-final-desktop.jpg"
+                srcSet="/img/portfolio/min/photoshop/beechfield-morf-desktop.jpg"
                 media="(min-width:961px)"
               />
               <source
-                srcSet="/img/portfolio/min/photoshop/composite-final-tablet.jpg"
+                srcSet="/img/portfolio/min/photoshop/beechfield-morf-tablet.jpg"
                 media="(max-width:960px)"
               />
               <source
-                srcSet="/img/portfolio/min/photoshop/composite-final-mobile.jpg"
+                srcSet="/img/portfolio/min/photoshop/beechfield-morf-mobile.jpg"
                 media="(max-width:480px)"
               />
               <img
-                src="/img/portfolio/min/photoshop/composite-final-desktop.jpg"
+                src="/img/portfolio/min/photoshop/beechfield-morf-desktop.jpg"
                 alt="Beechfield product"
                 loading="lazy"
               />
