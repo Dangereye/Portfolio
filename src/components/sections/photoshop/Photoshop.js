@@ -86,8 +86,6 @@ const Photoshop = ({ openSlideshow }) => {
                 onClick={() => openSlideshow(index)}
                 loading="lazy"
               />
-
-              {/* <div className="slide__title">{slide.title}</div> */}
             </div>
           ))}
         </div>

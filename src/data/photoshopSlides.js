@@ -6,7 +6,7 @@ const slides = [
       tablet: "/img/portfolio/min/photoshop/axq-tablet.jpg",
       mobile: "/img/portfolio/min/photoshop/axq-mobile.jpg",
     },
-    color: "#fe6a00",
+    color: "#f07614",
   },
   {
     title: "B&C Corporate Shirts",
@@ -15,7 +15,7 @@ const slides = [
       tablet: "/img/portfolio/min/photoshop/bandc-tablet.jpg",
       mobile: "/img/portfolio/min/photoshop/bandc-mobile.jpg",
     },
-    color: "#a67f24",
+    color: "#ae7c31",
   },
   {
     title: "Beechfield Trawler Beanie",
@@ -24,7 +24,7 @@ const slides = [
       tablet: "/img/portfolio/min/photoshop/beechfield-beanie-tablet.jpg",
       mobile: "/img/portfolio/min/photoshop/beechfield-beanie-mobile.jpg",
     },
-    color: "#dcad21",
+    color: "#eaa919",
   },
   {
     title: "Beechfield Original Morf",
@@ -33,7 +33,7 @@ const slides = [
       tablet: "/img/portfolio/min/photoshop/beechfield-morf-tablet.jpg",
       mobile: "/img/portfolio/min/photoshop/beechfield-morf-mobile.jpg",
     },
-    color: "#0693c9",
+    color: "#0271b0",
   },
   {
     title: "Fruit Of The Loom T-Shirt",
@@ -42,7 +42,7 @@ const slides = [
       tablet: "/img/portfolio/min/photoshop/fruit-of-the-loom-tablet.jpg",
       mobile: "/img/portfolio/min/photoshop/fruit-of-the-loom-mobile.jpg",
     },
-    color: "#b2356f",
+    color: "#883857",
   },
   {
     title: "Portwest Hi-Vis",
@@ -52,7 +52,7 @@ const slides = [
       mobile: "/img/portfolio/min/photoshop/portwest-mobile.jpg",
     },
 
-    color: "#fffe54",
+    color: "#f4ee3d",
   },
   {
     title: "Premier Poplin Shirts",
@@ -61,7 +61,7 @@ const slides = [
       tablet: "/img/portfolio/min/photoshop/premier-tablet.jpg",
       mobile: "/img/portfolio/min/photoshop/premier-mobile.jpg",
     },
-    color: "#d58665",
+    color: "#ce6c47",
   },
   {
     title: "Workguard Saftey Boots",
@@ -70,7 +70,7 @@ const slides = [
       tablet: "/img/portfolio/min/photoshop/workguard-tablet.jpg",
       mobile: "/img/portfolio/min/photoshop/workguard-mobile.jpg",
     },
-    color: "#73a301",
+    color: "#77ab00",
   },
   {
     title: "Yoko Hi-Vis",
@@ -79,7 +79,7 @@ const slides = [
       tablet: "/img/portfolio/min/photoshop/yoko-tablet.jpg",
       mobile: "/img/portfolio/min/photoshop/yoko-mobile.jpg",
     },
-    color: "#ff6e01",
+    color: "#f47200",
   },
 ];
 

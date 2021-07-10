@@ -28,9 +28,6 @@ const Home = ({ history }) => {
       <Header />
       <Portfolio />
       <Skills />
-      <Photoshop openSlideshow={openSlideshow} />
-      <About />
-      <Contact history={history} />
       {slideshowIsOpen && (
         <Slideshow
           slideshowIndex={slideshowIndex}
@@ -38,6 +35,9 @@ const Home = ({ history }) => {
           setSlideshowIsOpen={setSlideshowIsOpen}
         />
       )}
+      <Photoshop openSlideshow={openSlideshow} />
+      <About />
+      <Contact history={history} />
     </>
   );
 };

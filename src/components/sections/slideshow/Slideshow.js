@@ -114,6 +114,7 @@ const Slideshow = ({ slideshowIndex, slideshowIsOpen, setSlideshowIsOpen }) => {
                   width="1920px"
                   height="1080px"
                   alt={item.title}
+                  loading="lazy"
                 />
               </picture>
             </div>
