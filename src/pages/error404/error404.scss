@@ -1,0 +1,20 @@
+.error404 {
+  height: calc(100vh - 10rem);
+
+  .container {
+    height: 100%;
+    display: grid;
+    place-content: center;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 14rem;
+    line-height: 1;
+    color: $text-black;
+  }
+
+  .btn {
+    margin-top: 4rem;
+  }
+}

@@ -37,19 +37,6 @@
     border-radius: 4.3rem;
   }
 
-  &.option {
-    padding: 1rem 2rem;
-    color: $text-black;
-    border: none;
-    border-radius: 4.3rem;
-    background-color: transparent;
-
-    &.active {
-      color: $light-color;
-      background-color: $accent-color;
-    }
-  }
-
   &.glass {
     display: flex;
     justify-content: center;

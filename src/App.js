@@ -4,7 +4,7 @@ import Navbar from "./components/layout/navbar/Navbar";
 import MobileNav from "./components/layout/mobileNavbar/MobileNav";
 import Home from "./pages/Home";
 import Project from "./pages/Project";
-import Error404 from "./pages/Error404";
+import Error404 from "./pages/error404/Error404";
 import Footer from "./components/layout/footer/Footer";
 
 function App() {
