@@ -50,9 +50,9 @@ const About = () => {
               Express, Mongoose and Mongo DB.
             </p>
             <p className="about-text">
-              Through passion, constant practice, and learning, I can produce
-              performant, accessible, aesthetically pleasing software to a high
-              standard, utilising development best practices.
+              Through passion, constant practice and learning, I can produce
+              beautiful modern software to a high standard, utilising best
+              practices.
             </p>
             <p className="about-text">
               React has predominantly been my focus during the last 12 months,
