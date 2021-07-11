@@ -26,7 +26,11 @@ const Footer = () => {
                 <span>u</span>ser e<span>x</span>periences!
               </p>
               <div className="icon-links">
-                <IconAnchor href="/" name="Github" icon={<FaGithub />} />
+                <IconAnchor
+                  href="https://github.com/Dangereye"
+                  name="Github"
+                  icon={<FaGithub />}
+                />
                 <IconAnchor href="/" name="Linkedin" icon={<FaLinkedin />} />
               </div>
             </div>

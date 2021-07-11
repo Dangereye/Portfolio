@@ -50,6 +50,8 @@ const Photoshop = ({ openSlideshow }) => {
               />
               <img
                 src="/img/portfolio/min/photoshop/composite-desktop.jpg"
+                width="1364px"
+                height="582px"
                 alt="Beechfield product"
                 loading="lazy"
               />
@@ -71,6 +73,8 @@ const Photoshop = ({ openSlideshow }) => {
               />
               <img
                 src="/img/portfolio/min/photoshop/beechfield-morf-desktop.jpg"
+                width="1364px"
+                height="582px"
                 alt="Beechfield product"
                 loading="lazy"
               />
@@ -82,6 +86,8 @@ const Photoshop = ({ openSlideshow }) => {
             <div key={`gallery-item-${index}`} className="slide photoshop-item">
               <img
                 src={slide.images.mobile}
+                width="326px"
+                height="140px"
                 alt={slide.title}
                 onClick={() => openSlideshow(index)}
                 loading="lazy"

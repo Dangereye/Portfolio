@@ -14,7 +14,7 @@ const myProjects = [
     },
     api: [
       {
-        title: "themoviedb.org",
+        title: "TMDB",
         url: "https://www.themoviedb.org",
       },
     ],
@@ -65,11 +65,11 @@ const myProjects = [
     },
     api: [
       {
-        title: "weatherapi.com",
+        title: "Weather",
         url: "https://www.weatherapi.com/",
       },
       {
-        title: "unsplash.com",
+        title: "Unsplash",
         url: "https://unsplash.com/developers",
       },
     ],
@@ -113,13 +113,13 @@ const myProjects = [
     description:
       "A responsive React app, utilising functional components, hooks and the SWAPI API. Explore data regarding movies, characters, species, vehicles, starships and the associations between them. I sourced movie posters and several royalty-free stock images (credited) for illustration purposes. However, I decided to use icons primarily to save time and avoid any nasty copyright issues.",
     preview_images: {
-      desktop: "/img/projects/starwars/min/previews-desktop.jpg",
-      tablet: "/img/projects/starwars/min/previews-tablet.jpg",
-      mobile: "/img/projects/starwars/min/previews-mobile.jpg",
+      desktop: "/img/projects/star-wars/min/previews-desktop.jpg",
+      tablet: "/img/projects/star-wars/min/previews-tablet.jpg",
+      mobile: "/img/projects/star-wars/min/previews-mobile.jpg",
     },
     api: [
       {
-        title: "swapi.dev",
+        title: "SWAPI",
         url: "https://swapi.dev/",
       },
     ],
@@ -144,7 +144,7 @@ const myProjects = [
     buttons: {
       primary: {
         type: "anchor",
-        url: "https://pux-starwars.netlify.app",
+        url: "https://pux-star-wars.netlify.app",
         styles: "primary large",
         text: "Launch Site",
       },
