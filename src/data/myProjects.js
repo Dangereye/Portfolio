@@ -6,7 +6,7 @@ const myProjects = [
     date: "2021",
     title: "Movies",
     description:
-      "A responsive React app, utilising functional components, hooks, and the TMDB API. Search and explore millions of movies, television shows, cast and crew members from any era. TMDB provides vast, expansive and ever-evolving data, prompting experimentation with React Query for this project because of its ability to easily cache fetched data.",
+      "Search and explore millions of movies, television shows and related people. Check out upcoming releases, rediscover old favourites, learn who or what is popular - right now, watch trailers or read biographies. Maybe, you'll even find a few gems that you never knew existed. Disclaimer; can cause unexplained time loss.",
     preview_images: {
       desktop: "/img/projects/tmdb-movies/min/previews-desktop.jpg",
       tablet: "/img/projects/tmdb-movies/min/previews-tablet.jpg",
@@ -26,6 +26,10 @@ const myProjects = [
       { image: `${svg}/react.svg`, alt: "React" },
     ],
     third_party: [
+      {
+        title: "YouTube",
+        url: "https://www.youtube.com/",
+      },
       {
         title: "React Icons",
         url: "https://react-icons.github.io/react-icons/",
@@ -57,7 +61,7 @@ const myProjects = [
     date: "2021",
     title: "The Weather",
     description:
-      "A responsive React app, utilising functional components and hooks, including the Context API. Header images provided by Unsplash, update (somewhat reliably) using keywords from current weather conditions. Additional functionality includes geolocation, location search (saved to local storage), current conditions, hourly conditions, precipitation, wind, astronomy and multiple settings.",
+      "Check the forecast where you are or anywhere else in the world. Don't know where you are? Fear not, the geolocation has you covered. It's looking brighter already, eh? View conditions, precipitation and wind by the hour in a format that suits you. I've even thrown in some pretty pictures - courtesy of Unsplash that match (somewhat reliably) current weather conditions. You're welcome!",
     preview_images: {
       desktop: "/img/projects/the-weather/min/previews-desktop.jpg",
       tablet: "/img/projects/the-weather/min/previews-tablet.jpg",
@@ -111,7 +115,7 @@ const myProjects = [
     date: "2021",
     title: "Star Wars",
     description:
-      "A responsive React app, utilising functional components, hooks and the SWAPI API. Explore data regarding movies, characters, species, vehicles, starships and the associations between them. I sourced movie posters and several royalty-free stock images (credited) for illustration purposes. However, I decided to use icons primarily to save time and avoid any nasty copyright issues.",
+      "A long time ago in a galaxy far, far away, some stuff (no spoilers) went down! A team of dedicated enthusiasts over at swapi.dev have scoured the internet to collect and compile data from this remarkable tale. Rest easy - no Bothans died to bring us this information! I've presented the data with several royalty-free stock images (credited) and icons to make it a little more readable and digestible. Explore movies, people, species, vehicles, planets, starships and their relative associations.",
     preview_images: {
       desktop: "/img/projects/star-wars/min/previews-desktop.jpg",
       tablet: "/img/projects/star-wars/min/previews-tablet.jpg",
@@ -162,7 +166,7 @@ const myProjects = [
     date: "2021",
     title: "Portfolio",
     description:
-      "A responsive React app, utilising functional components and hooks to showcase recent projects, current knowledge, skills, and a little about myself. I've taken a rewarding dive into the world of GSAP with this project, experimenting with timeline and scroll trigger animations. Now, transitions between pages and sections are a little more visually interesting, adding a touch of extra polish. I realise I've only scratched the surface of GSAPs potential here but, I will be using it with future projects without a doubt!",
+      "Anyone can make bold claims but, do those claims hold up in reality? Let's See! Please, review my work. Navigation is easy! Skip to sections of interest at the click of your button. View projects - live, or time permitting - browse my code on Github. There are several Photoshop examples to inspect. I've even created you a carousel to make it quicker! You can also learn a little more about me. If you like what you see and would like to know more, let's talk!",
     preview_images: {
       desktop: "/img/projects/portfolio/min/previews-desktop.jpg",
       tablet: "/img/projects/portfolio/min/previews-tablet.jpg",
